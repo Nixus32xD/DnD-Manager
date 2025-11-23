@@ -841,7 +841,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: true,
         description:
-          "Preparas una alarma contra los intrusos. Elige una puerta, una ventana o una zona dentro del alcance que no sea mayor que un cubo de 6 m de lado. Hasta que el conjuro termine, una alarma te alertará siempre que una criatura toque la zona vigilada o entre en ella. Al lanzar el conjuro, puedes designar qué criaturas no activarán la alarma, que puede ser mental o sonora.",
+          "Preparas una alarma contra los intrusos. Elige una puerta, una ventana o una zona dentro del alcance que no sea mayor que un cubo de 6 m de lado. Hasta que el conjuro termine, una alarma te alertará siempre que una criatura toque la zona vigilada o entre en ella. Al lanzar el conjuro, puedes designar qué criaturas no activarán la alarma, que puede ser mental o sonora: \nAlarma mental. La alarma te avisará con un sonido dentro de tu mente si estás a 1,5 km o menos de la zona vigilada. Si estás durmiendo, te despertará. \nAlarma sonora. La alarma producirá el sonido de una campanilla durante 10 segundos, que será audible a 18 m o menos de la zona vigilada. ",
         higherLevels: null,
         classes: ["Explorador", "Mago"],
         source: "PHB 2024", // [cite: 1444]
@@ -2334,7 +2334,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Elige un objeto que puedas ver dentro del alcance. Puede ser una puerta, una caja, un cofre, unas esposas, un candado o cualquier otro objeto que posea alguna manera mágica o mundana de impedir el acceso. Un objetivo cerrado se abre, desatasca o desatranca. Si tiene varios cerrojos, solo se desbloquea uno. Si tiene 'cerradura arcana', queda anulada por 10 minutos.",
+          "Elige un objeto que puedas ver dentro del alcance. Puede ser una puerta, una caja, un cofre, unas esposas, un candado o cualquier otro objeto que posea alguna manera mágica o mundana de impedir el acceso. Un objetivo que esté cerrado mediante una cerradura normal o que esté atascado o atrancado se abre, desatasca o desatranca. Si el objeto tiene varios cerrojos, solo se desbloquea uno de ellos. Si el objetivo está cerrado mediante cerradura arcana, ese conjuro quedará anulado durante 10 minutos y, durante ese tiempo, el objeto se podrá abrir y cerrar. Cuando lanzas el conjuro, se escucha un fuerte golpe surgir del objetivo, que es audible a una distancia de 90 m.",
         higherLevels: null,
         classes: ["Bardo", "Hechicero", "Mago"],
         source: "PHB 2024",
@@ -2357,7 +2357,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Aumenta o reduce el tamaño de una criatura u objeto. Agrandar: El tamaño aumenta una categoría, tiene ventaja en pruebas/salvaciones de Fuerza y causa 1d4 extra de daño con armas. Reducir: El tamaño disminuye una categoría, tiene desventaja en pruebas/salvaciones de Fuerza y sus ataques causan 1d4 menos de daño (mínimo 1).",
+          "Hasta que el conjuro termine, aumenta o reduce el tamaño de una criatura u objeto que puedas ver dentro del alcance (consulta el efecto elegido a continuación). Si el objetivo es un objeto, no puede estar llevándolo ni vistiéndolo nadie. Si es una criatura no voluntaria, puede hacer una tirada de salvación de Constitución y, si la supera, el conjuro no tiene efecto. \nTodo lo que vista y lleve una criatura objetivo cambiará de tamaño con ella y cualquier objeto que suelte volverá a su tamaño normal de inmediato. Un arma arrojadiza o un proyectil recuperará su tamaño normal justo después de acertar a un objetivo o fallar. \nAgrandar. El tamaño del objetivo aumenta en una categoría; por ejemplo, de Mediano a Grande. El objetivo también tendrá ventaja en las pruebas de Fuerza y en las tiradas de salvación de Fuerza. Además, sus ataques con armas agrandadas o sin armas causan 1d4 de daño adicional al acertar. \nReducir. El tamaño del objetivo se reduce en una categoría; por ejemplo, de Mediano a Pequeño. El objetivo también tendrá desventaja en las pruebas de Fuerza y en las tiradas de salvación de Fuerza. Los ataques que haga con armas reducidas o sin armas causan 1d4 menos de daño al acertar (esto no puede reducir el daño a menos de 1). ",
         higherLevels: null,
         classes: ["Bardo", "Druida", "Hechicero", "Mago"],
         source: "PHB 2024",
@@ -2380,7 +2380,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Tocas a una criatura voluntaria y eliges ácido, frío, fuego, relámpago o veneno. Hasta que termine, el objetivo puede usar una acción de magia para exhalar energía en un cono de 4,5 m. Las criaturas en la zona hacen salvación de Destreza; sufren 3d6 de daño si fallan o la mitad si superan.",
+          "Tocas a una criatura voluntaria y eliges ácido, frío, fuego, relámpago o veneno. Hasta que el conjuro termine, el objetivo puede usar una acción de magia para exhalar en un cono de 4,5 m. Todas las criaturas situadas en la zona hacen una tirada de salvación de Destreza; sufrirán 3d6 de daño del tipo elegido si la fallan o la mitad del daño si la superan. ",
         higherLevels:
           "El daño aumenta en 1d6 por cada nivel por encima de 2 que tenga el espacio.",
         classes: ["Hechicero", "Mago"],
@@ -2404,7 +2404,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Modificas tu forma física. Elige una opción: Adaptación acuática (respirar bajo agua, velocidad nadando), Armas naturales (garras, colmillos, etc., daño 1d6 + aptitud mágica) o Cambiar de aspecto (apariencia física). Puedes cambiar la opción como acción.",
+          "Modificas tu forma física. Elige una de las siguientes opciones. Los efectos duran hasta que el conjuro termine; entretanto, puedes usar una acción de magia para sustituir la opción elegida por otra distinta. \nAdaptación acuática. Te salen branquias y te crecen membranas entre los dedos. Puedes respirar bajo el agua y obtienes una velocidad nadando igual a tu velocidad. \nArmas naturales. Te crecen cascos (contundente), colmillos (perforante), cuernos (perforante) o garras (cortante). Cuando hagas un ataque sin armas para causar daño con el nuevo apéndice, hará 1d6 de daño del tipo indicado entre paréntesis en vez del daño normal de tu ataque sin armas. Además, usarás tu modificador por aptitud mágica para las tiradas de ataque y de daño en vez de tu Fuerza. \nCambiar de aspecto. Alteras tu apariencia. Decide tu aspecto, especificando tu altura, peso, rasgos faciales, timbre de voz, longitud del pelo, tono de piel y cualquier otro rasgo distintivo. Puedes presentarte como un miembro: de otra especie, aunque esto no modificará tu perfil de juego. No puedes adoptar el aspecto de una criatura de un tamaño distinto y conservarás tu forma básica: si eres una criatura bípeda, no podrás usar este conjuro para ser un cuadrúpedo, por ejemplo. Hasta que termine el conjuro, puedes usar una acción de magia para volver a cambiar tu aspecto. ",
         higherLevels: null,
         classes: ["Hechicero", "Mago"],
         source: "PHB 2024",
@@ -3817,7 +3817,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Elige a una criatura voluntaria que puedas ver dentro del alcance. Hasta que el conjuro termine, la velocidad del objetivo se duplica, gana un bonificador de +2 a su clase de armadura, tiene ventaja en tiradas de salvación de Destreza y consigue una segunda acción en cada uno de sus turnos. Solo puede utilizar esta acción para llevar a cabo una acción de atacar (solo un ataque), correr, destrabarse, esconderse o utilizar. Cuando el conjuro termine, el objetivo tendrá el estado de incapacitado y una velocidad de 0 hasta el final de su siguiente turno.",
+          "Elige a una criatura voluntaria que puedas ver dentro del alcance. Hasta que el conjuro termine, la velocidad del objetivo se duplica, gana un bonificador de +2 a su clase de armadura, tiene ventaja en tiradas de salvación de Destreza y consigue una segunda acción en cada uno de sus turnos. Solo puede utilizar esta acción para llevar a cabo una acción de atacar (solo un ataque), correr, destrabarse, esconderse o utilizar. Cuando el conjuro termine, el objetivo tendrá el estado de incapacitado y una velocidad de O hasta el final de su siguiente turno, debido a una ola de somnolencia que lo afecta. ",
         higherLevels: null,
         classes: ["Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1443]
@@ -3841,9 +3841,9 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Elige un montón de huesos o un cadáver de un humanoide Mediano o Pequeño dentro del alcance. El objetivo se convierte en un esqueleto o un zombi bajo tu control por 24 horas. Como acción adicional, puedes dar órdenes mentales a las criaturas animadas. Para mantener el control otras 24 horas, debes volver a lanzar el conjuro antes de que acabe el tiempo.",
+          "Elige un montón de huesos o un cadáver de un humanoide Mediano o Pequeño dentro del alcance. El objetivo se convierte en una criatura muerta viviente: un esqueleto si eliges un montón de huesos o un zombi si eliges un cadáver (consulta los perfiles de las criaturas en el apéndice B). \nEn cada uno de tus turnos, puedes usar una acción adicional para dar órdenes mentalmente a cada criatura que hayas creado con el conjuro que esté a 18 m o menos de ti (si controlas a varias criaturas, puedes dar órdenes a cualesquiera de ellas a la vez transmitiéndole la misma orden a cada una). Tú decides qué acción llevará a cabo la criatura y adónde se moverá en su siguiente turno, o puedes dar una orden general, como proteger una cámara o un pasadizo. Si no das ninguna orden, la criatura hace la acción de esquivar y solo se mueve para evitar peligros. En cuanto se le dé una orden, la criatura la cumplirá hasta completar su tarea. \nLa criatura estará bajo tu control durante 24 horas, tras las cuales dejará de obedecer cualquier orden que le hayas dado. Para mantener el control sobre ella otras 24 horas, deberás volver a lanzarle este conjuro antes de que acabe el periodo actual de 24 horas. Este uso del conjuro refuerza tu control sobre hasta cuatro criaturas que hayas animado con él y no anima una nueva criatura.",
         higherLevels:
-          "Animas o refuerzas el control sobre dos criaturas muertas vivientes adicionales por cada nivel de conjuro por encima de 3 que tenga el espacio.",
+          " Animas o refuerzas el control sobre dos criaturas muertas vivientes adicionales por cada nivel de conjuro por encima de 3 que tenga el espacio. Cada una de las criaturas debe proceder de un cadáver o un montón de huesos distinto. ",
         classes: ["Clérigo", "Mago"],
         source: "PHB 2024", // [cite: 1446]
       },
@@ -5023,7 +5023,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: true,
         description:
-          "Este conjuro te pone en contacto con un dios o sus sirvientes. Puedes hacer una pregunta sobre un objetivo, un suceso o una actividad específicos que ocurrirán en los próximos 7 días. Tu DM te dará una respuesta verdadera. Si lanzas el conjuro más de una vez antes de finalizar un descanso largo, hay una posibilidad acumulativa del 25 % de fallo.",
+          "Este conjuro te pone en contacto con un dios o sus sirvientes. Puedes hacer una pregunta sobre un objetivo, un suceso o una actividad específicos que ocurrirán en los próximos 7 días. Tu DM te dará una respuesta verdadera, que puede ser una frase corta o una rima críptica. El conjuro no tiene en cuenta ninguna circunstancia que pueda alterar la respuesta, como por ejemplo el lanzamiento de otros conjuros. Si lanzas el conjuro más de una vez antes de finalizar un descanso largo, hay una posibilidad acumulativa del 25 % por cada lanzamiento después del primero de que no recibas ninguna respuesta. ",
         higherLevels: null,
         classes: ["Clérigo", "Druida", "Mago"],
         source: "PHB 2024", // [cite: 1450]
@@ -5967,9 +5967,9 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Intentas modificar los recuerdos de otra criatura. Si falla la salvación de Sabiduría, queda hechizada e incapacitada. Puedes eliminar, alterar o crear recuerdos de un suceso de las últimas 24 horas que no durase más de 10 minutos.",
+          "Intentas modificar los recuerdos de otra criatura. Una criatura que puedas ver dentro del alcance realiza una tirada de salvación de Sabiduría. Si estás luchando contra ella, tendrá ventaja en la tirada. Si la falla, tendrá el estado de hechizada hasta que termine el conjuro. Mientras esté hechizado de esta manera, el objetivo también tiene el estado de incapacitado y no es consciente de su entorno, aunque puede oírte. Si recibe cualquier daño o es el objetivo de otro conjuro, este conjuro termina y no se modifica ninguno de sus recuerdos. \nMientras dure este sortilegio, puedes afectar al recuerdo de un suceso que haya vivido el objetivo durante las últimas 24 horas y que no haya durado más de 10 minutos. Puedes eliminar permanentemente todo recuerdo del suceso, permitir que lo recuerde con claridad perfecta, cambiar cómo recuerda los detalles o crear un recuerdo de otro suceso. \nDebes hablarle al objetivo para describir cómo se ven afectados sus recuerdos y este debe poder comprender tu idioma para que los recuerdos modificados se asienten. Su mente llenará cualquier hueco que falte en los detalles de tu descripción. Si el conjuro termina antes de que acabes de describir los recuerdos modificados, la memoria de la criatura no se verá afectada. De lo contrario, los recuerdos modificados ocuparán el lugar de los reales en cuanto el conjuro termine. \nUn recuerdo modificado no tiene por qué afectar al comportamiento de una criatura, en especial si contradice sus inclinaciones naturales, su alineamiento o sus creencias. Un recuerdo modificado que no sea lógico, como cuánto disfrutó bañándose en ácido, se difuminará y la criatura lo considerará un mal sueño. Tu DM podría considerar que un recuerdo modificado es demasiado ilógico como para afectar a una criatura. \nUn conjuro levantar maldición o restablecimiento mayor lanzado sobre el objetivo restaurará los recuerdos auténticos de la criatura. ",
         higherLevels:
-          "Con espacios superiores puedes afectar recuerdos más antiguos: 7 días (nivel 6), 30 días (nivel 7), 365 días (nivel 8) o cualquier momento pasado (nivel 9).",
+          "Con un espacio de conjuro de nivel superior. Puedes alterar recuerdos del objetivo de un suceso que ocurrió hace 7 días (espacio de nivel 6), 30 días (espacio de nivel 7), 365 días (espacio de nivel 8) o en cualquier momento del pasado de la criatura (espacio de nivel 9). ",
         classes: ["Bardo", "Mago"],
         source: "PHB 2024", // [cite: 1445]
       },
@@ -5991,7 +5991,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Revives a una criatura que no lleve más de 10 días muerta. Vuelve con 1 punto de golpe. Cierra heridas mortales pero no restaura partes del cuerpo faltantes. El objetivo tiene un penalizador de -4 a pruebas, ataques y salvaciones que se reduce en 1 cada descanso largo.",
+          "Con un toque, revives a una criatura que no lleve más de 10 días muerta y que no fuera un muerto viviente cuando falleció. \nLa criatura vuelve a la vida con 1 punto de golpe. El conjuro también neutraliza cualquier veneno que afectase a la criatura en el momento de su muerte. \nEste conjuro cierra todas las heridas mortales, pero no devuelve las partes del cuerpo que faltan. Si a la criatura le faltan partes del cuerpo u órganos fundamentales para que sobreviva (por ejemplo, la cabeza), el conjuro falla automáticamente. \nRegresar de entre los muertos es una experiencia complicada. El objetivo tendrá un penalizador de -4 a las pruebas con d20. Cada vez que finalice un descanso largo, el penalizador se reduce en 1 hasta desaparecer.",
         higherLevels: null,
         classes: ["Bardo", "Clérigo", "Paladín"],
         source: "PHB 2024", // [cite: 1445]
@@ -7083,7 +7083,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Suplicas la ayuda de una entidad de otro mundo (dios, príncipe demonio, etc.). Envía a un celestial, elemental o infernal leal. Debes negociar un pago por sus servicios (oro, objetos mágicos, sacrificios, misiones). Si no llegas a un acuerdo, la criatura regresa a su plano.",
+          "Suplicas la ayuda de una entidad de otro mundo, la cual debe resultarte conocida: un dios, un príncipe demonio u otro ser con poder cósmico. Esa entidad enviará a un celestial, un elemental o un infernal que le sea leal para ayudarte, criatura que aparecerá en un espacio sin ocupar dentro del alcance. Si sabes el nombre de una criatura específica, puedes pronunciarlo cuando lances el conjuro para solicitar a esa criatura, aunque igualmente podría aparecer otra (a elección de tu DM).\nCuando la criatura aparece, no se siente forzada a comportarse de ningún modo concreto. Puedes pedirle que realice un servicio a cambio de un pago, pero no está obligada a hacerlo. La tarea solicitada podría ser muy sencilla (“ayúdanos a cruzar esta sima volando” o “échanos una mano en la batalla”) o algo más complicado (“espía a nuestros enemigos” o “protégenos mientras exploramos la mazmorra”). Para negociar por los servicios de la criatura, debes poder comunicarte con ella. \nEl pago puede adoptar una gran variedad de formas. Un celestial podría solicitar una importante donación de oro u objetos mágicos a un templo aliado, mientras que un infernal podría exigir el sacrificio de un ser vivo o un regalo de un tesoro. Algunas criaturas podrían solicitar que lleves a cabo alguna misión a cambio de sus servicios. Una tarea que pueda medirse en minutos requiere un pago equivalente a 100 po por minuto. \nUna tarea que se mida en horas requiere 1000 po por hora, y una tarea que se mida en días (hasta 10 días) requiere 10 000 po por día. Tu DM puede adaptar los pagos en función de las circunstancias en las que lances el conjuro. Si la tarea está en sintonía con los valores de la criatura, el pago podría reducirse a la mitad o incluso no ser necesario. Las tareas que no implican peligro suelen exigir solo la mitad del pago sugerido, mientras que las que son especialmente peligrosas podrían requerir una donación aún mayor. Raramente una criatura aceptará una tarea que parezca suicida. \nUna vez que la criatura complete su tarea o cuando finalice el tiempo de servicio acordado, volverá a su plano natal tras informarte de ello si es posible. Si no eres capaz de llegar a un acuerdo sobre el precio del servicio de la criatura, esta regresará a su plano natal de inmediato. ",
         higherLevels: null,
         classes: ["Clérigo"],
         source: "PHB 2024", // [cite: 1444]
