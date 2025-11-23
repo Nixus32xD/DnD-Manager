@@ -25,10 +25,6 @@ function App() {
 
         {/* Rutas de Conjuros */}
         <Route path="spells" element={<Placeholder title="Lista de Conjuros" />} />
-        
-        <Route path="spells" element={<Placeholder title="Lista de Conjuros" />} />
-        <Route path="muertes" element={<Placeholder title="Muertes" />} />
-
 
         {/* Ruta 404 */}
         <Route path="*" element={<Placeholder title="404 - Página no encontrada" />} />
