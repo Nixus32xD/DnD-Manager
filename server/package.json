@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "seed": "node seeder.js"
+    "seed": "node seeder.js",
+    "seedspell": "node spellsSeeder0-1.js"
   },
   "keywords": [],
   "author": "",
