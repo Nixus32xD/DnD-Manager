@@ -30,7 +30,11 @@ const SpellsPage = () => {
                     {spells.map(spell => (
                         <div key={spell._id} className="mb-4 p-4 border border-gray-300 rounded">
                             <h2 className="text-xl font-bold">{spell.name}</h2>
+                            <p className="text-sm text-gray-500 mb-2">Nivel: {spell.level} | Escuela: {spell.school}</p>
+                            <p className="text-gray-700 mb-2">Tiempo de lanzamiento: {spell.castingTime}</p>
                             <p className="text-gray-700">{spell.description}</p>
+                            <p className="text-gray-900 pt-2">{spell.higherLevels}</p>
+
                         </div>
                     ))}
                 </div>
