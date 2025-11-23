@@ -6014,8 +6014,8 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Animas hasta 10 objetos no mágicos (dependiendo del tamaño). Se convierten en criaturas bajo tu control que pueden atacar. Si sus puntos de golpe bajan a 0, vuelven a ser objetos.",
-        higherLevels: "El daño aumenta con espacios de nivel superior.",
+          "Tus órdenes hacen que los objetos cobren vida. Elige una cantidad de objetos no mágicos dentro del alcance que no vista ni lleve nadie, que no estén fijos en una superficie y que no sean Gargantuescos. La cantidad máxima de objetos es igual a tu modificador por aptitud mágica. A estos efectos, un objetivo Mediano o más pequeño cuenta como un objeto, un objetivo Grande cuenta como dos y un objetivo Enorme cuenta como tres. \nCada objetivo se animará, le crecerán patas, se convertirá en un autómata que emplea el perfil de un objeto animado y permanecerá bajo tu control hasta que el conjuro termine o hasta que sus puntos de golpe se reduzcan a O. Cada criatura que crees con este conjuro se considera una aliada para tus aliados y para ti. En combate, comparte tu orden de iniciativa y su turno va justo después del tuyo. \nHasta que el conjuro termine, puedes usar una acción adicional para dar órdenes mentalmente a cada criatura que hayas creado con el conjuro que esté a 150 m o menos de ti (si controlas a varias criaturas, puedes dar órdenes a cualesquiera de ellas a la vez transmitiéndole la misma orden a cada una). Si no das ninguna orden, la criatura hace la acción de esquivar y solo se mueve para evitar peligros. Cuando los puntos de golpe de la criatura se reduzcan a 0, recuperará su forma de objeto y cualquier daño sobrante se aplicará a esa forma.",
+        higherLevels: "El daño del golpe de la criatura aumenta en 1d4 (Mediana o más pequeña), 1d6 (Grande) o 1412 (Enorme) por cada nivel por encima de 5 que tenga el espacio.",
         classes: ["Bardo", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1446]
       },
