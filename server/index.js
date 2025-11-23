@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 
 // 1. Importamos el archivo de rutas nuevo
 import characterRoutes from "./routes/characterRoutes.js";
+import spellRoutes from "./routes/spellsRoutes.js";
 
 dotenv.config();
 
@@ -37,6 +38,7 @@ app.get('/', (req, res)=>{
 // 2. Usamos las rutas modulares
 // Esto significa: "Cualquier petición que empiece con /api/characters, mandala al archivo characterRoutes"
 app.use("/api/characters", characterRoutes);
+app.use("/api/spells", spellRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);

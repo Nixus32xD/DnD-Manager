@@ -9090,7 +9090,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Cuatro orbes de fuego golpean el suelo. Cada uno tiene un radio de explosión de 12 m. Las criaturas en el área sufren 20d6 de daño de fuego y 20d6 de daño contundente (mitad si superan salvación de Destreza). [cite: 1544]",
+          "Cuatro orbes de fuego golpean el suelo. Cada uno tiene un radio de explosión de 12 m. Las criaturas en el área sufren 20d6 de daño de fuego y 20d6 de daño contundente (mitad si superan salvación de Destreza). ",
         higherLevels: null,
         classes: ["Hechicero", "Mago"],
         source: "PHB 2024",
