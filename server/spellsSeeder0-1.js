@@ -8742,7 +8742,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Asumes la forma de otra criatura (VD igual o menor a tu nivel) hasta que termine el conjuro. Obtienes sus estadísticas pero mantienes tu personalidad e inteligencia. Puedes cambiar de forma nuevamente usando una acción. Ganas puntos de golpe temporales de la forma asumida. [cite: 1456]",
+          "Asumes la forma de otra criatura (VD igual o menor a tu nivel) hasta que termine el conjuro. Obtienes sus estadísticas pero mantienes tu personalidad e inteligencia. Puedes cambiar de forma nuevamente usando una acción. Ganas puntos de golpe temporales de la forma asumida.",
         higherLevels: null,
         classes: ["Druida", "Mago"],
         source: "PHB 2024",
@@ -8766,7 +8766,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Creas una prisión mágica para una criatura. Si falla la salvación de Sabiduría, queda aprisionada eternamente (no envejece, no necesita comer). Eliges la forma de prisión: Contención mínima (en gema), Encadenamiento, Entierro, Presidio cercado (semiplano) o Sueño. Solo un conjuro de disipar magia de nivel 9 o una condición específica establecida al lanzarlo pueden terminarlo. [cite: 1459], [cite: 1460]",
+          "Creas una prisión mágica para una criatura. Si falla la salvación de Sabiduría, queda aprisionada eternamente (no envejece, no necesita comer). Eliges la forma de prisión: Contención mínima (en gema), Encadenamiento, Entierro, Presidio cercado (semiplano) o Sueño. Solo un conjuro de disipar magia de nivel 9 o una condición específica establecida al lanzarlo pueden terminarlo.",
         higherLevels: null,
         classes: ["Brujo", "Mago"],
         source: "PHB 2024",
@@ -8789,7 +8789,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Una oleada de energía curativa restaura hasta 700 puntos de golpe, repartidos como quieras entre cualquier cantidad de criaturas dentro del alcance. También cura ceguera, sordera y enfermedades de los objetivos. [cite: 1471]",
+          "Una oleada de energía curativa restaura hasta 700 puntos de golpe, repartidos como quieras entre cualquier cantidad de criaturas dentro del alcance. También cura ceguera, sordera y enfermedades de los objetivos. ",
         higherLevels: null,
         classes: ["Clérigo"],
         source: "PHB 2024",
@@ -8812,7 +8812,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "El conjuro más poderoso que un mortal puede lanzar. Puede duplicar cualquier conjuro de nivel 8 o inferior sin requisitos. Alternativamente, puedes crear objetos de hasta 25.000 po, curar completamente a 20 criaturas, conceder resistencias a 10 criaturas, inmunidad a un conjuro, deshacer un evento reciente o pedir algo a discreción del DM (con riesgo de estrés severo y pérdida de la capacidad de volver a lanzar Deseo). [cite: 1472], [cite: 1473]",
+          "El conjuro más poderoso que un mortal puede lanzar. Puede duplicar cualquier conjuro de nivel 8 o inferior sin requisitos. Alternativamente, puedes crear objetos de hasta 25.000 po, curar completamente a 20 criaturas, conceder resistencias a 10 criaturas, inmunidad a un conjuro, deshacer un evento reciente o pedir algo a discreción del DM (con riesgo de estrés severo y pérdida de la capacidad de volver a lanzar Deseo). ",
         higherLevels: null,
         classes: ["Hechicero", "Mago"],
         source: "PHB 2024",
@@ -8835,7 +8835,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Creas un muro multicolor (plano o esfera) que protege, bloquea visión y conjuros. Tiene 7 capas (rojo, naranja, amarillo, verde, azul, añil, violeta), cada una con un efecto devastador (daño, petrificación, destierro) y un método específico para ser destruida. [cite: 1517]",
+          "Creas un muro multicolor (plano o esfera) que protege, bloquea visión y conjuros. Tiene 7 capas (rojo, naranja, amarillo, verde, azul, añil, violeta), cada una con un efecto devastador (daño, petrificación, destierro) y un método específico para ser destruida. ",
         higherLevels: null,
         classes: ["Bardo", "Mago"],
         source: "PHB 2024",
@@ -8858,7 +8858,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Obligas a morir a una criatura que puedas ver. Si tiene 100 puntos de golpe o menos, muere instantáneamente sin tirada de salvación. Si tiene más, sufre 12d12 de daño psíquico. [cite: 1521]",
+          "Obligas a morir a una criatura que puedas ver. Si tiene 100 puntos de golpe o menos, muere instantáneamente sin tirada de salvación. Si tiene más, sufre 12d12 de daño psíquico. ",
         higherLevels: null,
         classes: ["Bardo", "Brujo", "Hechicero", "Mago"],
         source: "PHB 2024",
@@ -8881,7 +8881,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Una criatura que veas recupera todos sus puntos de golpe. Si está asustada, aturdida, envenenada, hechizada o paralizada, el estado termina. Si está derribada, puede levantarse como reacción. [cite: 1521]",
+          "Una criatura que veas recupera todos sus puntos de golpe. Si está asustada, aturdida, envenenada, hechizada o paralizada, el estado termina. Si está derribada, puede levantarse como reacción. ",
         higherLevels: null,
         classes: ["Bardo", "Clérigo"],
         source: "PHB 2024",
@@ -8904,7 +8904,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Detienes el tiempo para todos menos para ti. Obtienes 1d4 + 1 turnos consecutivos. El conjuro termina si te mueves a más de 300 m o si realizas una acción que afecte a otra criatura u objeto que no lleves. [cite: 1521]",
+          "Detienes el tiempo para todos menos para ti. Obtienes 1d4 + 1 turnos consecutivos. El conjuro termina si te mueves a más de 300 m o si realizas una acción que afecte a otra criatura u objeto que no lleves. ",
         higherLevels: null,
         classes: ["Hechicero", "Mago"],
         source: "PHB 2024",
@@ -8928,7 +8928,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Transformas a una criatura en otra criatura u objeto, o un objeto en criatura. Si mantienes la concentración durante la hora completa, la transformación se vuelve permanente hasta que sea disipada. La nueva forma puede tener cualquier VD igual o menor al nivel del objetivo (o 9 si creas vida de un objeto). [cite: 1524]",
+          "Transformas a una criatura en otra criatura u objeto, o un objeto en criatura. Si mantienes la concentración durante la hora completa, la transformación se vuelve permanente hasta que sea disipada. La nueva forma puede tener cualquier VD igual o menor al nivel del objetivo (o 9 si creas vida de un objeto). ",
         higherLevels: null,
         classes: ["Bardo", "Brujo", "Mago"],
         source: "PHB 2024",
@@ -8951,7 +8951,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Creas un portal a otro plano de existencia. Puedes viajar a un lugar preciso o, al nombrar a una criatura específica, abrir el portal junto a ella y transportarla hacia ti. Deidades pueden impedir que se abra en su presencia. [cite: 1524]",
+          "Creas un portal a otro plano de existencia. Puedes viajar a un lugar preciso o, al nombrar a una criatura específica, abrir el portal junto a ella y transportarla hacia ti. Deidades pueden impedir que se abra en su presencia. ",
         higherLevels: null,
         classes: ["Brujo", "Clérigo", "Hechicero", "Mago"],
         source: "PHB 2024",
@@ -8974,7 +8974,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Otorgas a una criatura la capacidad de ver el futuro inmediato. Tiene ventaja en todas las pruebas de característica, tiradas de ataque y salvaciones. Las criaturas atacantes tienen desventaja al atacarla. [cite: 1525]",
+          "Otorgas a una criatura la capacidad de ver el futuro inmediato. Tiene ventaja en todas las pruebas de característica, tiradas de ataque y salvaciones. Las criaturas atacantes tienen desventaja al atacarla. ",
         higherLevels: null,
         classes: ["Bardo", "Brujo", "Druida", "Mago"],
         source: "PHB 2024",
@@ -8998,7 +8998,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Proyectas tu cuerpo astral y el de hasta 8 compañeros al Plano Astral. Vuestros cuerpos físicos quedan en animación suspendida. Si el cordón de plata se corta, mueres. [cite: 1532]",
+          "Proyectas tu cuerpo astral y el de hasta 8 compañeros al Plano Astral. Vuestros cuerpos físicos quedan en animación suspendida. Si el cordón de plata se corta, mueres. ",
         higherLevels: null,
         classes: ["Brujo", "Clérigo", "Mago"],
         source: "PHB 2024",
@@ -9021,7 +9021,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Revives a una criatura que lleve muerta hasta 200 años (no por vejez). Restaura todos los puntos de golpe, cierra heridas, cura enfermedades/venenos/maldiciones y restaura órganos perdidos. Puede crear un cuerpo nuevo si el original no existe. [cite: 1533]",
+          "Revives a una criatura que lleve muerta hasta 200 años (no por vejez). Restaura todos los puntos de golpe, cierra heridas, cura enfermedades/venenos/maldiciones y restaura órganos perdidos. Puede crear un cuerpo nuevo si el original no existe. ",
         higherLevels: null,
         classes: ["Clérigo", "Druida"],
         source: "PHB 2024",
@@ -9044,7 +9044,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Creas horrores ilusorios en una esfera de 9 m. Las criaturas deben superar salvación de Sabiduría o sufrir 10d10 daño psíquico y quedar asustadas. Si están asustadas, repiten salvación al final de cada turno; si fallan, sufren 5d10 psíquico extra. [cite: 1542]",
+          "Creas horrores ilusorios en una esfera de 9 m. Las criaturas deben superar salvación de Sabiduría o sufrir 10d10 daño psíquico y quedar asustadas. Si están asustadas, repiten salvación al final de cada turno; si fallan, sufren 5d10 psíquico extra. ",
         higherLevels: null,
         classes: ["Brujo", "Mago"],
         source: "PHB 2024",
@@ -9067,7 +9067,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Creas una tormenta masiva (90 m de radio). Cada turno produce un efecto diferente: daño de trueno y sordera (turno 1), lluvia ácida (turno 2), relámpagos (turno 3), granizo (turno 4) y ventiscas con frío (turnos 5-10). [cite: 1543]",
+          "Creas una tormenta masiva (90 m de radio). Cada turno produce un efecto diferente: daño de trueno y sordera (turno 1), lluvia ácida (turno 2), relámpagos (turno 3), granizo (turno 4) y ventiscas con frío (turnos 5-10). ",
         higherLevels: null,
         classes: ["Druida"],
         source: "PHB 2024",
