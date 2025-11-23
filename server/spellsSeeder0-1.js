@@ -3936,7 +3936,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: true, // Fuente indica "Acción o ritual"
         description:
-          "Este conjuro concede a hasta diez criaturas voluntarias que elijas dentro del alcance la capacidad de moverse por encima de cualquier superficie líquida, como agua, ácido, barro, nieve, arenas movedizas o lava, como si se tratara de un suelo sólido inofensivo.",
+          "Este conjuro concede la capacidad de moverse por encimade cualquier superficie líquida, como agua, ácido, barro,nieve, arenas movedizas o lava, como si se tratara de unsuelo sólido inofensivo (aunque las criaturas que crucenlava derretida pueden seguir sufriendo daño por el calor).Hasta diez criaturas voluntarias que elijas dentro del alcanceobtienen esta capacidad hasta que termine el conjuro.Los objetivos afectados deben emplear una acciónadicional para pasar de la superficie del líquido al propiolíquido y viceversa, pero si caen en él, pasarán a travésde la superficie al líquido que hay debajo.",
         higherLevels: null,
         classes: ["Clérigo", "Druida", "Explorador", "Hechicero"],
         source: "PHB 2024", // [cite: 1456]
@@ -3983,7 +3983,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Creas un cilindro de energía mágica de 3 m de radio y 6 m de altura. Elige celestiales, elementales, feéricos, infernales o muertos vivientes. El círculo impide que entren (o salgan, si inviertes el efecto), les impone desventaja en ataques y protege contra posesión o estados de asustado/hechizado por ellos.",
+        "Creas un cilindro de energía mágica de 3 m de radio y 6 mde altura centrado en un punto del suelo que puedas verdentro del alcance. En los puntos de intersección entre elcilindro y el suelo o cualquier otra superficie apareceránunas runas brillantes.Elige uno o más de los siguientes tipos de criaturas:celestiales, elementales, feéricos, infernales o muertosvivientes. El círculo afecta a una criatura del tipo el egidode las siguientes formas:\n\n+ La criatura no puede entrar voluntariamente en elcilindro por medios no mágicos. Si la criatura intentausar el teletransporte o el viaje interplanar para hacerlo,antes deberá superar una tirada de salvación de Carisma.\n\n+ La criatura tiene desventaja en las tiradas de ataquecontra objetivos que estén dentro del cilindro.\n\n+ Los objetivos dentro del cilindro no pueden ser poseídospor la criatura ni obtener los estados de asustadoso hechizados a causa de ella.\n\n+ Cada vez que lances este conjuro, puedes hacer que sumagia funcione en sentido inverso para impedir que unacriatura del tipo especificado salga del cilindro y protegerasí a los objetivos que estén fuera de él",
         higherLevels:
           "La duración aumenta en 1 hora por cada nivel por encima de 3 que tenga el espacio.",
         classes: ["Brujo", "Clérigo", "Mago", "Paladín"],
@@ -6014,8 +6014,8 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Tus órdenes hacen que los objetos cobren vida. Elige una cantidad de objetos no mágicos dentro del alcance que no vista ni lleve nadie, que no estén fijos en una superficie y que no sean Gargantuescos. La cantidad máxima de objetos es igual a tu modificador por aptitud mágica. A estos efectos, un objetivo Mediano o más pequeño cuenta como un objeto, un objetivo Grande cuenta como dos y un objetivo Enorme cuenta como tres. \nCada objetivo se animará, le crecerán patas, se convertirá en un autómata que emplea el perfil de un objeto animado y permanecerá bajo tu control hasta que el conjuro termine o hasta que sus puntos de golpe se reduzcan a O. Cada criatura que crees con este conjuro se considera una aliada para tus aliados y para ti. En combate, comparte tu orden de iniciativa y su turno va justo después del tuyo. \nHasta que el conjuro termine, puedes usar una acción adicional para dar órdenes mentalmente a cada criatura que hayas creado con el conjuro que esté a 150 m o menos de ti (si controlas a varias criaturas, puedes dar órdenes a cualesquiera de ellas a la vez transmitiéndole la misma orden a cada una). Si no das ninguna orden, la criatura hace la acción de esquivar y solo se mueve para evitar peligros. Cuando los puntos de golpe de la criatura se reduzcan a 0, recuperará su forma de objeto y cualquier daño sobrante se aplicará a esa forma.",
-        higherLevels: "El daño del golpe de la criatura aumenta en 1d4 (Mediana o más pequeña), 1d6 (Grande) o 1412 (Enorme) por cada nivel por encima de 5 que tenga el espacio.",
+          "Animas hasta 10 objetos no mágicos (dependiendo del tamaño). Se convierten en criaturas bajo tu control que pueden atacar. Si sus puntos de golpe bajan a 0, vuelven a ser objetos.",
+        higherLevels: "El daño aumenta con espacios de nivel superior.",
         classes: ["Bardo", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1446]
       },
