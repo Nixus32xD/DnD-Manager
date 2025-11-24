@@ -3,6 +3,8 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/Homepage';
 import CharactersPage from './pages/CharactersPage';
 import SpellsPage from './pages/SpellsPage';
+import RulesPage from './pages/RulesPage';
+import FeatsPage from './pages/FeatsPage';
 
 // Placeholder para páginas que aún no creaste
 const Placeholder = ({ title }) => (
@@ -23,9 +25,15 @@ function App() {
         {/* Rutas de Personajes */}
         <Route path="characters" element={<CharactersPage />} />
         <Route path="characters/create" element={<Placeholder title="Crear Personaje" />} />
+        
+        {/* Rutas de Reglas */}
+        <Route path="rules" element={< RulesPage/>} />
 
         {/* Rutas de Conjuros */}
-        <Route path="spells" element={< SpellsPage/>} />
+        <Route path="rules/spells" element={< SpellsPage/>} />
+        {/* Rutas de Dotes */}
+        <Route path="rules/feats" element={< FeatsPage/>} />
+
 
         {/* Ruta 404 */}
         <Route path="*" element={<Placeholder title="404 - Página no encontrada" />} />

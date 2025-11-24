@@ -25,7 +25,7 @@ const MainLayout = () => {
                             <Link to="/characters" className="text-slate-400 hover:text-amber-400 transition font-medium uppercase text-sm tracking-widest">
                                 Personajes
                             </Link>
-                            <Link to="/spells" className="text-slate-400 hover:text-amber-400 transition font-medium uppercase text-sm tracking-widest">
+                            <Link to="/rules/spells" className="text-slate-400 hover:text-amber-400 transition font-medium uppercase text-sm tracking-widest">
                                 Conjuros
                             </Link>
                             <Link to="/rules" className="text-slate-400 hover:text-amber-400 transition font-medium uppercase text-sm tracking-widest">
