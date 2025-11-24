@@ -6037,7 +6037,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Cambias la apariencia de cualquier cantidad de criaturas que puedas ver dentro del alcance. Puedes cambiar su ropa, armadura, altura, peso, etc. La ilusión es visual y táctil, pero no cambia el perfil de juego.",
+          "Le das una apariencia ilusoria a cada criatura de tu elección que puedas ver dentro del alcance. Un objetivo no voluntario puede hacer una tirada de salvación de Carisma y, si la supera, el conjuro no le afectará. Puedes dar la misma apariencia o una distinta a cada objetivo, así como cambiar el aspecto de sus cuerpos y equipo. \nPuedes hacer que cada criatura parezca 30 cm más alta o más baja y de complexión más pesada o ligera. Un nuevo aspecto debe tener la misma configuración básica de miembros que el objetivo, aunque en el resto de aspectos, la ilusión queda a tu elección y permanecerá hasta que el conjuro termine. \nLos cambios realizados por este conjuro pueden descubrirse mediante una inspección física. Por ejemplo, si usas este conjuro para añadir un sombrero a la vestimenta de una criatura, los objetos atravesarán el sombrero. \nSi una criatura emplea la acción de estudiar para examinar a un objetivo, podrá hacer una prueba de Inteligencia (Investigación) contra tu CD de salvación de conjuros. Si la supera, sabrá que el objetivo está disfrazado. ",
         higherLevels: null,
         classes: ["Bardo", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1447]

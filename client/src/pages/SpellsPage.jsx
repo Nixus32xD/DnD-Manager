@@ -42,7 +42,7 @@ function SpellModal({ spell, onClose }) {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity" onClick={onClose}>
             <div
-                className="bg-slate-900 border border-amber-500/40 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto custom-scrollbar relative flex flex-col"
+                className="bg-slate-900 border border-amber-500/40 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto dark-scrollbar custom-scrollbar relative flex flex-col"
                 onClick={(e) => e.stopPropagation()} // Evita cerrar al hacer clic dentro
             >
                 {/* Botón Cerrar */}
