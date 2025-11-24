@@ -2662,7 +2662,8 @@ const seedSpells = async () => {
         ritual: false,
         description:
           "Introduces una púa de energía psiónica en la mente de una criatura que puedas ver dentro del alcance. El objetivo hace una tirada de salvación de Sabiduría; sufrirá 3d8 de daño psíquico si la falla o la mitad del daño si la supera. Además, si falla la tirada, conocerás en todo momento la ubicación del objetivo hasta que el conjuro termine, pero solo mientras los dos estéis en el mismo plano de existencia. Mientras tengas este conocimiento, la criatura no podrá ocultarse de ti y, si tiene el estado de invisible, no se beneficiará de dicho estado contra ti. ",
-        higherLevels: "El daño aumenta en 1d8 por cada nivel por encima de 2 que tenga el espacio.",
+        higherLevels:
+          "El daño aumenta en 1d8 por cada nivel por encima de 2 que tenga el espacio.",
         classes: ["Brujo", "Hechicero", "Mago"],
         source: "PHB 2024",
       },
@@ -2684,7 +2685,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Tu cuerpo se vuelve borroso. Los ataques contra ti tienen desventaja a menos que el atacante use visión ciega o verdadera.",
+          "Tu cuerpo se vuelve borroso. Hasta que termine el conjuro, todas las criaturas tendrán desventaja en las tiradas de ataque contra ti. Un atacante es inmune a este efecto si te percibe mediante visión ciega o visión verdadera.",
         higherLevels: null,
         classes: ["Hechicero", "Mago"],
         source: "PHB 2024",
@@ -3983,7 +3984,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-        "Creas un cilindro de energía mágica de 3 m de radio y 6 mde altura centrado en un punto del suelo que puedas verdentro del alcance. En los puntos de intersección entre elcilindro y el suelo o cualquier otra superficie apareceránunas runas brillantes.Elige uno o más de los siguientes tipos de criaturas:celestiales, elementales, feéricos, infernales o muertosvivientes. El círculo afecta a una criatura del tipo el egidode las siguientes formas:\n\n+ La criatura no puede entrar voluntariamente en elcilindro por medios no mágicos. Si la criatura intentausar el teletransporte o el viaje interplanar para hacerlo,antes deberá superar una tirada de salvación de Carisma.\n\n+ La criatura tiene desventaja en las tiradas de ataquecontra objetivos que estén dentro del cilindro.\n\n+ Los objetivos dentro del cilindro no pueden ser poseídospor la criatura ni obtener los estados de asustadoso hechizados a causa de ella.\n\n+ Cada vez que lances este conjuro, puedes hacer que sumagia funcione en sentido inverso para impedir que unacriatura del tipo especificado salga del cilindro y protegerasí a los objetivos que estén fuera de él",
+          "Creas un cilindro de energía mágica de 3 m de radio y 6 mde altura centrado en un punto del suelo que puedas verdentro del alcance. En los puntos de intersección entre elcilindro y el suelo o cualquier otra superficie apareceránunas runas brillantes.Elige uno o más de los siguientes tipos de criaturas:celestiales, elementales, feéricos, infernales o muertosvivientes. El círculo afecta a una criatura del tipo el egidode las siguientes formas:\n\n+ La criatura no puede entrar voluntariamente en elcilindro por medios no mágicos. Si la criatura intentausar el teletransporte o el viaje interplanar para hacerlo,antes deberá superar una tirada de salvación de Carisma.\n\n+ La criatura tiene desventaja en las tiradas de ataquecontra objetivos que estén dentro del cilindro.\n\n+ Los objetivos dentro del cilindro no pueden ser poseídospor la criatura ni obtener los estados de asustadoso hechizados a causa de ella.\n\n+ Cada vez que lances este conjuro, puedes hacer que sumagia funcione en sentido inverso para impedir que unacriatura del tipo especificado salga del cilindro y protegerasí a los objetivos que estén fuera de él",
         higherLevels:
           "La duración aumenta en 1 hora por cada nivel por encima de 3 que tenga el espacio.",
         classes: ["Brujo", "Clérigo", "Mago", "Paladín"],
@@ -4079,7 +4080,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Intentas interrumpir a una criatura que esté lanzando un conjuro. La criatura hace una tirada de salvación de Constitución. Si la falla, el conjuro se disipa sin causar efecto alguno y la acción empleada para lanzarlo se desperdiciará.",
+          "Intentas interrumpir a una criatura que esté lanzando un conjuro. La criatura hace una tirada de salvación de Constitución. Si la falla, el conjuro se disipa sin causar efecto alguno y la acción, acción adicional o reacción empleada para lanzarlo se desperdiciará. Si ese conjuro se lanzó con un espacio de conjuro, dicho espacio no se gastará. ",
         higherLevels: null,
         classes: ["Brujo", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1467]
@@ -5143,7 +5144,7 @@ const seedSpells = async () => {
           "Todas las criaturas de tu elección que puedas ver dentro del alcance deberán superar una tirada de salvación de Sabiduría o tendrán el estado de hechizadas hasta que el conjuro termine. \nMientras dure, puedes usar una acción adicional para designar una dirección horizontal respecto a ti. Cada criatura hechizada deberá usar todo el movimiento que pueda para avanzar en esa dirección por la ruta más segura durante su próximo turno. Tras moverse de este modo, un objetivo repite la tirada de salvación y, si tiene éxito, se librará del conjuro. ",
         higherLevels: null,
         classes: ["Bardo"],
-        source: "PHB 2024", 
+        source: "PHB 2024",
       },
       {
         name: "Confusión",
@@ -5189,6 +5190,8 @@ const seedSpells = async () => {
         ritual: false,
         description:
           "Conjuras espíritus de los Planos Elementales que revolotean a tu alrededor en una emanación de 4,5 m mientras dure el conjuro. Hasta que el conjuro termine, cualquier ataque que hagas causará 2d8 de daño adicional cuando aciertes a una criatura dentro de la emanación. Ese daño será de ácido, frío, fuego o relámpago (a tu elección cuando ataques). \nAdemás, el suelo incluido en la emanación se considerará terreno difícil para tus enemigos. ",
+        higherLevels:
+          " El daño aumenta en 2d8 por cada nivel por encima de 4 que tenga el espacio. ",
         classes: ["Druida", "Mago"],
         source: "PHB 2024", // [cite: 1464]
       },
@@ -5210,7 +5213,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Conjuras espíritus de la naturaleza en una emanación de 3 m alrededor de ti. Puedes obligar a criaturas que entren o terminen su turno allí a hacer una salvación de Sabiduría; sufren 5d8 de daño de fuerza si fallan o la mitad si superan. Puedes destrabarte como acción adicional.",
+          "Conjuras espíritus de la naturaleza que revolotean a tu alrededor en una emanación de 3 m hasta que el conjuro termine. Siempre que la emanación entre en el espacio de una criatura que puedas ver y siempre que una criatura que puedas ver entre en la emanación o termine su turno allí, puedes obligar a la criatura a hacer una tirada de salvación de Sabiduría. Sufrirá 5d8 de daño de fuerza si la falla o la mitad del daño si la supera. Una criatura solo hace esta tirada una vez por turno. \nAdemás, hasta que termine el conjuro, puedes llevar a cabo la acción de destrabarse como acción adicional. ",
         higherLevels: "El daño aumenta en 1d8 por cada nivel por encima de 4.",
         classes: ["Druida", "Explorador"],
         source: "PHB 2024", // [cite: 1465]
@@ -5233,7 +5236,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Controlas cualquier masa de agua en un cubo de 30 m. Eliges efectos: Abrir las aguas (crear canal), Inundación (subir nivel o crear ola), Redirigir caudal o Remolino (daño y arrastre).",
+          "Hasta que el conjuro termine, controlas cualquier masa de agua que esté en un área de tu elección y con forma de cubo de hasta 30 m de lado, y usas uno de los siguientes efectos. Como acción de magia en tus siguientes turnos, puedes repetir el mismo efecto o elegir uno distinto. \nAbrir las aguas. Haces que las aguas de la zona se separen y creen un canal, que se extiende a lo largo de toda el área del conjuro, con las aguas separadas formando un muro a ambos lados. El canal se mantendrá hasta que el conjuro termine o hasta que elijas un efecto distinto. Posteriormente, el agua irá llenando el canal lentamente durante el siguiente asalto hasta recuperar su nivel normal. \nInundación. Haces que el nivel del agua estancada de la zona aumente hasta 6 m. Si eliges una zona en una masa de agua grande, en vez de eso, creas una ola de 6 m de altura que se desplaza de un lado de esa zona a la otra y luego rompe. Cualquier vehículo Enorme o más pequeño que esté en el recorrido de la ola será transportado hasta el otro lado y también tendrá un 25 % de probabilidades de volcar. \nEl nivel del agua permanecerá elevado hasta que el conjuro termine o hasta que elijas un efecto distinto. Si este efecto ha producido una ola, esta se repetirá al principio de tu siguiente turno mientras dure el efecto de la inundación. \nRedirigir caudal. Haces que un caudal de agua en la zona se mueva en la dirección que elijas, incluso si tiene que fluir por encima de obstáculos, subir muros o tomar otros rumbos extraños. El agua de la zona se moverá según tus instrucciones, pero una vez salga del área del conjuro, volverá a fluir de forma normal en función del terreno. El agua seguirá moviéndose en la dirección que hayas elegido hasta que el conjuro termine o hasta que elijas un efecto distinto. \nRemolino. Provocas que se forme un remolino en el centro del área, que debe ser un cuadrado de al menos 15 m de lado y 7,5 m de profundidad. El remolino permanece hasta que elijas un efecto distinto o termine el conjuro. El remolino tiene 1,5 m de ancho en su base y hasta 15 m en la parte superior, con una altura de 7,5 m. Cualquier criatura que esté en el agua a 7,5 m o menos del remolino será atraída 3 m hacia él. Cuando una criatura entre en el remolino por primera vez en un turno o termine su turno allí, hará una tirada de salvación de Fuerza. Si la falla, la criatura recibirá 2d8 de daño contundente. Si la supera, recibirá la mitad de daño. Una criatura solo puede alejarse nadando del remolino si usa primero una acción para apartarse y supera una prueba de Fuerza (Atletismo) contra tu CD de salvación de conjuros. ",
         higherLevels: null,
         classes: ["Clérigo", "Druida", "Mago"],
         source: "PHB 2024", // [cite: 1467]
@@ -6269,8 +6272,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Disparas un arma al aire y creas una lluvia de proyectiles en un cilindro de 12 m de radio y 6 m de alto. Las criaturas en el área sufren 8d8 daño de fuerza (mitad si superan salvación de Destreza).",
-        higherLevels: "El daño aumenta en 1d8 por cada nivel por encima de 5.",
+          "Blandes el arma utilizada para lanzar el conjuro y eliges un punto dentro del alcance. Cientos de duplicados espectrales del arma (o munición para el tipo de arma correspondiente) caen en una lluvia y luego desaparecen. \nTodas las criaturas de tu elección que puedas ver dentro de un cilindro de 12 m de radio y 6 m de altura centrado en ese punto hacen una tirada de salvación de Destreza. Sufrirán 8d8 de daño de fuerza si la fallan o la mitad del daño si la superan.",
         classes: ["Explorador"],
         source: "PHB 2024", // [cite: 1465]
       },
@@ -6292,7 +6294,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Emites una ráfaga de aire helado en un cono de 18 m. Las criaturas sufren 8d8 daño de frío (mitad si superan Constitución). Convierte en estatua de hielo a quien muera.",
+          "Emites una ráfaga de aire helado. Todas las criaturas situadas en un cono de 18 m que se origina en ti hacen una tirada de salvación de Constitución; sufrirán 8d8 de daño de frío si la fallan o la mitad de daño si la superan. Si una criatura muere a causa de este conjuro, se convertirá en una estatua congelada hasta que se descongele.",
         higherLevels: "El daño aumenta en 1d8 por cada nivel por encima de 5.",
         classes: ["Druida", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1465]
@@ -6308,7 +6310,7 @@ const seedSpells = async () => {
           somatic: true,
           material: true,
           materialDescription:
-            "Incienso (250 po, consumido) y 4 tiras de marfil (50 po)",
+            "Un incienso que valga al menos 250 po, que se consume como parte del conjuro, y cuatro tiras de marfil que valgan al menos 50 po",
           cost: 300,
           consumed: true, // Solo se consume el incienso (250po), pero el objeto total es complejo. Para tu base de datos, podés marcar consumed:true y cost:250 si querés ser preciso con el gasto.
         },
@@ -6316,7 +6318,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Nombra o describe una persona, lugar u objeto famoso. Recibes un resumen de información relevante sobre ello, que puede ser críptico o metafórico.",
+          "Nombra o describe a una persona, un lugar o un objeto famosos. El conjuro traerá a tu mente un breve resumen de la información relevante sobre lo nombrado, que describe tu DM. \nEsta información pueden ser detalles importantes, revelaciones simpáticas o incluso conocimiento secreto que no es de dominio público. Cuanta más información tengas ya sobre esa cosa, más precisa y detallada será la que consigas. La información será cierta, pero puede estar disimulada bajo un lenguaje metafórico o poético, a discreción de tu DM. \nSi lo que has nombrado no es famoso, en su lugar escucharás una musiquilla triste tocada con un trombón y el conjuro fallará. ",
         higherLevels: null,
         classes: ["Bardo", "Clérigo", "Mago"],
         source: "PHB 2024", // [cite: 1465]
@@ -6331,7 +6333,8 @@ const seedSpells = async () => {
           verbal: true,
           somatic: true,
           material: true,
-          materialDescription: "Incienso que valga al menos 1000 po",
+          materialDescription:
+            "Un incienso que valga al menos 1000 po, que se consume como parte del conjuro",
           cost: 1000,
           consumed: true,
         },
@@ -6339,7 +6342,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Consagras una zona de hasta 18 m de radio. Impide la entrada a ciertos tipos de criaturas (celestiales, infernales, etc.) y puedes vincular un efecto adicional permanente (como luz del día, silencio, o protección contra energía).",
+          "Tocas un punto e impregnas una zona a su alrededor con poder sagrado o impío. El área puede tener un radio de hasta 18 m y el conjuro falla si el radio incluye cualquier zona que ya esté bajo el efecto de consagrar. La zona afectada tiene los siguientes efectos. \nProtección sagrada. Elige cualquiera de los siguientes tipos de criatura: aberración, celestial, elemental, feérico, infernal o muerto viviente. Las criaturas de los tipos elegidos no podrán entrar en la zona voluntariamente, y cualquier criatura poseída o con los estados de asustada o hechizada a causa de ellas dejarán de estarlo mientras permanezcan en la zona. \nEfecto adicional. Vinculas un efecto adicional de la siguiente lista: \nCoraje. Las criaturas de cualesquiera tipos que elijas no podrán obtener el estado de asustadas dentro de la zona. \nDescanso plácido. Los cadáveres enterrados en la zona no se pueden convertir en muertos vivientes. \nDon de lenguas. Las criaturas de cualesquiera tipos que elijas se pueden comunicar con cualquier otra criatura en la zona, aunque no compartan ningún idioma común. \nIntromisión extradimensional. Las criaturas de cualesquiera tipos que elijas no pueden entrar en la zona ni salir de ella usando el teletransporte o el viaje interplanar. \nLuz del día. La zona se llena de luz brillante. La oscuridad mágica creada por conjuros de niveles menores que el de este conjuro no pueden extinguir la luz. \nOscuridad. La zona se llena de oscuridad. La luz normal y la luz mágica creada por conjuros de niveles menores que el de este conjuro no pueden iluminar la zona. \nResistencia. Las criaturas de cualesquiera tipos que elijas tienen resistencia a un tipo de daño de tu elección dentro de la zona. \nSilencio. Ningún sonido puede salir de la zona ni penetrar en ella, \nTerror. Las criaturas de cualesquiera tipos que elijas tienen el estado de asustadas dentro de la zona. \nVulnerabilidad. Las criaturas de cualesquiera tipos que elijas tienen vulnerabilidad a un tipo de daño de tu elección dentro de la zona.  ",
         higherLevels: null,
         classes: ["Clérigo"],
         source: "PHB 2024", // [cite: 1465]
@@ -6362,7 +6365,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: true,
         description:
-          "Contactas mentalmente con una entidad de otro plano para hacerle 5 preguntas. Debes superar una salvación de Inteligencia (CD 15) o recibir 6d6 daño psíquico y quedar incapacitado hasta un descanso largo.",
+          "Contactas mentalmente con un semidiós, el espíritu de un erudito muerto hace tiempo o cualquier otra entidad ilustrada de otro plano. Contactar con esta inteligencia sobrenatural puede hacer añicos tu mente. Cuando lances este conjuro, haz una tirada de salvación de Inteligencia con CD 15. Si superas la tirada, puedes hacerle a la entidad hasta cinco preguntas, que debes realizar antes de que el conjuro termine. Tu DM responderá a cada pregunta con una sola palabra, como “sí”, “no”, “puede”, “nunca”, “irrelevante” o “ambiguo” (si la entidad no conoce la respuesta a la pregunta). Si una respuesta de una sola palabra pudiera inducir a error, tu DM podría ofrecer en su lugar una frase corta. \nSi fallas la tirada, sufrirás 6d6 de daño psíquico y tendrás el estado de incapacitado hasta que finalices un descanso largo. Si te lanzan un conjuro restablecimiento mayor, el efecto acabará. ",
         higherLevels: null,
         classes: ["Brujo", "Mago"],
         source: "PHB 2024", // [cite: 1466]
@@ -6385,7 +6388,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Tocas a una criatura y la infectas. Si falla salvación de Constitución, sufre 11d8 daño necrótico y queda envenenada. Además, tiene desventaja en salvaciones de una característica elegida. Debe repetir salvaciones para acabar el efecto o que dure 7 días.",
+          "Tu toque causa un contagio mágico. El objetivo debe superar una tirada de salvación de Constitución o sufrirá 11d8 de daño necrótico y tendrá el estado de envenenado. Además, elige una característica cuando lances el conjuro. Mientras esté envenenado, el objetivo tendrá desventaja en las tiradas de salvación que haga con la característica elegida. \nEl objetivo deberá repetir la tirada de salvación al final de cada uno de sus turnos hasta que la supere o la falle tres veces. Si supera tres de estas tiradas, el conjuro terminará para el objetivo, pero si falla tres tiradas, el conjuro le durará 7 días. \nCuando el objetivo envenenado reciba un efecto que fuera a poner fin al estado de envenenado, deberá superar una tirada de salvación de Constitución o el estado de envenenado no terminará. ",
         higherLevels: null,
         classes: ["Clérigo", "Druida"],
         source: "PHB 2024", // [cite: 1466]
@@ -7200,8 +7203,9 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Conjuras un espíritu feérico Mediano (Alegre, Burlón o Enfurecido). Tiene sus propias estadísticas y capacidades de teletransporte. Puede hechizar, cegar o tener ventaja en ataques según su estado de ánimo.",
-        higherLevels: "El daño aumenta con espacios de nivel superior.",
+          "Conjuras un espíritu Mediano de los Parajes Feéricos en un espacio sin ocupar que puedas ver dentro del alcance. El espíritu dura hasta que termine el conjuro y toma la forma de una criatura feérica de tu elección. Cuando aparezca, puedes hacer un ataque de conjuro cuerpo a cuerpo contra una criatura a 1,5 m o menos de él. Si acierta, el objetivo sufrirá una cantidad de daño psíquico igual a 3d12 más tu modificador por aptitud mágica y tendrá el estado de asustado hasta el principio de tu siguiente turno, y tanto el espíritu como tú seréis el origen de su miedo. \nComo acción adicional en tus siguientes turnos, puedes teletransportar el espíritu a un espacio sin ocupar que puedas ver a 9 m o menos del espacio que ocupaba antes y hacer el ataque contra una criatura a 1,5 m o menos de él.",
+        higherLevels:
+          "El daño aumenta en 2d12 por cada nivel por encima de 6 que tenga el espacio. ",
         classes: ["Druida"],
         source: "PHB 2024", // [cite: 1464]
       },
@@ -7224,7 +7228,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Almacenas un conjuro de nivel 5 o inferior (con tiempo de 1 acción) para que se active sobre ti cuando se cumpla una condición específica. Solo puedes tener una contingencia a la vez.",
+          "Elige un conjuro de nivel 5 o inferior que puedas lanzar, que tenga un tiempo de lanzamiento de una acción y que te permita elegirte como objetivo. Lanzas el conjuro (llamado “conjuro contingente”) como parte del lanzamiento de contingencia y gastas los espacios de conjuro de ambos, pero el conjuro contingente no tiene efecto en ese momento, sino que se activa cuando se produce una condición determinada. Describes esa condición cuando lanzas los dos conjuros. Por ejemplo, si lanzas contingencia junto a respirar bajo el agua, podrías decir que respirar bajo el agua tenga efecto cuando te sumerjas en agua o en un líquido similar. \nEl conjuro contingente tiene efecto inmediatamente después de que se produzca la condición por primera vez, tanto si quieres como si no, y después termina el conjuro contingencia. \nEl conjuro contingente solo tiene efecto sobre ti, aunque normalmente pudieras elegir como objetivo a otros. Solo puedes tener un conjuro contingencia activo al mismo tiempo. Si vuelves a lanzarlo, terminará el efecto de cualquier otro conjuro contingencia que tengas. Asimismo, contingencia termina si dejas de tener contigo su componente material. ",
         higherLevels: null,
         classes: ["Mago"],
         source: "PHB 2024", // [cite: 1467]
@@ -8440,7 +8444,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Controlas el clima en un radio de 7,5 km. Puedes cambiar precipitaciones, temperatura y viento por etapas. Tarda 1d4 x 10 minutos en cambiar.",
+          "Hasta que termine el conjuro, asumes el control del clima a 7,5 km o menos de ti. Debes estar al aire libre para lanzar este conjuro y terminará antes de tiempo si entras en una zona cubierta. Cuando lanzas el conjuro, cambias las condiciones climatológicas actuales, que determinará tu DM. Puedes cambiar las precipitaciones, la temperatura y el viento. Se tardan 1d4 x 10 minutos en que las nuevas condiciones surtan efecto. En cuanto lo hagan, puedes volver a cambiarlas. Cuando el conjuro termine, el clima volverá poco a poco a su estado normal. Cuando cambies las condiciones meteorológicas, busca un estado en las tablas siguientes y modifica su nivel en uno, arriba o abajo. Si cambias el viento, también puedes alterar su dirección. ",
         higherLevels: null,
         classes: ["Clérigo", "Druida", "Mago"],
         source: "PHB 2024", // [cite: 1468]
