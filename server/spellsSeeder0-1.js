@@ -2661,8 +2661,8 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "El objetivo debe superar salvación de Sabiduría o recibir 3d8 daño psíquico y no podrá ocultarse de ti (conoces su ubicación y no se beneficia de invisibilidad contra ti) mientras estéis en el mismo plano.",
-        higherLevels: "El daño aumenta en 1d8 por cada nivel por encima de 2.",
+          "Introduces una púa de energía psiónica en la mente de una criatura que puedas ver dentro del alcance. El objetivo hace una tirada de salvación de Sabiduría; sufrirá 3d8 de daño psíquico si la falla o la mitad del daño si la supera. Además, si falla la tirada, conocerás en todo momento la ubicación del objetivo hasta que el conjuro termine, pero solo mientras los dos estéis en el mismo plano de existencia. Mientras tengas este conocimiento, la criatura no podrá ocultarse de ti y, si tiene el estado de invisible, no se beneficiará de dicho estado contra ti. ",
+        higherLevels: "El daño aumenta en 1d8 por cada nivel por encima de 2 que tenga el espacio.",
         classes: ["Brujo", "Hechicero", "Mago"],
         source: "PHB 2024",
       },
@@ -4008,7 +4008,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Creas un sensor invisible dentro del alcance en un lugar que conozcas o en un lugar obvio. Puedes ver u oír a través del sensor como si estuvieras allí. Como acción adicional, puedes cambiar entre vista y oído.",
+          "Creas un sensor invisible dentro del alcance en un lugar que conozcas (que hayas visitado o visto antes) o en un lugar obvio, aunque no lo conozcas (por ejemplo, tras una puerta, al girar una esquina o en una arboleda). Este sensor intangible e invulnerable permanecerá allí hasta que el conjuro termine. \nCuando lances el conjuro, elige la vista o el oído. Podrás usar el sentido elegido como si estuvieras en el espacio del sensor. Como acción adicional, puedes cambiar entre la vista y el oído. \nCualquier criatura que pueda percibir el sensor (por ejemplo, que se esté beneficiando del conjuro ver invisibilidad o que tenga visión verdadera) verá un orbe luminoso del tamaño aproximado de tu puño. ",
         higherLevels: null,
         classes: ["Bardo", "Clérigo", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1461]
@@ -4031,9 +4031,9 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Conjuras espíritus de la naturaleza como una manada Grande de animales espectrales e intangibles. Tienes ventaja en salvaciones de Fuerza cerca de la manada. Puedes moverla 9 m. Si se mueve cerca de una criatura o una criatura entra en su espacio, puedes obligarla a hacer una salvación de Destreza; sufre 3d10 de daño cortante si falla.",
+          "Conjuras espíritus de la naturaleza que aparecen como una manada Grande de animales espectrales e intangibles en un espacio sin ocupar que puedas ver dentro del alcance. La manada permanecerá hasta que el conjuro termine y puedes elegir la forma animal de los espíritus, como lobos, serpientes O aves. \nTienes ventaja en las tiradas de salvación de Fuerza mientras estés a 1,5 m o menos de la manada. Además, cuando te muevas en tu turno, también podrás mover a la manada hasta 9 m a un espacio sin ocupar que puedas ver. \nSiempre que la manada se mueva a 3 m o menos de una criatura que puedas ver y siempre que una criatura que puedas ver entre en un espacio a 3 m o menos de la manada o termine su turno allí, puedes obligar a la criatura a hacer una tirada de salvación de Destreza. Si la falla, recibirá 3d10 de daño cortante. Una criatura solo hace esta tirada una vez por turno. ",
         higherLevels:
-          "El daño aumenta en 1d10 por cada nivel por encima de 3 que tenga el espacio.",
+          " El daño aumenta en 1d10 por cada nivel por encima de 3 que tenga el espacio. ",
         classes: ["Druida", "Explorador"],
         source: "PHB 2024", // [cite: 1463]
       },
@@ -4056,7 +4056,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Blandes el arma utilizada para lanzar el conjuro e invocas versiones espectrales que salen disparadas en un cono de 18 m. Todas las criaturas en el cono hacen una tirada de salvación de Destreza; sufrirán 5d8 de daño de fuerza si la fallan o la mitad del daño si la superan.",
+          "Blandes el arma utilizada para lanzar el conjuro e invocas versiones espectrales parecidas (o munición para el tipo de arma correspondiente) que salen disparadas hacia adelante y luego desaparecen. Todas las criaturas de tu elección que puedas ver en un cono de 18 m hacen una tirada de salvación de Destreza; sufrirán 5d8 de daño de fuerza si la fallan o la mitad del daño si la superan. ",
         higherLevels:
           "El daño aumenta en 1d8 por cada nivel por encima de 3 que tenga el espacio.",
         classes: ["Explorador"],
@@ -5109,7 +5109,7 @@ const seedSpells = async () => {
           somatic: true,
           material: true,
           materialDescription:
-            "Un cofre de materiales raros (5000 po) y una réplica Diminuta (50 po)",
+            "Un cofre de con unas dimensiones de 90 cm por 60 cm por 60 cm, construido de materiales raros que valgan al menos 5000 po, así como una réplica Diminuta hecha de los mismos materiales y que valga al menos 50 po",
           cost: 5050, // Coste total de los materiales requeridos
           consumed: false,
         },
@@ -5117,7 +5117,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Ocultas un cofre y todo su contenido en el Plano Etéreo. Puedes usar una acción para recuperar el cofre tocando la réplica o enviarlo de vuelta. Después de 60 días, hay riesgo de que el efecto termine y el cofre se pierda.",
+          "Ocultas un cofre y todo su contenido en el Plano Etéreo. Debes tocar el cofre y la réplica en miniatura que sirve como componente material del conjuro. El cofre puede contener hasta 0,34 m* de material inerte (90 cm por 60 cm por 60 cm). \nMientras el cofre permanezca en el Plano Etéreo, puedes usar una acción de magia y tocar la réplica para recuperar dicho cofre, que aparecerá en un espacio sin ocupar en el suelo a 1,5 m de ti. Puedes enviar el cofre de regreso al Plano Etéreo usando una acción de magia para tocar el cofre y la réplica. \nDespués de 60 días, hay una posibilidad acumulativa del 5% al final de cada día de que el efecto del conjuro termine. El conjuro también termina si vuelves a lanzarlo o si se destruye la réplica Diminuta del cofre. Si el conjuro termina y el cofre grande está en el Plano Etéreo, permanecerá allí hasta que otra persona o tú lo encontréis. ",
         higherLevels: null,
         classes: ["Mago"],
         source: "PHB 2024", // [cite: 1461]
@@ -5140,10 +5140,10 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Todas las criaturas de tu elección dentro del alcance deben superar una salvación de Sabiduría o quedar hechizadas. Mientras dure, puedes usar una acción adicional para designar una dirección; las criaturas deben moverse en esa dirección en su turno.",
+          "Todas las criaturas de tu elección que puedas ver dentro del alcance deberán superar una tirada de salvación de Sabiduría o tendrán el estado de hechizadas hasta que el conjuro termine. \nMientras dure, puedes usar una acción adicional para designar una dirección horizontal respecto a ti. Cada criatura hechizada deberá usar todo el movimiento que pueda para avanzar en esa dirección por la ruta más segura durante su próximo turno. Tras moverse de este modo, un objetivo repite la tirada de salvación y, si tiene éxito, se librará del conjuro. ",
         higherLevels: null,
         classes: ["Bardo"],
-        source: "PHB 2024", // [cite: 1462]
+        source: "PHB 2024", 
       },
       {
         name: "Confusión",
@@ -5163,9 +5163,10 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Afecta criaturas en una esfera de 3 m. Deben superar salvación de Sabiduría o tirar 1d10 al principio de sus turnos para determinar su comportamiento (moverse aleatoriamente, no actuar, atacar a la criatura más cercana, etc.).",
+          "Todas las criaturas situadas en una esfera de 3 m de radio centrada en un punto que elijas dentro del alcance deberán superar una tirada de salvación de Sabiduría o no podrán usar acciones adicionales ni reacciones y deberán tirar 1d10 al principio de cada uno de sus turnos para determinar su comportamiento ese turno. Para ello, consulta la tabla que se muestra a continuación. \n1d10 Comportamiento del turno \n[1] El objetivo no usa ninguna acción y emplea todo su movimiento para desplazarse. Para determinar la dirección, tira 1d4: con un 1, se moverá al norte; con un 2, al este; con un 3, al sur; con un 4, al oeste. \n[2-6] El objetivo no se mueve ni realiza acciones. \n [7-8] El objetivo no se mueve y emplea la acción de atacar para hacer un ataque cuerpo a cuerpo contra una criatura aleatoria dentro de su alcance. Si no hay ninguna dentro de su alcance, el objetivo no hace ninguna acción. \n[9-10] El objetivo elige su comportamiento. \nAl final de cada uno de sus turnos, un objetivo afectado repite la tirada de salvación y, si tiene éxito, se librará del conjuro.",
+
         higherLevels:
-          "El radio de la esfera aumenta en 1,5 m por cada nivel por encima de 4.",
+          " El radio de la esfera aumenta en 1,5 m por cada nivel por encima de 4 que tenga el espacio. ",
         classes: ["Bardo", "Druida", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1462]
       },
@@ -5187,8 +5188,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Conjuras espíritus elementales que revolotean a tu alrededor en una emanación de 4,5 m. Cualquier ataque que hagas causa 2d8 de daño adicional (ácido, frío, fuego o relámpago) a criaturas dentro de la emanación. La zona es terreno difícil para tus enemigos.",
-        higherLevels: "El daño aumenta en 2d8 por cada nivel por encima de 4.",
+          "Conjuras espíritus de los Planos Elementales que revolotean a tu alrededor en una emanación de 4,5 m mientras dure el conjuro. Hasta que el conjuro termine, cualquier ataque que hagas causará 2d8 de daño adicional cuando aciertes a una criatura dentro de la emanación. Ese daño será de ácido, frío, fuego o relámpago (a tu elección cuando ataques). \nAdemás, el suelo incluido en la emanación se considerará terreno difícil para tus enemigos. ",
         classes: ["Druida", "Mago"],
         source: "PHB 2024", // [cite: 1464]
       },
@@ -6199,7 +6199,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: true,
         description:
-          "Contactas con tu deidad o un representante divino y haces hasta 3 preguntas de sí o no. Recibes respuestas veraces (o 'ambiguo' si la entidad no lo sabe).",
+          "Te pones en contacto con una deidad o con un representante divino y le haces hasta tres preguntas que se puedan responder con sí o no. Tienes que realizar las preguntas antes de que el conjuro termine y recibirás una respuesta correcta a cada una de ellas. \nLos seres divinos no tienen por qué ser omniscientes, por lo que si la deidad no tiene información sobre lo que le preguntas, puede responderte “ambiguo”. En caso de que una respuesta de una sola palabra pudiera inducir a error o ser contraria a los intereses de la deidad, tu DM podría ofrecer en su lugar una frase corta. \nSi lanzas el conjuro más de una vez antes de finalizar un descanso largo, hay una posibilidad acumulativa del 25 % por cada lanzamiento después del primero de que no recibas ninguna respuesta.",
         higherLevels: null,
         classes: ["Clérigo"],
         source: "PHB 2024", // [cite: 1462]
@@ -6222,7 +6222,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: true,
         description:
-          "Obtienes información sobre el territorio en un radio de 4,5 km (o 90 m subterráneo). Conoces ubicaciones de asentamientos, portales, criaturas poderosas, elementos naturales, etc.",
+          "Comulgas con espíritus de la naturaleza y obtienes información sobre la zona circundante. En exteriores, el conjuro te proporciona información de la zona a 4,5 km a tu alrededor. En cavernas y otros entornos naturales subterráneos, el radio se ve limitado a 90 m. El conjuro no funciona en lugares en los que la naturaleza ha sido sustituida por construcciones, como castillos y asentamientos. \n Elige tres de los siguientes hechos, que aprenderás según corresponda a la zona del conjuro: \n+ Ubicaciones de asentamientos. \n+ Ubicaciones de portales a otros planos de existencia. \n+ La ubicación de una criatura con un valor de desafío de 10 o más (a elección de tu DM) que sea celestial, elemental, feérico, infernal o muerto viviente. \n+ El tipo de planta, mineral o bestia más frecuente (tú decides cuál). \n+ Ubicaciones de masas de agua. \nPor ejemplo, podrías determinar el paradero de un monstruo poderoso en la zona y la ubicación de masas de agua y de cualquier pueblo cercano.",
         higherLevels: null,
         classes: ["Druida", "Explorador"],
         source: "PHB 2024", // [cite: 1462]
@@ -6245,7 +6245,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Invocas un espíritu elemental Grande (Aire, Tierra, Fuego o Agua) en un espacio sin ocupar. Es un aliado. Si las criaturas entran en su espacio o están cerca, el elemental puede atacar o apresar (daño 8d8 del tipo elemental).",
+          "Invocas un espíritu Grande e intangible de los Planos Elementales, que aparece en un espacio sin ocupar dentro. del alcance. Elige el elemento del espíritu, que determina su tipo de daño: agua (frío), aire (relámpago), fuego (fuego) o tierra (trueno). El espíritu permanece hasta que el conjuro termine. \nSiempre que una criatura que puedas ver entre en el espacio del espíritu o empiece su turno a 1,5 m o menos de él, puedes obligarla a hacer una tirada de salvación de Destreza si el espíritu no tiene ninguna criatura apresada. Si la falla, el objetivo sufrirá 8d8 de daño del tipo del espíritu y tendrá el estado de apresado hasta que el conjuro termine. Al principio de cada uno de sus turnos, el objetivo apresado repite la tirada de salvación. Si la falla, sufrirá 448 de daño del tipo del espíritu. Si la supera, dejará de estar apresado por él. ",
         higherLevels: "El daño aumenta en 2d8 por cada nivel por encima de 5.",
         classes: ["Druida", "Mago"],
         source: "PHB 2024", // [cite: 1463]
@@ -7902,7 +7902,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Conjuras un espíritu celestial que se manifiesta como un pilar de luz de 3 m de radio y 12 m de alto. Eliges entre Luz abrasadora (6d12 daño radiante, salvación Destreza) o Luz sanadora (cura 4d12 + mod). Puedes mover el cilindro y activar el efecto en cada turno.",
+          "Conjuras un espíritu de los Planos Superiores, que se manifiesta como un pilar de luz de 3 m de radio y 12 m de alto centrado en un punto dentro del alcance. Por cada criatura que puedas ver en el cilindro, elige qué tipo de luz brilla sobre ella: \nLuz abrasadora. El objetivo hace una tirada de salvación de Destreza; sufrirá 6d12 de daño radiante si la falla o la mitad del daño si la supera. \nLuz sanadora. El objetivo recupera una cantidad de puntos de golpe igual a 4d12 más tu modificador por aptitud mágica. \nHasta que el conjuro termine, una luz brillante llena el cilindro y, cuando te muevas en tu turno, también puedes mover el cilindro hasta 9 m. \nSiempre que el cilindro entre en el espacio de una criatura que puedas ver y siempre que una criatura que puedas ver entre en el cilindro o termine su turno en él, puedes bañar a la criatura con una de las luces. Una criatura puede verse afectada por este conjuro solo una vez por turno. ",
         higherLevels:
           "El daño y la curación aumentan en 1d12 por cada nivel por encima de 7.",
         classes: ["Clérigo"],
@@ -8409,7 +8409,7 @@ const seedSpells = async () => {
           somatic: true,
           material: true,
           materialDescription:
-            "Un diamante de al menos 1000 po (consumido) y un recipiente de al menos 2000 po",
+            "Un diamante que valga al menos 1000 po, que se consume como parte del conjuro, y un recipiente sellable que valga al menos 2000 po y sea lo bastante grande como para alojar a la criatura que se clone",
           cost: 3000, // Coste total de materiales requeridos para lanzar
           consumed: true, // El diamante se consume, el recipiente no
         },
@@ -8417,7 +8417,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Creas un duplicado inerte de una criatura viva. Madura en 120 días. Si la criatura original muere, su alma se transfiere al clon si está libre y dispuesta. El clon es físicamente idéntico al original.",
+          "Tocas a una criatura o al menos un cubo de su carne de 2,5 cm. Dentro del recipiente empleado para lanzar el conjuro se crea un duplicado inerte de la criatura que alcanza la madurez en 120 días; tú decides si el clon terminado tiene la misma edad que la criatura o si es más joven. El clon permanecerá inerte y durará indefinidamente, siempre que su recipiente se mantenga intacto. \nSi la criatura original muere después de que el clon haya madurado, su alma se transferirá al clon si el alma es libre y desea regresar. El clon es físicamente idéntico al original, al igual que su personalidad, sus recuerdos y sus capacidades, pero no posee nada de su equipo original. Los restos mortales de la criatura original, si existen, se volverán inertes y no podrán ser devueltos a la vida, ya que el alma de la criatura está en otra parte. ",
         higherLevels: null,
         classes: ["Mago"],
         source: "PHB 2024", // [cite: 1461]
