@@ -5,6 +5,9 @@ import CharactersPage from './pages/CharactersPage';
 import SpellsPage from './pages/SpellsPage';
 import RulesPage from './pages/RulesPage';
 import FeatsPage from './pages/FeatsPage';
+import ItemsPage from './pages/ItemsPage';
+import BackgroundsPage from './pages/BackgroundsPage';
+
 
 // Placeholder para páginas que aún no creaste
 const Placeholder = ({ title }) => (
@@ -33,6 +36,10 @@ function App() {
         <Route path="rules/spells" element={< SpellsPage/>} />
         {/* Rutas de Dotes */}
         <Route path="rules/feats" element={< FeatsPage/>} />
+        {/* Rutas de Obejtos y Equipo */}
+        <Route path="rules/items" element={< ItemsPage/>} />
+        {/* Rutas de Transfondo */}
+        <Route path="rules/backgrounds" element={< BackgroundsPage/>} />
 
 
         {/* Ruta 404 */}

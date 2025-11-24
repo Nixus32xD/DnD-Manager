@@ -8,6 +8,8 @@ import mongoose from "mongoose";
 import characterRoutes from "./routes/characterRoutes.js";
 import spellRoutes from "./routes/spellsRoutes.js";
 import featRoutes from "./routes/featRoutes.js"
+import itemRoutes from "./routes/itemRoutes.js";
+import backgroundRoutes from "./routes/backgroundRoutes.js";
 
 dotenv.config();
 
@@ -41,6 +43,8 @@ app.get('/', (req, res)=>{
 app.use("/api/characters", characterRoutes);
 app.use("/api/spells", spellRoutes);
 app.use("/api/feats", featRoutes);
+app.use("/api/items", itemRoutes);
+app.use("/api/backgrounds", backgroundRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
