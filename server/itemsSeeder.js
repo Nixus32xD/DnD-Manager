@@ -12,7 +12,7 @@ const seedDB = async () => {
 
     const itemsData = [
       // ===========================================================================
-      // 1. ARMAS (WEAPONS) - Tabla Pág. 215
+      // 1. ARMAS (WEAPONS) - Tabla Pág. 215 (Manual 2024)
       // ===========================================================================
 
       // --- Armas Cuerpo a Cuerpo Sencillas ---
@@ -289,13 +289,10 @@ const seedDB = async () => {
         cost: { quantity: 10, unit: "po" },
         weight: 3,
         damage: { dice: "1d12", type: "Perforante" },
-        properties: [
-          "Gran alcance",
-          "Pesada",
-          "Especial (A dos manos salvo montado)",
-        ],
+        properties: ["Gran alcance", "Pesada", "Especial"],
         masteryProperty: "Derribar",
-        description: "Diseñada para usarse a caballo.",
+        description:
+          "Diseñada para usarse a caballo. A dos manos si no estás montado.",
       },
       {
         name: "Látigo",
@@ -370,7 +367,7 @@ const seedDB = async () => {
         cost: { quantity: 5, unit: "po" },
         weight: 1,
         damage: { dice: "1d8", type: "Perforante" },
-        properties: ["Versátil (1d10)"], // Nota: Algunas versiones lo ponen versatil, otras no. Sigo standard.
+        properties: ["Versátil (1d10)"],
         masteryProperty: "Debilitar",
         description: "Un pico diseñado para perforar armaduras.",
       },
@@ -443,7 +440,7 @@ const seedDB = async () => {
         cost: { quantity: 500, unit: "po" },
         weight: 5,
         damage: { dice: "1d12", type: "Perforante" },
-        properties: ["A dos manos", "Munición", "Recarga"],
+        properties: ["A dos manos", "Munición", "Recarga", "Pesada"],
         range: { normal: 12, long: 36 },
         masteryProperty: "Ralentizar",
         description: "Un arma de fuego de pólvora negra.",
@@ -608,7 +605,7 @@ const seedDB = async () => {
       },
 
       // ===========================================================================
-      // 3. HERRAMIENTAS (TOOLS) - Pág. 220
+      // 3. HERRAMIENTAS (TOOLS)
       // ===========================================================================
       {
         name: "Herramientas de ladrón",
@@ -616,12 +613,12 @@ const seedDB = async () => {
         cost: { quantity: 25, unit: "po" },
         weight: 0.5,
         description:
-          "Ganzúas, espejo, limas y tenazas. Permite desactivar trampas y abrir cerraduras.",
+          "Ganzúas, espejo, limas y tenazas. Necesarias para desactivar trampas y abrir cerraduras.",
       },
       {
         name: "Instrumento musical",
         type: "Tool",
-        cost: { quantity: 35, unit: "po" }, // Promedio (Laúd)
+        cost: { quantity: 35, unit: "po" },
         weight: 1,
         description:
           "Varios tipos: Laúd, Flauta, Tambor, Lira, etc. Esencial para bardos.",
@@ -644,15 +641,176 @@ const seedDB = async () => {
       {
         name: "Herramientas de artesano",
         type: "Tool",
-        cost: { quantity: 15, unit: "po" }, // Promedio
+        cost: { quantity: 15, unit: "po" },
         weight: 2.5,
         description:
           "Incluye herramientas de herrero, carpintero, albañil, etc.",
       },
+      {
+        name: "Útiles para disfrazarse",
+        type: "Tool",
+        cost: { quantity: 25, unit: "po" },
+        weight: 1.5,
+        description:
+          "Cosméticos, tintes de pelo y pequeñas prendas para cambiar de apariencia.",
+      },
+      {
+        name: "Útiles para falsificar",
+        type: "Tool",
+        cost: { quantity: 15, unit: "po" },
+        weight: 2.5,
+        description: "Tintas, papeles y sellos para crear documentos falsos.",
+      },
+      {
+        name: "Herramientas de navegante",
+        type: "Tool",
+        cost: { quantity: 25, unit: "po" },
+        weight: 1,
+        description: "Instrumentos para orientarse en el mar o la naturaleza.",
+      },
+      {
+        name: "Juego",
+        type: "Tool",
+        cost: { quantity: 1, unit: "po" },
+        weight: 0,
+        description: "Dados, naipes o piezas de ajedrez dragón.",
+      },
 
       // ===========================================================================
-      // 4. EQUIPO DE AVENTURAS (GEAR) - Pág. 225
+      // 4. EQUIPO DE AVENTURAS (GEAR)
       // ===========================================================================
+      {
+        name: "Abrojos (bolsa)",
+        type: "Gear",
+        cost: { quantity: 1, unit: "po" },
+        weight: 1,
+        description:
+          "Cubren una zona de 1,5m. Causan 1 de daño y reducen velocidad.",
+      },
+      {
+        name: "Aceite (frasco)",
+        type: "Gear",
+        cost: { quantity: 1, unit: "pp" },
+        weight: 0.5,
+        description: "Se puede lanzar o usar como combustible para lámparas.",
+      },
+      {
+        name: "Ácido (vial)",
+        type: "Gear",
+        cost: { quantity: 25, unit: "po" },
+        weight: 0.5,
+        description:
+          "Se puede lanzar como arma improvisada. Causa 2d6 de daño de ácido.",
+      },
+      {
+        name: "Agua bendita (frasco)",
+        type: "Gear",
+        cost: { quantity: 25, unit: "po" },
+        weight: 0.5,
+        description: "Daña a infernales y muertos vivientes (2d6 radiante).",
+      },
+      {
+        name: "Aljaba",
+        type: "Gear",
+        cost: { quantity: 1, unit: "po" },
+        weight: 0.5,
+        description: "Puede contener hasta 20 flechas.",
+      },
+      {
+        name: "Antitoxina",
+        type: "Gear",
+        cost: { quantity: 50, unit: "po" },
+        weight: 0.5,
+        description: "Ventaja en salvaciones contra veneno por 1 hora.",
+      },
+      {
+        name: "Antorcha",
+        type: "Gear",
+        cost: { quantity: 1, unit: "pc" },
+        weight: 0.5,
+        description: "Arde por 1 hora. Luz brillante 6m, tenue 6m.",
+      },
+      {
+        name: "Ariete portátil",
+        type: "Gear",
+        cost: { quantity: 4, unit: "po" },
+        weight: 17.5,
+        description: "+4 a pruebas de Fuerza para romper puertas.",
+      },
+      {
+        name: "Bolas de metal (bolsa)",
+        type: "Gear",
+        cost: { quantity: 1, unit: "po" },
+        weight: 1,
+        description:
+          "Cubren un área de 3m cuadrados. CD 10 Destreza o caer derribado.",
+      },
+      {
+        name: "Cadena (3m)",
+        type: "Gear",
+        cost: { quantity: 5, unit: "po" },
+        weight: 5,
+        description: "Tiene 10 PG. Se puede romper con CD 20 de Fuerza.",
+      },
+      {
+        name: "Canalizador Arcano (Bastón/Vara/Cristal)",
+        type: "Gear",
+        cost: { quantity: 10, unit: "po" },
+        weight: 1,
+        description: "Foco mágico para hechiceros, brujos y magos.",
+      },
+      {
+        name: "Canalizador Druídico (Muérdago/Tótem)",
+        type: "Gear",
+        cost: { quantity: 1, unit: "po" },
+        weight: 0,
+        description: "Foco mágico para druidas y exploradores.",
+      },
+      {
+        name: "Cuerda (Cáñamo)",
+        type: "Gear",
+        cost: { quantity: 1, unit: "po" },
+        weight: 5,
+        description: "15 metros. Se puede romper con CD 17 de Fuerza.",
+      },
+      {
+        name: "Cuerda (Seda)",
+        type: "Gear",
+        cost: { quantity: 10, unit: "po" },
+        weight: 2.5,
+        description: "15 metros. Más ligera y resistente que el cáñamo.",
+      },
+      {
+        name: "Esposas",
+        type: "Gear",
+        cost: { quantity: 2, unit: "po" },
+        weight: 1,
+        description: "CD 20 para escapar o romperlas.",
+      },
+      {
+        name: "Fuego de Alquimista",
+        type: "Gear",
+        cost: { quantity: 50, unit: "po" },
+        weight: 0.5,
+        description:
+          "Frasco arrojadizo. Al impactar causa 1d4 de daño de fuego cada turno.",
+      },
+      {
+        name: "Libro de Conjuros",
+        type: "Gear",
+        cost: { quantity: 50, unit: "po" },
+        weight: 1.5,
+        description:
+          "Esencial para los magos. Contiene sus conjuros inscritos.",
+      },
+      {
+        name: "Linterna sorda",
+        type: "Gear",
+        cost: { quantity: 5, unit: "po" },
+        weight: 1,
+        description:
+          "Emite luz brillante en 9m. Se puede tapar para ocultar la luz.",
+      },
       {
         name: "Paquete de Explorador",
         type: "Gear",
@@ -670,6 +828,14 @@ const seedDB = async () => {
           "Mochila, palanqueta, martillo, pitones, antorchas, yesquero, raciones y cantimplora.",
       },
       {
+        name: "Paquete de Ladrón",
+        type: "Gear",
+        cost: { quantity: 16, unit: "po" },
+        weight: 20,
+        description:
+          "Mochila, bolas de metal, cordel, campana, velas, palanqueta, martillo, pitones, linterna sorda, aceite, raciones, yesquero, cantimplora.",
+      },
+      {
         name: "Poción de Curación",
         type: "Gear",
         rarity: "Common",
@@ -679,42 +845,33 @@ const seedDB = async () => {
           "Restaura 2d4 + 2 puntos de golpe. Acción adicional para beber.",
       },
       {
-        name: "Antitoxina",
-        type: "Gear",
-        cost: { quantity: 50, unit: "po" },
-        weight: 0.5,
-        description: "Ventaja en salvaciones contra veneno por 1 hora.",
-      },
-      {
-        name: "Cuerda (Cáñamo)",
+        name: "Red",
         type: "Gear",
         cost: { quantity: 1, unit: "po" },
-        weight: 5,
-        description: "15 metros. Se puede romper con CD 17 de Fuerza.",
-      },
-      {
-        name: "Linterna sorda",
-        type: "Gear",
-        cost: { quantity: 5, unit: "po" },
-        weight: 1,
-        description:
-          "Emite luz brillante en 9m. Se puede tapar para ocultar la luz.",
-      },
-      {
-        name: "Libro de Conjuros",
-        type: "Gear",
-        cost: { quantity: 50, unit: "po" },
         weight: 1.5,
         description:
-          "Esencial para los magos. Contiene sus conjuros inscritos.",
+          "Apresar criatura Grande o menor. CD 10 Fuerza para escapar. 5 PG.",
       },
       {
-        name: "Fuego de Alquimista",
+        name: "Símbolo Sagrado",
         type: "Gear",
-        cost: { quantity: 50, unit: "po" },
+        cost: { quantity: 5, unit: "po" },
         weight: 0.5,
-        description:
-          "Frasco arrojadizo. Al impactar causa 1d4 de daño de fuego cada turno hasta que se apague.",
+        description: "Foco mágico para clérigos y paladines.",
+      },
+      {
+        name: "Tienda",
+        type: "Gear",
+        cost: { quantity: 2, unit: "po" },
+        weight: 10,
+        description: "Refugio para dos personas.",
+      },
+      {
+        name: "Yesquero",
+        type: "Gear",
+        cost: { quantity: 5, unit: "pp" },
+        weight: 0.5,
+        description: "Contiene pedernal y acero para encender fuego.",
       },
 
       // ===========================================================================
@@ -735,10 +892,28 @@ const seedDB = async () => {
           "Rápido y fiable para viajes, pero no entrenado para pelear.",
       },
       {
+        name: "Poni",
+        type: "Mount",
+        cost: { quantity: 30, unit: "po" },
+        description: "Pequeño pero robusto, ideal para medianos o gnomos.",
+      },
+      {
         name: "Elefante",
         type: "Mount",
         cost: { quantity: 200, unit: "po" },
         description: "Enorme bestia de carga o guerra.",
+      },
+      {
+        name: "Camello",
+        type: "Mount",
+        cost: { quantity: 50, unit: "po" },
+        description: "Resistente para viajes por el desierto.",
+      },
+      {
+        name: "Mula",
+        type: "Mount",
+        cost: { quantity: 8, unit: "po" },
+        description: "Bestia de carga fiable.",
       },
     ];
 
