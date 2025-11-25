@@ -9,7 +9,13 @@ const FeatSchema = new mongoose.Schema({
     classFeature: String // Ej: "Lanzamiento de Conjuros"
   },
   description: String,
-  benefits: [{ type: String }] // Lista de efectos mecánicos
+  benefits: [{ type: String }], // Lista de efectos mecánicos
+
+  table: {
+    title: String,
+    headers: [String], // Ej: ["Herramientas", "Equipo"]
+    rows: [[String]]   // Ej: [["Albañil", "Polipasto"], ["...", "..."]]
+  }
 });
 
 export default mongoose.model("Feat", FeatSchema);

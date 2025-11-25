@@ -68,6 +68,23 @@ const seedFeats = async () => {
           "Descuento: Cuando compres un objeto no mágico, consigues un 20% de descuento.",
           "Fabricación rápida: Tras un descanso largo, puedes fabricar un objeto de la tabla si tienes las herramientas. Dura hasta el siguiente descanso largo.",
         ],
+        table: {
+          title: "Fabricación Rápida",
+          headers: ["Herramientas de artesano", "Equipo fabricado"],
+          rows: [
+            ["Herramientas de albañil", "Polipasto"],
+            ["Herramientas de alfarero", "Jarro, lámpara"],
+            ["Herramientas de carpintero", "Antorcha, escalera"],
+            ["Herramientas de curtidor", "Bolsa, estuche"],
+            ["Herramientas de ebanista", "Bastón, garrote, garrote grande"],
+            [
+              "Herramientas de herrero",
+              "Abrojos, bolas de metal, cubo, garfio de escalada, olla de hierro",
+            ],
+            ["Herramientas de manitas", "Campana, pala, yesca"],
+            ["Herramientas de tejedor", "Cesta, cuerda, red, tienda"],
+          ],
+        },
       },
       {
         name: "Habilidoso",

@@ -130,6 +130,43 @@ function FeatModal({ feat, onClose }) {
                             </ul>
                         </div>
                     )}
+                    {feat.table && (
+                        <div className="mt-6">
+                            <h4 className="text-sm font-bold text-amber-500 uppercase mb-3 tracking-widest border-b border-slate-800 pb-2">
+                                {feat.table.title}
+                            </h4>
+                            <div className="overflow-hidden rounded-lg ">
+                                <table className="w-full text-left text-sm border-collapse">
+                                    <thead>
+                                        <tr className="bg-slate-950/80 text-slate-200 border-b border-slate-700">
+                                            {feat.table.headers.map((header, i) => (
+                                                <th key={i} className="p-3 font-serif font-bold">
+                                                    {header}
+                                                </th>
+                                            ))}
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-slate-800/50 bg-slate-900/30">
+                                        {feat.table.rows.map((row, rowIndex) => (
+                                            <tr
+                                                key={rowIndex}
+                                                className="hover:bg-slate-800/50 transition-colors"
+                                            >
+                                                {row.map((cell, cellIndex) => (
+                                                    <td
+                                                        key={cellIndex}
+                                                        className={`p-3 text-slate-400 ${cellIndex === 0 ? 'font-medium text-amber-500/80' : ''}`}
+                                                    >
+                                                        {cell}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
