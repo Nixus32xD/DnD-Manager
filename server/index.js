@@ -10,6 +10,7 @@ import spellRoutes from "./routes/spellsRoutes.js";
 import featRoutes from "./routes/featRoutes.js"
 import itemRoutes from "./routes/itemRoutes.js";
 import backgroundRoutes from "./routes/backgroundRoutes.js";
+import speciesRoutes from "./routes/speciesRoutes.js";
 
 dotenv.config();
 
@@ -45,6 +46,7 @@ app.use("/api/spells", spellRoutes);
 app.use("/api/feats", featRoutes);
 app.use("/api/items", itemRoutes);
 app.use("/api/backgrounds", backgroundRoutes);
+app.use("/api/species", speciesRoutes)
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);

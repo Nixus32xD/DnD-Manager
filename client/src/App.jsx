@@ -7,6 +7,7 @@ import RulesPage from './pages/RulesPage';
 import FeatsPage from './pages/FeatsPage';
 import ItemsPage from './pages/ItemsPage';
 import BackgroundsPage from './pages/BackgroundsPage';
+import SpeciesPage from './pages/SpeciesPage';
 
 
 // Placeholder para páginas que aún no creaste
@@ -40,6 +41,8 @@ function App() {
         <Route path="rules/items" element={< ItemsPage/>} />
         {/* Rutas de Transfondo */}
         <Route path="rules/backgrounds" element={< BackgroundsPage/>} />
+        {/* Rutas de Especies */}
+        <Route path="rules/species" element={< SpeciesPage/>} />
 
 
         {/* Ruta 404 */}
