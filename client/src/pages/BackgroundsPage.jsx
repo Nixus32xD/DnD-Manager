@@ -13,10 +13,25 @@ function BackgroundModal({ background, onClose }) {
         return () => window.removeEventListener('keydown', handleEsc);
     }, [onClose]);
 
+    // Lógica para mostrar la clase asociada a la dote según el trasfondo
+    const getFeatDisplay = () => {
+        if (!background.feat) return "Sin dote asignada";
+
+        let suffix = "";
+        // Normalizamos a minúsculas para evitar errores de tipeo
+        const bgName = background.name.toLowerCase();
+
+        if (bgName === "acólito") suffix = " (Clérigo)";
+        else if (bgName === "sabio" || bgName === "erudito") suffix = " (Mago)";
+        else if (bgName === "guía") suffix = " (Druida)";
+
+        return `${background.feat.name}${suffix}`;
+    };
+
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity" onClick={onClose}>
-            <div 
-                className="bg-slate-900 border border-amber-500/30 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto dark-scrollbar relative flex flex-col" 
+            <div
+                className="bg-slate-900 border border-amber-500/30 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto dark-scrollbar relative flex flex-col"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Botón Cerrar */}
@@ -41,7 +56,7 @@ function BackgroundModal({ background, onClose }) {
 
                 {/* Cuerpo */}
                 <div className="p-6 space-y-6">
-                    
+
                     {/* Descripción */}
                     <p className="text-slate-300 italic text-lg leading-relaxed border-l-4 border-emerald-600/50 pl-4 bg-emerald-950/10 py-2 rounded-r">
                         "{background.description}"
@@ -49,7 +64,7 @@ function BackgroundModal({ background, onClose }) {
 
                     {/* Grid de Características */}
                     <div className="grid md:grid-cols-2 gap-6">
-                        
+
                         {/* Bonificadores de Característica */}
                         <div className="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
                             <h4 className="text-sm font-bold text-amber-500 uppercase mb-3 flex items-center gap-2">
@@ -75,7 +90,7 @@ function BackgroundModal({ background, onClose }) {
                             {background.feat ? (
                                 <div>
                                     <span className="text-lg font-serif font-bold text-slate-100 block mb-1">
-                                        {background.feat.name}
+                                        {getFeatDisplay()}
                                     </span>
                                     <p className="text-xs text-slate-400 line-clamp-3">
                                         {background.feat.description}
@@ -132,7 +147,7 @@ function BackgroundModal({ background, onClose }) {
 // --- COMPONENTE TARJETA GRID ---
 function BackgroundCard({ background, onClick }) {
     return (
-        <div 
+        <div
             onClick={() => onClick(background)}
             className="group flex flex-col p-6 rounded-xl border border-slate-800 bg-slate-900/40 backdrop-blur-sm 
                        hover:border-emerald-500/30 hover:bg-slate-800/60 hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full relative overflow-hidden"
@@ -199,17 +214,17 @@ export default function BackgroundsPage() {
         fetchBackgrounds();
     }, []);
 
-    const filteredBackgrounds = backgrounds.filter(bg => 
+    const filteredBackgrounds = backgrounds.filter(bg =>
         bg.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-200 font-sans pb-20">
-            
+
             {selectedBg && <BackgroundModal background={selectedBg} onClose={() => setSelectedBg(null)} />}
 
             <div className="container mx-auto px-4 py-12">
-                
+
                 {/* Header */}
                 <div className="text-center mb-12 space-y-3">
                     <h1 className="text-4xl md:text-6xl font-extrabold font-serif text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 via-emerald-500 to-teal-700 filter drop-shadow-lg">
