@@ -21,6 +21,13 @@ const SpellSchema = new mongoose.Schema({
   higherLevels: String, // Descripción de escalado
   classes: [String], // ["Mago", "Hechicero"] - Importante para filtros de creación
   source: { type: String, default: "PHB 2024" },
+  tables: [
+    {
+      title: String, // Ej: "Precipitaciones"
+      headers: [String], // Ej: ["Nivel", "Estado"]
+      rows: [[String]], // Ej: [["1", "Despejado"], ["2", "Nubes escasas"]]
+    },
+  ],
 });
 
 export default mongoose.model("Spell", SpellSchema);

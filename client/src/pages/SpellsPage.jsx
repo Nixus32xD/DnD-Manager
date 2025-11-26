@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Search, Filter, Scroll, Brain, Sparkles, BookOpen, X, Hand, Mic, Box, Clock, Ruler, Hourglass, Shield } from "lucide-react";
+import { Search, Filter, Scroll, Brain, Sparkles, BookOpen, X, Hand, Mic, Box, Clock, Ruler, Hourglass, Shield, Table as TableIcon } from "lucide-react";
 
 // --- CONSTANTES Y UTILIDADES ---
 
@@ -42,7 +42,7 @@ function SpellModal({ spell, onClose }) {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity" onClick={onClose}>
             <div
-                className="bg-slate-900 border border-amber-500/40 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto dark-scrollbar custom-scrollbar relative flex flex-col"
+                className="bg-slate-900 border border-amber-500/40 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto dark-scrollbar relative flex flex-col"
                 onClick={(e) => e.stopPropagation()} // Evita cerrar al hacer clic dentro
             >
                 {/* Botón Cerrar */}
@@ -129,6 +129,45 @@ function SpellModal({ spell, onClose }) {
                                 {spell.description}
                             </div>
                         </div>
+
+                        {/* --- RENDERIZADO DE TABLAS (NUEVO) --- */}
+                        {spell.tables && spell.tables.length > 0 && (
+                            <div className="space-y-6 my-6">
+                                {spell.tables.map((table, index) => (
+                                    <div key={index} className="overflow-hidden rounded-lg border border-slate-800 shadow-sm">
+                                        {table.title && (
+                                            <div className="bg-slate-950/80 px-4 py-2.5 border-b border-slate-800 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">
+                                                <TableIcon className="w-3.5 h-3.5" />
+                                                {table.title}
+                                            </div>
+                                        )}
+                                        <div className="overflow-x-auto">
+                                            <table className="w-full text-left text-sm border-collapse">
+                                                <thead>
+                                                    <tr className="bg-slate-900/50 text-slate-300 border-b border-slate-800/50">
+                                                        {table.headers.map((h, i) => (
+                                                            <th key={i} className="p-3 font-serif font-medium whitespace-nowrap">{h}</th>
+                                                        ))}
+                                                    </tr>
+                                                </thead>
+                                                <tbody className="divide-y divide-slate-800/30 bg-slate-900/20">
+                                                    {table.rows.map((row, rI) => (
+                                                        <tr key={rI} className="hover:bg-slate-800/40 transition-colors">
+                                                            {row.map((cell, cI) => (
+                                                                <td key={cI} className={`p-3 ${cI === 0 ? 'text-amber-100/90 font-medium' : 'text-slate-400'}`}>
+                                                                    {cell}
+                                                                </td>
+                                                            ))}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                        {/* ------------------------------------- */}
 
                         {spell.higherLevels && (
                             <div className="bg-slate-800/20 p-4 rounded-lg border-l-4 border-indigo-500">
