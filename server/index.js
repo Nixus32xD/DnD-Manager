@@ -11,6 +11,8 @@ import featRoutes from "./routes/featRoutes.js"
 import itemRoutes from "./routes/itemRoutes.js";
 import backgroundRoutes from "./routes/backgroundRoutes.js";
 import speciesRoutes from "./routes/speciesRoutes.js";
+import classRoutes from "./routes/classRoutes.js";
+import glossaryRoutes from "./routes/glossaryRoutes.js";
 
 dotenv.config();
 
@@ -47,6 +49,8 @@ app.use("/api/feats", featRoutes);
 app.use("/api/items", itemRoutes);
 app.use("/api/backgrounds", backgroundRoutes);
 app.use("/api/species", speciesRoutes)
+app.use("/api/classes", classRoutes);
+app.use("/api/glossary", glossaryRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);

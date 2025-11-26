@@ -8,7 +8,7 @@ import FeatsPage from './pages/FeatsPage';
 import ItemsPage from './pages/ItemsPage';
 import BackgroundsPage from './pages/BackgroundsPage';
 import SpeciesPage from './pages/SpeciesPage';
-
+import ClassPage from './pages/ClassPage';
 
 // Placeholder para páginas que aún no creaste
 const Placeholder = ({ title }) => (
@@ -43,6 +43,9 @@ function App() {
         <Route path="rules/backgrounds" element={< BackgroundsPage/>} />
         {/* Rutas de Especies */}
         <Route path="rules/species" element={< SpeciesPage/>} />
+        {/* Rutas de Clases */}
+        <Route path="rules/classes/:classId" element={< ClassPage/>} />
+        <Route path="rules/classes" element={< ClassPage/>} />
 
 
         {/* Ruta 404 */}
