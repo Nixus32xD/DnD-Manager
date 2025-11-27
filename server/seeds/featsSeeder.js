@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Feat from "./models/Feat.js";
+import Feat from "../models/Feat.js";
 
 dotenv.config();
 

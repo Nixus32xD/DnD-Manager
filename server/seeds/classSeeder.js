@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Class from "./models/Class.js";
+import Class from "../models/Class.js";
 
 dotenv.config();
 
@@ -28,10 +28,10 @@ const barbarianData = {
     ],
   },
   startingEquipment: [
-    "Hacha a dos manos (o arma marcial)",
-    "Dos hachas de mano",
+    "Hacha a dos manos",
+    "Cuatro hachas de mano",
     "Paquete de explorador",
-    "4 Jabalinas",
+    "15 po",
   ],
   tableMetadata: {
     columns: [
@@ -48,17 +48,17 @@ const barbarianData = {
         {
           name: "Furia",
           description:
-            "Acción adicional. Resistencia a daño físico, ventaja en Fuerza y daño extra. Dura 1 min o hasta que te incapaciten/pongas armadura pesada.",
+            "Puedes imbuirte de un poder primigenio llamado furia, que te otorga una fuerza y resistencia extraordinarias.\n\nPuedes dejarte llevar por ella como acción adicional si no llevas puesta una armadura pesada. Puedes dejarte llevar por la furia tantas veces como se indica para tu nivel de bárbaro en la columna de furias. Recuperas uno de los usos gastados tras finalizar un descanso corto y todos tras finalizar un descanso largo.\n\nMientras estés enfurecido, usa las siguientes reglas:\n\n<strong>Resistencia al daño.</strong> Tienes resistencia al daño contundente, cortante y perforante.\n\n<strong>Daño por furia.</strong> Cuando llevas a cabo un ataque que use la Fuerza (ya sea con un arma o un ataque sin armas) y causas daño al objetivo, obtienes un bonificador al daño que aumenta conforme subes de nivel de bárbaro, como se muestra en la columna “Daño por furia” de la tabla “Rasgos de bárbaro”.\n\n<strong>Ventaja en Fuerza.</strong> Tienes ventaja en las pruebas de Fuerza y en las tiradas de salvación de Fuerza.\n\n<strong>Sin concentración ni conjuros.</strong> No puedes mantener la concentración ni lanzar conjuros.\n\n<strong>Duración.</strong> La furia dura hasta el final de tu siguiente turno y termina antes si te pones una armadura pesada o recibes el estado de incapacitado. Si la furia sigue activa en tu siguiente turno, puedes prolongarla otro asalto de una de las siguientes formas: \n• Haces una tirada de ataque contra un enemigo.\n• Obligas a un enemigo a hacer una tirada de salvación.\n• Empleas una acción adicional para prolongar tu furia.\n\nCada vez que prolongues la furia, durará hasta el final de tu siguiente turno. Puedes mantener una furia hasta 10 minutos.",
         },
         {
           name: "Defensa sin Armadura",
           description:
-            "Tu CA es 10 + DES + CON si no llevas armadura (puedes usar escudo).",
+            "Mientras no lleves armadura alguna, tu clase de armadura base será igual a 10 más tus modificadores por Destreza y Constitución. Obtienes este beneficio aunque lleves un escudo. ",
         },
         {
           name: "Maestría con Armas",
           description:
-            "Puedes usar las propiedades de maestría de 2 tipos de armas.",
+            "Tu entrenamiento con armas te permite utilizar las propiedades de maestría con dos tipos de armas cuerpo a cuerpo sencillas o marciales de tu elección, como las hachas a dos manos y las hachas de mano. Tras finalizar un descanso largo, puedes llevar a cabo ejercicios con armas y cambiar una de dichas elecciones. \nCuando alcances ciertos niveles de bárbaro, adquirirás la capacidad de usar las propiedades de maestría con más tipos de armas, como se muestra en la columna “Maestría con armas” ",
         },
       ],
       classSpecific: { rages: "2", rageDmg: "+2", weaponMastery: "2" },
@@ -70,12 +70,12 @@ const barbarianData = {
         {
           name: "Ataque Temerario",
           description:
-            "Tienes ventaja en ataques de Fuerza, pero te atacan con ventaja hasta tu próximo turno.",
+            "Puedes abandonar por completo tu defensa para atacar con una mayor fiereza. Cuando vayas a realizar la primera tirada de ataque de tu turno, puedes decidir atacar temerariamente. Si lo haces, tendrás ventaja en las tiradas de ataque que utilicen la Fuerza hasta el principio de tu siguiente turno, pero las tiradas de ataque contra ti también tendrán ventaja durante ese tiempo.",
         },
         {
           name: "Sentir el Peligro",
           description:
-            "Ventaja en salvaciones de Destreza contra efectos que puedas ver.",
+            "Eres capaz de percibir de forma casi sobrenatural cuándo las cosas no son como deberían. Gracias a ello, se te da bien evitar el peligro. Tienes ventaja en las tiradas de salvación de Destreza salvo que tengas el estado de incapacitado. ",
         },
       ],
       classSpecific: { rages: "2", rageDmg: "+2", weaponMastery: "2" },
@@ -85,14 +85,14 @@ const barbarianData = {
       proficiencyBonus: 2,
       features: [
         {
-          name: "Senda Primordial",
+          name: "Subclase de Bárbaro",
           description:
-            "Eliges tu Subclase (Árbol del Mundo, Berserker, Corazón Salvaje o Fanático).",
+            "Consigues una subclase de bárbaro de tu elección. Las subclases de la senda del Árbol del Mundo, la senda del berserker, la senda del corazón salvaje y la senda del fanático se detallan tras la descripción de esta clase. \nUna subclase es una especialización que te proporciona rasgos cuando alcanzas ciertos niveles de bárbaro. De aquí en adelante, obtienes todos los rasgos de tu subclase que sean de tu nivel de bárbaro e inferiores.",
         },
         {
           name: "Conocimiento Primigenio",
           description:
-            "Ganas competencia en una habilidad extra. Puedes usar Fuerza para ciertas habilidades mientras estás en Furia.",
+            "Ganas competencia en otra habilidad de tu elección de la lista de habilidades disponibles para los bárbaros en el nivel 1. \n\nAdemás, mientras estés enfurecido, puedes canalizar el poder primigenio cuando intentes determinadas tareas. Siempre que hagas una prueba de característica con una de las siguientes habilidades, podrás hacerla como una prueba de Fuerza incluso si normalmente utiliza otra característica: Acrobacias, Intimidación, Percepción, Sigilo o Supervivencia. Cuando utilizas esta capacidad, tu Fuerza representa el poder primigenio que fluye por ti y agudiza tu agilidad, porte y sentidos.",
         },
       ],
       classSpecific: { rages: "3", rageDmg: "+2", weaponMastery: "2" },
@@ -103,7 +103,7 @@ const barbarianData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description: "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
         },
       ],
       classSpecific: { rages: "3", rageDmg: "+2", weaponMastery: "3" },
@@ -115,7 +115,7 @@ const barbarianData = {
         {
           name: "Ataque Adicional",
           description:
-            "Puedes atacar dos veces cuando realizas la acción de Atacar.",
+            "Cuando lleves a cabo la acción de atacar en tu turno, podrás hacer dos ataques en lugar de uno. ",
         },
         {
           name: "Movimiento Rápido",
@@ -130,7 +130,7 @@ const barbarianData = {
       proficiencyBonus: 3,
       features: [
         {
-          name: "Rasgo de Senda",
+          name: "Rasgo de Subclase",
           description: "Obtienes un rasgo de tu subclase.",
         },
       ],
@@ -142,12 +142,12 @@ const barbarianData = {
       features: [
         {
           name: "Instinto Salvaje",
-          description: "Tienes ventaja en tiradas de Iniciativa.",
+          description: "Tus instintos están tan afinados que tienes ventaja en las tiradas de iniciativa. ",
         },
         {
           name: "Salto Instintivo",
           description:
-            "Como parte de la acción de entrar en Furia, puedes moverte la mitad de tu velocidad.",
+            "Como parte de la acción adicional para dejarte llevar por la furia, puedes moverte hasta la mitad de tu velocidad.",
         },
       ],
       classSpecific: { rages: "4", rageDmg: "+2", weaponMastery: "3" },
@@ -158,7 +158,7 @@ const barbarianData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description: "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
         },
       ],
       classSpecific: { rages: "4", rageDmg: "+2", weaponMastery: "3" },
@@ -170,7 +170,7 @@ const barbarianData = {
         {
           name: "Golpe Brutal",
           description:
-            "Si atacas con Temerario, puedes sacrificar la ventaja para ganar 1d10 de daño extra y aplicar un efecto (Empujar o Ralentizar).",
+            "Si utilizas Ataque temerario, puedes renunciar a cualquier ventaja en una tirada de ataque de tu elección basada en la Fuerza en tu turno. La tirada de ataque elegida no debe tener desventaja. Si la tirada de ataque elegida acierta, el objetivo sufre 1d10 de daño adicional del mismo tipo que inflija el arma o el ataque sin armas y puedes causar un efecto de Golpe brutal de tu elección. Tienes las siguientes opciones de efectos. \n<strong>Golpe enérgico:</strong> El objetivo es empujado 4,5 m respecto a ti en línea recta. Luego puedes moverte hasta la mitad de tu velocidad directamente hacia el objetivo sin provocar ataques de oportunidad. \n<strong>Golpe ralentizador:</strong> La velocidad del objetivo se reduce en 4,5 m hasta el principio de tu siguiente turno. Un objetivo solo puede sufrir un golpe ralentizador cada vez: el más reciente.",
         },
       ],
       classSpecific: { rages: "4", rageDmg: "+3", weaponMastery: "3" },

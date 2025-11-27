@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
 // Importamos los modelos
-import Character from './models/Character.js';
-import User from './models/User.js';
-import Species from './models/Species.js';
-import Class from './models/Class.js';
-import Background from './models/Background.js';
+import Character from '../models/Character.js';
+import User from '../models/User.js';
+import Species from '../models/Species.js';
+import Class from '../models/Class.js';
+import Background from '../models/Background.js';
 
 dotenv.config();
 

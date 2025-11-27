@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 // Importar Modelos
-import Background from "./models/Background.js";
-import Feat from "./models/Feat.js";
+import Background from "../models/Background.js";
+import Feat from "../models/Feat.js";
 
 dotenv.config();
 

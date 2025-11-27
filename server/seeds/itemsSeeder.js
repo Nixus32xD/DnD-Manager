@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Item from "./models/item.js"; // Asegurate que la ruta sea correcta
+import Item from "../models/item.js"; // Asegurate que la ruta sea correcta
 
 dotenv.config();
 
