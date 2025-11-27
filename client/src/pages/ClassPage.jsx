@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Sword, Shield, Zap, X, ChevronRight, Scroll, BookOpen, Star } from 'lucide-react';
+import Keyword from '../components/Keyword';
 
 const ClassesPage = () => {
     const [classes, setClasses] = useState([]);
