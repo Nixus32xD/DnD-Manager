@@ -35,8 +35,8 @@ const ClassesPage = () => {
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {classes.map((cls) => (
-                        <div 
-                            key={cls._id} 
+                        <div
+                            key={cls._id}
                             onClick={() => setSelectedClass(cls)}
                             className="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-amber-600/50 cursor-pointer transition-all hover:-translate-y-1 group relative overflow-hidden"
                         >
@@ -62,7 +62,7 @@ const ClassesPage = () => {
             {selectedClass && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md animate-in fade-in" onClick={() => setSelectedClass(null)}>
                     <div className="bg-slate-900 border border-slate-700 w-full max-w-6xl max-h-[95vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
-                        
+
                         {/* Header Modal */}
                         <div className="bg-slate-950 p-6 border-b border-slate-800 flex justify-between items-start shrink-0">
                             <div>
@@ -79,7 +79,7 @@ const ClassesPage = () => {
 
                         {/* Contenido Scrollable */}
                         <div className="overflow-y-auto p-6 custom-scrollbar">
-                            
+
                             {/* TABLA DE PROGRESIÓN DINÁMICA */}
                             <div className="mb-8 border border-slate-800 rounded-lg overflow-hidden shadow-lg bg-slate-950">
                                 <div className="overflow-x-auto">
@@ -101,9 +101,20 @@ const ClassesPage = () => {
                                                     <td className="px-4 py-3 text-center font-bold text-slate-500">{level.level}</td>
                                                     <td className="px-4 py-3 text-center text-slate-200">+{level.proficiencyBonus}</td>
                                                     <td className="px-4 py-3">
-                                                        {level.features.map(f => f.name).join(", ") || "-"}
+                                                        {level.features.length > 0 ? (
+                                                            level.features.map((f, i) => (
+                                                                <span key={i}>
+                                                                    {/* Acá usamos el componente Keyword */}
+                                                                    <Keyword>{f.name}</Keyword>
+                                                                    {/* Agregamos la coma si no es el último */}
+                                                                    {i < level.features.length - 1 && ", "}
+                                                                </span>
+                                                            ))
+                                                        ) : (
+                                                            "-"
+                                                        )}
                                                     </td>
-                                                    
+
                                                     {/* Celdas Dinámicas */}
                                                     {selectedClass.tableMetadata?.columns.map((col, idx) => (
                                                         <td key={idx} className="px-4 py-3 text-center text-amber-100/80">
@@ -120,15 +131,15 @@ const ClassesPage = () => {
                             {/* PROFICIENCIAS Y EQUIPO */}
                             <div className="grid md:grid-cols-2 gap-6 mb-10">
                                 <div className="bg-slate-800/30 p-5 rounded-lg border border-slate-800">
-                                    <h3 className="text-amber-500 font-bold mb-3 font-serif flex items-center gap-2"><Shield className="w-4 h-4"/> Proficiencias</h3>
+                                    <h3 className="text-amber-500 font-bold mb-3 font-serif flex items-center gap-2"><Shield className="w-4 h-4" /> Proficiencias</h3>
                                     <ul className="space-y-2 text-sm text-slate-300">
-                                        <li><strong className="text-slate-500 uppercase text-xs">Armadura:</strong> <br/> {selectedClass.proficiencies.armor.join(", ")}</li>
-                                        <li><strong className="text-slate-500 uppercase text-xs">Armas:</strong> <br/> {selectedClass.proficiencies.weapons.join(", ")}</li>
-                                        <li><strong className="text-slate-500 uppercase text-xs">Salvaciones:</strong> <br/> {selectedClass.savingThrows.join(", ")}</li>
+                                        <li><strong className="text-slate-500 uppercase text-xs">Armadura:</strong> <br /> {selectedClass.proficiencies.armor.join(", ")}</li>
+                                        <li><strong className="text-slate-500 uppercase text-xs">Armas:</strong> <br /> {selectedClass.proficiencies.weapons.join(", ")}</li>
+                                        <li><strong className="text-slate-500 uppercase text-xs">Salvaciones:</strong> <br /> {selectedClass.savingThrows.join(", ")}</li>
                                     </ul>
                                 </div>
                                 <div className="bg-slate-800/30 p-5 rounded-lg border border-slate-800">
-                                    <h3 className="text-amber-500 font-bold mb-3 font-serif flex items-center gap-2"><Scroll className="w-4 h-4"/> Equipo Inicial</h3>
+                                    <h3 className="text-amber-500 font-bold mb-3 font-serif flex items-center gap-2"><Scroll className="w-4 h-4" /> Equipo Inicial</h3>
                                     <ul className="list-disc list-inside space-y-1 text-sm text-slate-300 marker:text-amber-700">
                                         {selectedClass.startingEquipment.map((item, i) => (
                                             <li key={i}>{item}</li>
@@ -146,7 +157,7 @@ const ClassesPage = () => {
                                             Subclases Disponibles
                                         </h3>
                                     </div>
-                                    
+
                                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                                         {selectedClass.subclasses.map((sub, idx) => (
                                             <div key={idx} className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-amber-700/50 transition-colors">
@@ -157,13 +168,16 @@ const ClassesPage = () => {
                                                 <p className="text-slate-400 text-sm mb-6 italic border-l-2 border-slate-800 pl-3">
                                                     "{sub.description}"
                                                 </p>
-                                                
+
                                                 {/* Features de la Subclase */}
                                                 <div className="space-y-3">
                                                     {sub.features.map((feat, fIdx) => (
                                                         <div key={fIdx} className="bg-slate-900/50 rounded p-3 text-sm border border-slate-800/50">
                                                             <div className="flex justify-between items-center mb-1">
-                                                                <span className="font-bold text-slate-200">{feat.name}</span>
+                                                                <span className="font-bold text-slate-200">
+                                                                    {/* Envolvemos el nombre del rasgo con Keyword */}
+                                                                    <Keyword>{feat.name}</Keyword>
+                                                                </span>
                                                                 <span className="text-[10px] font-bold bg-slate-800 text-slate-500 px-2 py-0.5 rounded uppercase tracking-wider">Nivel {feat.level}</span>
                                                             </div>
                                                             <p className="text-slate-400 text-xs leading-relaxed">{feat.description}</p>
