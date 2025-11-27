@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Sword, Shield, Zap, X, ChevronRight, Scroll, BookOpen, Star } from 'lucide-react';
 import Keyword from '../components/Keyword';
+// import { GiBattleAxe } from "react-icons/ginpm i react-icons";
 
 const ClassesPage = () => {
     const [classes, setClasses] = useState([]);

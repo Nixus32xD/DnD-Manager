@@ -126,7 +126,12 @@ function SpellModal({ spell, onClose }) {
                                 <Scroll className="w-4 h-4 text-slate-500" /> Descripción
                             </h3>
                             <div className="text-slate-300 text-sm leading-relaxed whitespace-pre-line">
-                                {spell.description}
+                                <div
+                                    className="text-slate-300 text-sm leading-relaxed text-left"
+                                    dangerouslySetInnerHTML={{
+                                        __html: spell.description.replace(/\n/g, '<br />')
+                                    }}
+                                />
                             </div>
                         </div>
 
