@@ -8438,16 +8438,53 @@ const seedSpells = async () => {
           material: true,
           materialDescription: "Incienso para quemar",
           cost: 0,
-          consumed: false, // No especifica consumo ni coste en oro
+          consumed: false,
         },
         duration: "Concentración, hasta 8 horas",
-        concentration: true,
         ritual: false,
         description:
-          "Hasta que termine el conjuro, asumes el control del clima a 7,5 km o menos de ti. Debes estar al aire libre para lanzar este conjuro y terminará antes de tiempo si entras en una zona cubierta. Cuando lanzas el conjuro, cambias las condiciones climatológicas actuales, que determinará tu DM. Puedes cambiar las precipitaciones, la temperatura y el viento. Se tardan 1d4 x 10 minutos en que las nuevas condiciones surtan efecto. En cuanto lo hagan, puedes volver a cambiarlas. Cuando el conjuro termine, el clima volverá poco a poco a su estado normal. Cuando cambies las condiciones meteorológicas, busca un estado en las tablas siguientes y modifica su nivel en uno, arriba o abajo. Si cambias el viento, también puedes alterar su dirección. ",
+          "Hasta que termine el conjuro, asumes el control del clima a 7,5 km o menos de ti. Debes estar al aire libre para lanzar este conjuro y terminará antes de tiempo si entras en una zona cubierta.\n\nCuando lanzas el conjuro, cambias las condiciones climatológicas actuales, que determinará tu DM. Puedes cambiar las precipitaciones, la temperatura y el viento. Se tardan 1d4 x 10 minutos en que las nuevas condiciones surtan efecto. En cuanto lo hagan, puedes volver a cambiarlas. Cuando el conjuro termine, el clima volverá poco a poco a su estado normal.\n\nCuando cambies las condiciones meteorológicas, busca un estado en las tablas siguientes y modifica su nivel en uno, arriba o abajo. Si cambias el viento, también puedes alterar su dirección.",
         higherLevels: null,
         classes: ["Clérigo", "Druida", "Mago"],
-        source: "PHB 2024", // [cite: 1468]
+        source: "PHB 2024",
+
+        // --- AQUÍ ESTÁ LA SINTAXIS DE LAS TABLAS ---
+        tables: [
+          {
+            title: "Precipitaciones",
+            headers: ["Nivel", "Estado"],
+            rows: [
+              ["1", "Despejado"],
+              ["2", "Nubes escasas"],
+              ["3", "Cielo cubierto o niebla de superficie"],
+              ["4", "Lluvia, granizo o nieve"],
+              ["5", "Lluvia torrencial, tormenta de granizo o ventisca"],
+            ],
+          },
+          {
+            title: "Temperatura",
+            headers: ["Nivel", "Estado"],
+            rows: [
+              ["1", "Ola de calor"],
+              ["2", "Caliente"],
+              ["3", "Templado"],
+              ["4", "Fresco"],
+              ["5", "Frío"],
+              ["6", "Frío extremo"],
+            ],
+          },
+          {
+            title: "Viento",
+            headers: ["Nivel", "Estado"],
+            rows: [
+              ["1", "Calmo"],
+              ["2", "Viento moderado"],
+              ["3", "Viento fuerte"],
+              ["4", "Galerna"],
+              ["5", "Tempestad"],
+            ],
+          },
+        ],
       },
       {
         name: "Dominar monstruo",
