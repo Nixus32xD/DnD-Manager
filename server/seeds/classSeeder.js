@@ -193,7 +193,7 @@ const barbarianData = {
         {
           name: "Furia Implacable",
           description:
-            "Si caes a 0 PG en furia, puedes hacer una salvación de CON (CD 10) para volver con tantos PG como tu nivel de bárbaro x2.",
+            "Tu furia te permite seguir luchando incluso tras sufrir heridas graves. Si tus puntos de golpe se reducen a O mientras estas enfurecido, pero no mueres inmediatamente, puedes hacer una tirada de salvación de Constitución con CD 10. Si la superas, tus puntos de golpe pasarán a ser una cantidad igual al doble de tu nivel de bárbaro. \nSiempre que uses este rasgo después de la primera vez, la CD aumenta en 5. Tras finalizar un descanso corto o largo, la CD vuelve a ser 10. ",
         },
       ],
       classSpecific: { rages: "4", rageDmg: "+3", weaponMastery: "4" },
@@ -204,7 +204,7 @@ const barbarianData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description: "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
         },
       ],
       classSpecific: { rages: "5", rageDmg: "+3", weaponMastery: "4" },
@@ -214,9 +214,9 @@ const barbarianData = {
       proficiencyBonus: 5,
       features: [
         {
-          name: "Golpe Brutal Mejorado",
+          name: "Golpe Brutal Mejorado ++",
           description:
-            "Nuevas opciones para Golpe Brutal: Abrumar (desventaja en salvaciones) y Desgarrar (bonificador al ataque de aliados).",
+            "Has perfeccionado tus formas de atacar con fiereza. Entre las opciones de Golpe brutal se encuentran ahora los siguientes efectos: \n<strong>Golpe abrumador:</strong> El objetivo tiene desventaja en la siguiente tirada de salvación que haga y no puede llevar a cabo ataques de oportunidad hasta el principio de tu siguiente turno.\n<strong>Golpe desgarrador:</strong> Antes del principio de tu siguiente turno, la próxima tirada de ataque realizada por otra criatura contra el objetivo obtiene un bonificador de +5. Una tirada de ataque puede obtener solo un bonificador de un golpe desgarrador. ",
         },
       ],
       classSpecific: { rages: "5", rageDmg: "+3", weaponMastery: "4" },
@@ -239,7 +239,7 @@ const barbarianData = {
         {
           name: "Furia Persistente",
           description:
-            "Recuperas todos los usos de Furia al tirar iniciativa. La furia dura 10 minutos sin necesidad de atacar.",
+            "Cuando tires iniciativa, puedes recuperar todos los usos gastados de la furia. Tras recuperar los usos de la furia de esta manera, no podrás volver a hacerlo hasta que finalices un descanso largo. \nAdemás, tu furia es tan intensa que ahora dura 10 minutos sin necesidad de hacer nada para prolongarla de un asalto a otro. Tu furia termina antes si recibes el estado de inconsciente (no solo el de incapacitado) o te pones una armadura pesada.",
         },
       ],
       classSpecific: { rages: "5", rageDmg: "+3", weaponMastery: "4" },
@@ -250,7 +250,7 @@ const barbarianData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description: "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
         },
       ],
       classSpecific: { rages: "5", rageDmg: "+4", weaponMastery: "4" },
@@ -260,9 +260,9 @@ const barbarianData = {
       proficiencyBonus: 6,
       features: [
         {
-          name: "Golpe Brutal Mejorado (2)",
+          name: "Golpe Brutal Mejorado +++",
           description:
-            "El daño extra aumenta a 2d10 y puedes aplicar dos efectos a la vez.",
+            "El daño adicional de tu Golpe brutal aumenta a 2d10. Además, puedes utilizar dos efectos diferentes de Golpe brutal siempre que uses tu rasgo Golpe brutal. ",
         },
       ],
       classSpecific: { rages: "6", rageDmg: "+4", weaponMastery: "4" },
@@ -274,7 +274,7 @@ const barbarianData = {
         {
           name: "Poderío Indómito",
           description:
-            "Si el total de una prueba de Fuerza es menor que tu puntuación de Fuerza, puedes usar tu puntuación en su lugar.",
+            "Si tu resultado en una prueba de Fuerza o una tirada de salvación de Fuerza es inferior a tu puntuación de Fuerza, puedes usar esa puntuación en lugar del resultado.",
         },
       ],
       classSpecific: { rages: "6", rageDmg: "+4", weaponMastery: "4" },
@@ -282,7 +282,7 @@ const barbarianData = {
     {
       level: 19,
       proficiencyBonus: 6,
-      features: [{ name: "Don Épico", description: "Eliges una Dote Épica." }],
+      features: [{ name: "Don Épico", description: "Obtienes una dote de don épico u otra dote de tu elección para la que cumplas las condiciones. Se recomienda Don del ataque imparable." }],
       classSpecific: { rages: "6", rageDmg: "+4", weaponMastery: "4" },
     },
     {
@@ -292,7 +292,7 @@ const barbarianData = {
         {
           name: "Campeón Primordial",
           description:
-            "Tus puntuaciones de Fuerza y Constitución aumentan en 4 (Máximo 25).",
+            "Encarnas un poder primigenio. Tus puntuaciones de Fuerza y Constitución aumentan en 4, hasta un máximo de 25. ",
         },
       ],
       classSpecific: { rages: "6", rageDmg: "+4", weaponMastery: "4" },
