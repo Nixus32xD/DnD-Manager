@@ -8551,7 +8551,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Destierras a una criatura a un semiplano laberíntico. Para escapar, debe usar una acción y superar una prueba de Inteligencia (Investigación) CD 20. Si escapa o termina el conjuro, regresa.",
+          "Destierras a una criatura a un semiplano labDestierras a una criatura que puedas ver dentro del alcance a un semiplano laberíntico. El objetivopermanecerá allí hasta que termine el conjuro o hastaque escape del laberinto.El objetivo puede llevar a cabo una acción de estudiarpara intentar escapar. Cuando lo haga, realizará unaprueba de Inteligencia (Investigación) con CD 20.Si la supera, escapará y el conjuro terminará.Cuando el conjuro termine, el objetivo reapareceráen el espacio que abandonó o en el espacio sin ocuparmás cercano si dicho espacio está ocupado. eríntico. Para escapar, debe usar unZa acción y superar una prueba de Inteligencia (Investigación) CD 20. Si escapa o termina el conjuro, regresa.",
         higherLevels: null,
         classes: ["Mago"],
         source: "PHB 2024", // [cite: 1508]
@@ -8574,7 +8574,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Tus mentiras son indetectables por magia. Además, cuando hagas una prueba de Carisma, puedes sustituir el resultado de la tirada por un 15.",
+          "Tus mHasta que el conjuro termine, cuando hagas una prueba deCarisma, puedes sustituir el resultado de la tirada por un15. Además, digas lo que digas, cualquier magia usada paradetectar si dices la verdad indicará que la estás diciendo. entiras son indetectables por magia. Además, cuando hagas una prueba de Carisma, puedes sustituir el resultado de la tirada por un 15.",
         higherLevels: null,
         classes: ["Bardo", "Brujo"],
         source: "PHB 2024", // [cite: 1508]
@@ -8597,7 +8597,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Proteges la mente de una criatura. Gana inmunidad al daño psíquico, al estado de hechizado, y a cualquier efecto que lea pensamientos, emociones, detecte alineamiento o localice mágicamente. Incluso 'Deseo' falla al intentar espiar.",
+          "Proteges la mente de una criatura. Gana inmunidad al daño psíquico, al estaHasta que el conjuro termine, una criatura voluntaria a la que toques tendrá inmunidad al daño psíquico y alestado de hechizada. Además, no se verá afectada por nadaque pudiera percibir sus emociones o alineamiento, leersus pensamientos o detectar mágicamente su ubicación,y ningún conjuro (ni siquiera deseo) puede conseguirinformación sobre el objetivo, observarlo desde lejoso controlar su mente. do de hechizado, y a cualquier efecto que lea pensamientos, emociones, detecte alineamiento o localice mágicamente. Incluso 'Deseo' falla al intentar espiar.",
         higherLevels: null,
         classes: ["Bardo", "Mago"],
         source: "PHB 2024", // [cite: 1514]
@@ -8620,7 +8620,7 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Creas una nube de humo y ascuas de 6 m de radio. Causa 10d8 de daño de fuego a quien entre o empiece su turno allí (salvación Destreza para mitad). La nube se aleja 3 m de ti cada turno.",
+          "Creas una nube de humo y ascUna nube turbulenta de humo y ascuas llena una esfera de 6 m de radio centrada en un punto dentro del alcance.La zona que ocupa la nube está muy oscura y dura hastaque el conjuro termine o hasta que la disperse un vientofuerte (por ejemplo, el que crea ráfaga de viento).Cuando aparezca la nube, todas las criaturas dentro deella harán una tirada de salvación de Destreza; sufrirán10d8 de daño de fuego si la fallan o la mitad del daño si lasuperan. Una criatura también deberá hacer esta tiradacuando la esfera entre en su espacio o cuando la criaturaentre en la esfera o termine su turno en ella. Una criaturasolo hace esta tirada una vez por turno.La nube se aleja de ti 3 m en la dirección que elijas alprincipio de cada uno de tus turnos.uas de 6 m de radio. Causa 10d8 de daño de fuego a quien entre o empiece su turno allí (salvación Destreza para mitad). La nube se aleja 3 m de ti cada turno.",
         higherLevels: null,
         classes: ["Druida", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1518]
@@ -8643,7 +8643,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Atacas la mente de una criatura (salvación Inteligencia). Si falla, sufre 10d12 daño psíquico y no puede lanzar conjuros ni acciones de magia durante 30 días (puede repetir salvación cada 30 días). Si supera, mitad de daño.",
+          "Atacas la mente Atacas la mente de una criatura que puedas ver dentro del alcance. El objetivo hace una tirada de salvación deInteligencia.Si la falla, sufrirá 10412 de daño psíquico y no podrálanzar conjuros ni realizar acciones de magia. Al finalde cada 30 días, el objetivo repite la tirada de salvacióny, si tiene éxito, se librará del efecto. También se puedefinalizar este efecto mediante un conjuro curar, deseoo restablecimiento mayor.Si supera la tirada, solo sufrirá la mitad de ese daño. de una criatura (salvación Inteligencia). Si falla, sufre 10d12 daño psíquico y no puede lanzar conjuros ni acciones de magia durante 30 días (puede repetir salvación cada 30 días). Si supera, mitad de daño.",
         higherLevels: null,
         classes: ["Bardo", "Brujo", "Druida", "Mago"],
         source: "PHB 2024", // [cite: 1518]
@@ -8666,7 +8666,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Si el objetivo tiene 150 pg o menos, queda aturdido. Si tiene más, su velocidad cae a 0. El objetivo aturdido hace salvación de Constitución al final de sus turnos para terminar el efecto.",
+          "Si el objetivo tiene 150 pAbrumas la mente de una criatura que puedas ver dentro del alcance. Si el objetivo tiene 150 puntos de golpeo menos, tendrá el estado de aturdido. De lo contrario,su velocidad será O hasta el principio de tu siguienteturno.El objetivo aturdido hace una tirada de salvación deConstitución al final de cada uno de sus turnos y, si tieneéxito, se librará del estado. g o menos, queda aturdido. Si tiene más, su velocidad cae a 0. El objetivo aturdido hace salvación de Constitución al final de sus turnos para terminar el efecto.",
         higherLevels: null,
         classes: ["Bardo", "Brujo", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1520]
@@ -8689,7 +8689,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Creas una puerta de sombras que lleva a un semiplano vacío de 9 m de lado. Puedes acceder a semiplanos creados anteriormente. Al terminar, la puerta desaparece atrapando lo que haya dentro.",
+          "Creas una puerta El objetivo de la tirada de ataque recibe 5d10 de daño de fuerza adicional del ataque. Si el ataque reduce los puntosde golpe del objetivo a 50 o menos, deberá superar unatirada de salvación de Carisma o se teletransportaráa un semiplano inofensivo hasta que termine el conjuro.Mientras permanezca allí, tendrá el estado de incapacitado.Cuando el conjuro termine, el objetivo reaparecerá enel espacio que abandonó o en el espacio sin ocupar máscercano si dicho espacio está ocupado. de sombras que lleva a un semiplano vacío de 9 m de lado. Puedes acceder a semiplanos creados anteriormente. Al terminar, la puerta desaparece atrapando lo que haya dentro.",
         higherLevels: null,
         classes: ["Brujo", "Hechicero", "Mago"],
         source: "PHB 2024", // [cite: 1536]
@@ -8712,7 +8712,7 @@ const seedSpells = async () => {
         concentration: false,
         ritual: false,
         description:
-          "Creas un enlace telepático con una criatura voluntaria en el mismo plano. Podéis compartir palabras, imágenes y sensaciones instantáneamente.",
+          "Creas un eCreas un enlace telepático entre tú y una criaturavoluntaria que conozcas. El objetivo puede estar encualquier lugar del mismo plano de existencia que tú,pero el conjuro terminará si dejáis de estar en el mismoplano.Hasta que el conjuro termine, el objetivo y tú podéiscompartir de forma instantánea palabras, imágenes,sonidos y otros mensajes sensoriales mediante el enlace,y el objetivo te reconoce como la criatura con la que seestá comunicando. El conjuro permite que una criaturacomprenda el significado de tus palabras y cualquiermensaje sensorial que le envíes. nlace telepático con una criatura voluntaria en el mismo plano. Podéis compartir palabras, imágenes y sensaciones instantáneamente.",
         higherLevels: null,
         classes: ["Mago"],
         source: "PHB 2024", // [cite: 1539]
@@ -8735,7 +8735,12 @@ const seedSpells = async () => {
         concentration: true,
         ritual: false,
         description:
-          "Sacudes el suelo en un radio de 30 m. Las criaturas deben superar salvación de Destreza o caer derribadas. Crea grietas (1d6) que pueden tragar criaturas y derrumba estructuras (causando 50 daño contundente a la estructura y riesgo de entierro a criaturas cercanas).",
+          "Sacudes el sueloElige un punto del suelo que puedas ver dentro delalcance. Hasta que el conjuro termine, una intensasacudida afecta al suelo en un círculo de 30 m de radiocentrado en ese punto. El suelo de la zona se consideraterreno difícil.Cuando lances este conjuro y al final de cada uno de tusturnos hasta que termine, todas las criaturas que haya enel suelo en la zona deberán hacer una tirada de salvaciónde Destreza. Si la fallan, tendrán el estado de derribadasy perderán la concentración.Además, podrás provocar los siguientes efectos."
+          + "\n\n" +
+          "Grietas. Se abre un total de 1d6 fisuras en la zonadel conjuro al final del turno en que lo lances. Tú eligesla ubicación de las grietas, que pueden estar debajode estructuras. Cada una tiene una profundidad deíd10 x 3 m y una anchura de 3 m y se extiende desde unborde del área del conjuro hasta otro borde. Una criaturaque esté en el mismo espacio que una grieta deberá superaruna tirada de salvación de Destreza o caerá en ella. Si lasupera, la criatura se moverá a la vez que se abre el bordede la grieta y se mantendrá allí."
+          + "\n\n" +
+          "Estructuras. El temblor causa 50 de daño contundentea cualquier estructura que esté en contacto con el suelode la zona cuando lances el conjuro y al final de cada unode tus turnos hasta que el conjuro termine. Si los puntosde golpe de una estructura se reducen a O, se derrumbará.Una criatura que se encuentre a una distancia de una estructura que se derrumba igual a la mitad de su alturahace una tirada de salvación de Destreza. Si la falla,sufrirá 12d6 de daño contundente, tendrá el estado dederribada y quedará enterrada entre los escombros.Para escapar, como acción tendrá que superar unaprueba de Fuerza (Atletismo) con CD 20. Si la supera,solo sufrirá la mitad de ese daño.  en un radio de 30 m. Las criaturas deben superar salvación de Destreza o caer derribadas. Crea grietas (1d6) que pueden tragar criaturas y derrumba estructuras (causando 50 daño contundente a la estructura y riesgo de entierro a criaturas cercanas).",
+
         higherLevels: null,
         classes: ["Clérigo", "Druida", "Hechicero"],
         source: "PHB 2024", // [cite: 1541]
