@@ -2,7 +2,25 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Sword, Shield, Zap, X, ChevronRight, Scroll, BookOpen, Star } from 'lucide-react';
 import Keyword from '../components/Keyword';
-// import { GiBattleAxe } from "react-icons/ginpm i react-icons";
+import { GiSharpAxe, GiFragmentedSword, GiWarlockEye, GiHealthPotion, GiGraspingClaws, GiChargedArrow, GiSwordsEmblem, GiCrystalWand, GiSpellBook, GiArmorPunch, GiCloakDagger } from "react-icons/gi";
+import { LiaGuitarSolid } from "react-icons/lia";
+
+
+const CLASS_ICONS = {
+    "Bárbaro": GiSharpAxe,
+    "Paladín": GiFragmentedSword,
+    "Bardo": LiaGuitarSolid,
+    "Brujo": GiWarlockEye,
+    "Clérigo": GiHealthPotion,
+    "Druida": GiGraspingClaws,
+    "Explorador": GiChargedArrow,
+    "Hechicero": GiCrystalWand,
+    "Guerrero": GiSwordsEmblem,
+    "Mago": GiSpellBook,
+    "Monje": GiArmorPunch,
+    "Pícaro": GiCloakDagger,
+};
+
 
 const ClassesPage = () => {
     const [classes, setClasses] = useState([]);
@@ -41,9 +59,14 @@ const ClassesPage = () => {
                             onClick={() => setSelectedClass(cls)}
                             className="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-amber-600/50 cursor-pointer transition-all hover:-translate-y-1 group relative overflow-hidden"
                         >
-                            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                                <Sword className="w-24 h-24 text-amber-500" />
-                            </div>
+                            {(() => {
+                                const Icon = CLASS_ICONS[cls.name];
+                                return Icon ? (
+                                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-50 transition-opacity">
+                                        <Icon className="w-24 h-24 text-amber-500" />
+                                    </div>
+                                ) : null;
+                            })()}
                             <h2 className="text-2xl font-bold text-slate-100 font-serif mb-2 group-hover:text-amber-500 transition-colors">{cls.name}</h2>
                             <div className="flex gap-2 mb-4 text-xs font-bold uppercase tracking-widest text-slate-500">
                                 <span>d{cls.hitDie} PG</span>
