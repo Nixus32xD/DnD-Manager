@@ -66,10 +66,34 @@ const ClassSchema = new mongoose.Schema({
     {
       name: String, // Path of the Berserker
       description: String,
+
+      // --- NUEVO CAMPO: Lista de Conjuros Ampliada ---
+      expandedSpells: [
+        {
+          spellLevel: Number, // Ej: 1, 2, 3, 4, 5
+          list: [String], // Ej: ["Fuego Feérico", "Dormir"]
+        },
+      ],
+      // -----------------------------------------------
+
       features: [
         {
           level: Number,
           name: String,
+          description: String,
+        },
+      ],
+    },
+  ],
+  // --- NUEVO CAMPO PARA LISTAS EXTRA (Invocaciones, Metamagia, etc.) ---
+  optionalFeatures: [
+    {
+      title: String, // Ej: "Invocaciones Sobrenaturales"
+      description: String, // Ej: "A nivel 2 ganas 2 invocaciones..."
+      items: [
+        {
+          name: String,
+          requirements: String, // Ej: "Nivel 5, Pacto del Filo"
           description: String,
         },
       ],

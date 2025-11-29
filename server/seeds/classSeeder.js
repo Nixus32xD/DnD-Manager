@@ -103,7 +103,8 @@ const barbarianData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
         },
       ],
       classSpecific: { rages: "3", rageDmg: "+2", weaponMastery: "3" },
@@ -142,7 +143,8 @@ const barbarianData = {
       features: [
         {
           name: "Instinto Salvaje",
-          description: "Tus instintos están tan afinados que tienes ventaja en las tiradas de iniciativa. ",
+          description:
+            "Tus instintos están tan afinados que tienes ventaja en las tiradas de iniciativa. ",
         },
         {
           name: "Salto Instintivo",
@@ -158,7 +160,8 @@ const barbarianData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
         },
       ],
       classSpecific: { rages: "4", rageDmg: "+2", weaponMastery: "3" },
@@ -204,7 +207,8 @@ const barbarianData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
         },
       ],
       classSpecific: { rages: "5", rageDmg: "+3", weaponMastery: "4" },
@@ -250,7 +254,8 @@ const barbarianData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles de bárbaro 8, 12 y 16.",
         },
       ],
       classSpecific: { rages: "5", rageDmg: "+4", weaponMastery: "4" },
@@ -282,7 +287,13 @@ const barbarianData = {
     {
       level: 19,
       proficiencyBonus: 6,
-      features: [{ name: "Don Épico", description: "Obtienes una dote de don épico u otra dote de tu elección para la que cumplas las condiciones. Se recomienda Don del ataque imparable." }],
+      features: [
+        {
+          name: "Don Épico",
+          description:
+            "Obtienes una dote de don épico u otra dote de tu elección para la que cumplas las condiciones. Se recomienda Don del ataque imparable.",
+        },
+      ],
       classSpecific: { rages: "6", rageDmg: "+4", weaponMastery: "4" },
     },
     {
@@ -302,125 +313,136 @@ const barbarianData = {
     {
       name: "Senda del Árbol del Mundo",
       description:
-        "Conectas con Yggdrasil para obtener vitalidad y teletransportarte.",
+        "Los bárbaros que siguen la senda del Árbol del Mundo conectan con el árbol cósmico Yggdrasil a través de su furia. Este árbol crece entre los Planos Exteriores, a los que vincula entre sí además de con el Plano Material. Estos bárbaros recurren a la magia del árbol para obtener vitalidad y como medio de transporte dimensional.",
       features: [
         {
           level: 3,
           name: "Vitalidad del Árbol",
           description:
-            "Ganas PG temporales al entrar en furia y puedes dárselos a aliados.",
+            "Tu furia se nutre de la fuerza vital del Árbol del Mundo. Obtienes los siguientes beneficios:\n <strong>Oleada de vitalidad:</strong> Cuando te enfurezcas, obtendrás una cantidad de puntos de golpe temporales igual a tu nivel de bárbaro. \n<strong>Fuerza revitalizante:</strong> Al principio de cada uno de tus turnos mientras estés enfurecido, puedes elegir a otra criatura a 3 m 0 menos de ti para que obtenga puntos de golpe temporales. \nPara determinarlos, tira una cantidad de d6 igual a tu bonificación de daño por furia y suma los resultados. Si algunos de estos puntos de golpe temporales permanecen cuando dejes de estar enfurecido, se desvanecerán.",
         },
         {
           level: 6,
           name: "Ramas del Árbol",
           description:
-            "Reacción para teletransportar enemigos o reducir su velocidad.",
+            "Cuando una criatura que puedas ver comience su turno a 9 mo menos de ti mientras estás enfurecido, podrás llevar a cabo una reacción para invocar unas ramas espectrales del Árbol del Mundo a su alrededor. El objetivo deberá superar una tirada de salvación de Fuerza (CD 8 más tu modificador por Fuerza y tu bonificador por competencia) o se teletransportará a un espacio sin ocupar que puedas ver a 1,5 m de ti o al espacio sin ocupar más cercano que puedas ver. Después de que el objetivo se teletransporte, puedes reducir su velocidad a O hasta el final del turno actual.",
         },
         {
           level: 10,
           name: "Raíces Apaleadoras",
           description:
-            "Aumenta el alcance de tus armas y activa propiedades de maestría extra.",
+            "Durante tu turno, tu alcance es 3 m superior con cualquier arma cuerpo a cuerpo que tenga la propiedad de pesada o versátil, ya que los zarcillos del Árbol del Mundo se prolongan desde tu cuerpo. Cuando aciertes con un arma así en tu turno, podrás activar la propiedad de maestría de derribar o empujar, además de otra propiedad de maestría diferente que utilices con ese arma.",
         },
         {
           level: 14,
           name: "Viajar por el Árbol",
           description:
-            "Teletransporte para ti y tus aliados al entrar en furia o como acción adicional.",
+            "Cuando te enfureces y como acción adicional mientras estés enfurecido, puedes teletransportarte hasta 18 m a un espacio sin ocupar que puedas ver. \nAsimismo, una vez por furia, puedes aumentar el alcance del teletransporte a 45 m. Si lo haces, también puedes transportar hasta seis criaturas voluntarias que estén a 3 mo menos de ti. Cada criatura se teletransportará a un espacio sin ocupar de tu elección a 3 m o menos de tu espacio de destino.",
         },
       ],
     },
     {
       name: "Senda del Berserker",
-      description: "La violencia pura desatada.",
+      description:
+        "Los bárbaros que recorren la senda del berserker ponen su furia principalmente al servicio de la violencia. Su senda se asienta en una rabia sin cortapisas y estos bárbaros se embriagan del caos del combate mientras dejan que su furia se apodere de ellos y los fortalezca.",
       features: [
         {
           level: 3,
           name: "Frenesí",
           description:
-            "Causas daño extra (d6s de furia) al atacar temerariamente.",
+            "Si utilizas Ataque temerario mientras estás enfurecido, causarás daño adicional al primer objetivo al que aciertes en tu turno con un ataque basado en la Fuerza. Para determinar el daño adicional, tira una cantidad de d6 igual a tu bonificación de daño por furia y suma los resultados. El daño será del mismo tipo que el del arma o ataque sin armas utilizado para el ataque.",
         },
         {
           level: 6,
           name: "Furia Irracional",
           description:
-            "Inmunidad a asustado y hechizado mientras estás en furia.",
+            "Tienes inmunidad a los estados de asustado y hechizado mientras estés enfurecido. Si estás asustado o hechizado cuando te dejes llevar por la furia, el estado terminará para ti.",
         },
         {
           level: 10,
           name: "Represalia",
-          description: "Reacción para atacar a quien te daña cuerpo a cuerpo.",
+          description:
+            "Cuando recibas daño de una criatura que esté a 1,5 m o menos de ti, puedes llevar a cabo una reacción para hacer un ataque cuerpo a cuerpo contra esa criatura usando un arma o un ataque sin armas.",
         },
         {
           level: 14,
           name: "Presencia Intimidante",
-          description: "Aterroriza a enemigos cercanos como acción adicional.",
+          description:
+            "Como acción adicional, puedes sembrar el terror en los demás con tu mera presencia amenazadora y tu poder primigenio. Cuando lo hagas, todas las criaturas de tu elección situadas en una emanación de 9 m originada en ti deberá hacer una tirada de salvación de Sabiduría (CD 8 más tu modificador por Fuerza y tu bonificador por competencia). Si la fallan, tendrán el estado de asustadas durante 1 minuto. Al final de cada uno de sus turnos, las criaturas asustadas repiten la tirada de salvación y, si tienen éxito, se librarán del efecto. \nCuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo, a menos que gastes un uso de tu furia (no requiere acción) para restablecer su USO.",
         },
       ],
     },
     {
       name: "Senda del Corazón Salvaje",
-      description: "Afinidad con animales y espíritus bestiales (antes Tótem).",
+      description:
+        "Los bárbaros que siguen la senda del corazón salvaje sienten afinidad por los animales. Aprenden métodos mágicos de comunicarse con ellos y su furia aumenta su conexión, ya que los imbuye de una fuerza sobrenatural. ",
       features: [
         {
           level: 3,
           name: "Furia de lo Salvaje",
           description:
-            "Elige un estilo animal (Oso, Águila, Lobo) al entrar en furia.",
+            "Tu furia se sirve del poder primigenio de los animales. Cuando te enfurezcas, obtendrás una de las siguientes opciones, a tu elección.\n <strong>Águila</strong> Cuando te enfurezcas, podrás llevar a cabo las acciones de destrabarse y correr como parte de esa acción adicional. Mientras estés enfurecido, puedes usar una acción adicional para llevar a cabo ambas acciones. \n<strong>Lobo:</strong> Mientras estés enfurecido, tus aliados tendrán ventaja en las tiradas de ataque contra cualquiera de tus enemigos que se encuentre a 1,5 m o menos de ti. \n<strong>Oso:</strong> Mientras estés enfurecido, tendrás resistencia a todos los tipos de daño salvo de fuerza, necrótico, psíquico y radiante.",
         },
         {
           level: 3,
           name: "Portavoz de los Animales",
-          description: "Puedes lanzar Hablar con Animales como ritual.",
+          description:
+            "Puedes lanzar los conjuros hablar con los animales y sentidos de la bestia, pero solo como rituales. La Sabiduría es tu aptitud mágica para lanzarlos.",
         },
         {
           level: 6,
           name: "Aspecto de lo Salvaje",
-          description: "Elige un beneficio pasivo (Búho, Pantera, Salmón).",
+          description:
+            "Obtienes una de las siguientes opciones, a tu elección. Tras finalizar un descanso largo, puedes cambiar de opción. \n<strong>Búho:</strong> Tienes visión en la oscuridad hasta 18 m. Si ya posees visión en la oscuridad, su alcance aumenta en 18 m. \n<strong>Pantera:</strong> Tienes una velocidad trepando igual a tu velocidad. \n<strong>Salmón:</strong> Tienes una velocidad nadando igual a tu velocidad. ",
         },
         {
           level: 10,
           name: "Hablante de la Naturaleza",
-          description: "Lanzas Comunión con la Naturaleza como ritual.",
+          description:
+            "Puedes lanzar el conjuro comunión con la naturaleza, pero solo como ritual. La Sabiduría es tu aptitud mágica para lanzarlo. ",
         },
         {
           level: 14,
           name: "Poder de lo Salvaje",
           description:
-            "Elige un beneficio de combate (León, Halcón, Carnero) al entrar en furia.",
+            "Cuando te enfurezcas, obtendrás una de las siguientes opciones, a tu elección. \n<strong>Carnero</strong> Mientras estés enfurecido, podrás hacer que una criatura Grande o más pequeña sufra el estado de derribada si la aciertas con un ataque cuerpo a cuerpo. \n<strong>Halcón:</strong> Mientras estés enfurecido, tendrás una velocidad volando igual a tu velocidad si no llevas ninguna armadura. <strong>León</strong> Mientras estés enfurecido, cualquier enemigo que esté a 1,5 m o menos de ti tendrá desventaja en las tiradas de ataque contra otros objetivos que no seáis tú u otro bárbaro que tenga esta opción activa.",
         },
       ],
     },
     {
       name: "Senda del Fanático",
-      description: "Furia divina impulsada por un dios.",
+      description:
+        "Expresa tu furia en una eufórica unión con una divinidad. Los bárbaros que siguen la senda del fanático reciben beneficios de un dios o panteón. Estos bárbaros experimentan su furia como un episodio eufórico de unión divina que les imbuye de poder. Habitualmente, se alían con sacerdotes y otros seguidores de su dios o panteón.",
       features: [
         {
           level: 3,
           name: "Furia Divina",
           description:
-            "Daño extra necrótico o radiante en el primer golpe del turno.",
+            "Puedes canalizar el poder divino hacia tus ataques. En cada uno de tus turnos mientras estés enfurecido, la primera criatura a la que aciertes con un arma o un ataque sin armas sufrirá una cantidad de daño adicional igual a 1d6 más la mitad de tu nivel de bárbaro (redondeando hacia abajo). El daño adicional es necrótico o radiante, que eliges cada vez que lo causas. ",
         },
         {
           level: 3,
           name: "Guerrero de los Dioses",
           description:
-            "Reserva de dados d12 para curarte como acción adicional.",
+            "Una entidad divina ayuda a garantizar que continúes la batalla. Cuentas con una reserva de cuatro d12 que puedes gastar para curarte. Como acción adicional, puedes gastar dados de la reserva, tirarlos y recuperar una cantidad de puntos de golpe igual al resultado total de la tirada. \nTu reserva recupera todos los dados gastados tras finalizar un descanso largo. \nEl número máximo de dados de la reserva aumenta en uno cuando alcanzas los niveles 6 (5 dados), 12 (6 dados) y 17 (7 dados) de bárbaro.",
         },
         {
           level: 6,
           name: "Foco Fanático",
-          description: "Si fallas una salvación, puedes repetirla con un bono.",
+          description:
+            "Una vez por furia, si fallas una tirada de salvación, podrás repetirla con un bonificador igual a tu bonificación de daño por furia y deberás utilizar el nuevo resultado.",
         },
         {
           level: 10,
           name: "Presencia Ferviente",
-          description: "Grito de guerra que da ventaja a aliados.",
+          description:
+            "Como acción adicional, profieres un grito de guerra imbuido de energía divina. Hasta diez criaturas de tu elección que estén a 18 m o menos de ti obtendrán ventaja en las tiradas de ataque y tiradas de salvación hasta el principio de tu siguiente turno. \nCuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo, 'a menos que gastes un uso de tu furia (no requiere acción) para restablecer su uso.",
         },
         {
           level: 14,
           name: "Furia de los Dioses",
-          description: "Resistencia a daños y puedes evitar caer a 0 PG.",
+          description:
+            "Cuando te enfureces, puedes adoptar la forma de un guerrero divino. Esta forma dura 1 minuto o hasta que tus puntos de golpe se reduzcan a 0. Cuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo. \nMientras tengas esta forma, obtendrás los siguientes beneficios: \n<strong>Resistencia:</strong> Tienes resistencia al daño necrótico, psíquico y radiante. \n<strong>Revitalización:</strong> Cuando los puntos de golpe de una criatura que esté a 9 m o menos de ti fueran a reducirse a O, puedes llevar a cabo una reacción para gastar un uso de tu furia y hacer que los puntos de golpe del objetivo cambien a una cantidad igual a tu nivel de bárbaro. \n<strong>Vuelo</strong> Tienes una velocidad volando igual a tu velocidad y puedes levitar. ",
         },
       ],
     },
@@ -448,6 +470,7 @@ const bardData = {
     "Instrumento musical",
     "Paquete de artista",
     "19 po",
+    "O 90 po",
   ],
 
   // Configuración de la tabla visual
@@ -476,12 +499,12 @@ const bardData = {
         {
           name: "Inspiración Bárdica",
           description:
-            "Acción bonus para inspirar (d6). Usos igual a Mod. Carisma 901].",
+            "Puedes recurrir a tus palabras, música o danza para inspirar de forma sobrenatural a los demás. Esta inspiración se representa con tu dado de Inspiración bárdica, que es un d6. \n<strong>Utilizar la Inspiración bárdica:</strong> Como acción adicional, puedes inspirar a otra criatura que esté a 18 m o menos de ti y que te pueda ver u oír. Esa criatura obtiene uno de tus dados de Inspiración bárdica. Cada criatura no puede tener más de un dado de Inspiración bárdica. \nUna sola vez durante la siguiente hora, cuando la criatura falle una prueba con d20, podrá tirar el dado de Inspiración bárdica y sumar el resultado al 420, lo que podría hacerle superar la prueba. Un dado de Inspiración bárdica se gasta al tirarlo. \n<strong>Número de usos:</strong> Puedes conceder un dado de Inspiración bárdica una cantidad de veces igual a tu modificador por Carisma (mínimo una vez) y recuperas todos sus usos tras finalizar un descanso largo. \n<strong>A niveles superiores</strong> Tu dado de Inspiración bárdica cambia cuando alcanzas ciertos niveles de bardo, como se muestra en la columna “Dado bárdico” de la tabla “Rasgos de bardo”. El dado se convierte en un d8 en el nivel 5, un dl0 en el nivel 10 y un d12 en el nivel 15.",
         },
         {
           name: "Lanzamiento de Conjuros",
           description:
-            "Usas Carisma. Puedes cambiar un conjuro preparado al subir de nivel.",
+            "Has aprendido a lanzar conjuros mediante tus artes bárdicas. Consulta el capítulo 7 para ver las reglas sobre el lanzamiento de conjuros. La información presentada a continuación detalla cómo usar esas reglas con los conjuros de bardo, que encontrarás más adelante en la lista de conjuros de bardo de la descripción de la clase. \n<strong>Trucos:</strong> Conoces dos trucos de tu elección escogidos de entre los de la lista de conjuros de bardo. Se recomiendan burla dañina y luces danzantes. \nCada vez que subas un nivel de bardo, puedes sustituir uno de tus trucos por otro truco de tu elección de la lista de conjuros de bardo. \nCuando alcances los niveles 4 y 10 de bardo, aprenderás otro truco de tu elección de la lista de conjuros de bardo, como se muestra en la columna “Trucos” de la tabla “Rasgos de bardo”. \n<strong>Espacios de conjuro:</strong> La tabla “Rasgos de bardo” muestra cuántos espacios de conjuro tienes para lanzar tus conjuros de nivel 1 y superiores. Recuperas todos los espacios utilizados tras finalizar un descanso largo. \n<strong>Conjuros preparados de nivel 1 y superiores:</strong> Preparas una serie de conjuros de nivel 1 y superiores, que son los que podrás lanzar con este rasgo. Para empezar, elige cuatro conjuros de nivel 1 de la lista de conjuros de bardo. ",
         },
       ],
       classSpecific: {
@@ -506,12 +529,12 @@ const bardData = {
         {
           name: "Aprendiz de Mucho",
           description:
-            "Suma la mitad de tu bono de competencia a pruebas donde no seas competente.",
+            "Puedes sumar la mitad de tu bonificador por competencia (redondeando hacia abajo) a cualquier prueba de característica que hagas que utilice una habilidad en la que no seas competente y que no use de otro modo tu bonificador por competencia. \nPor ejemplo, si haces una prueba de Fuerza (Atletismo) y no eres competente en Atletismo, puedes sumar la mitad de tu bonificador por competencia a la prueba.",
         },
         {
           name: "Pericia",
           description:
-            "Elige 2 de tus habilidades para duplicar tu bono de competencia.",
+            "Ganas pericia en dos de tus competencias en habilidades de tu elección. Se recomiendan Interpretación y Persuasión si eres competente en ellas. En el nivel 9 de bardo ganas pericia en otras dos competencias de tu elección.",
         },
       ],
       classSpecific: {
@@ -534,9 +557,9 @@ const bardData = {
       proficiencyBonus: 2,
       features: [
         {
-          name: "Colegio de Bardo",
+          name: "Sublcase de Bardo",
           description:
-            "Elige tu Subclase (Danza, Conocimiento, Glamour o Valor).",
+            "Consigues una subclase de bardo de tu elección. Las subclases del colegio de la danza, el colegio del conocimiento, el colegio del glamour y el colegio del valor se detallan tras la descripción de esta clase. Una subclase es una especialización que te proporciona rasgos cuando alcanzas ciertos niveles de bardo. De aquí en adelante, obtienes todos los rasgos de tu subclase que sean de tu nivel de bardo e inferiores. ",
         },
       ],
       classSpecific: {
@@ -560,7 +583,8 @@ const bardData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles 8, 12 y 16 de bardo. ",
         },
       ],
       classSpecific: {
@@ -585,10 +609,10 @@ const bardData = {
         {
           name: "Fuente de Inspiración",
           description:
-            "Recuperas usos de Inspiración en descanso corto. Puedes gastar espacios para recuperar usos.",
+            "Ahora recuperas todos los usos de Inspiración bárdica tras finalizar un descanso corto o largo. \nAdemás, puedes gastar un espacio de conjuro (no requiere acción) para recuperar un uso gastado de Inspiración bárdica.",
         },
         {
-          name: "Dado Bárdico (d8)",
+          name: "Dado Bárdico ++",
           description: "Tu dado de inspiración aumenta a d8.",
         },
       ],
@@ -612,7 +636,7 @@ const bardData = {
       proficiencyBonus: 3,
       features: [
         {
-          name: "Rasgo de Colegio",
+          name: "Rasgo de Subclase",
           description: "Obtienes un rasgo de tu subclase.",
         },
       ],
@@ -638,7 +662,7 @@ const bardData = {
         {
           name: "Contraencantamiento",
           description:
-            "Reacción para repetir salvaciones contra hechizado o asustado (con ventaja).",
+            "Puedes emplear notas musicales o palabras de poder para interrumpir los efectos que afectan a la mente. Si tú o una criatura que esté a 9 m o menos de ti falláis una tirada de salvación contra un efecto que aplique el estado de asustado o hechizado, puedes llevar a cabo una reacción para que se repita la tirada de salvación, y la nueva tirada tendrá ventaja.",
         },
       ],
       classSpecific: {
@@ -662,7 +686,8 @@ const bardData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles 8, 12 y 16 de bardo. ",
         },
       ],
       classSpecific: {
@@ -685,7 +710,7 @@ const bardData = {
       proficiencyBonus: 4,
       features: [
         {
-          name: "Pericia (x2)",
+          name: "Pericia ++",
           description:
             "Elige 2 habilidades más para duplicar tu bono de competencia.",
         },
@@ -712,10 +737,10 @@ const bardData = {
         {
           name: "Secretos Mágicos",
           description:
-            "Puedes preparar conjuros de las listas de Clérigo, Druida y Mago.",
+            "Has aprendido secretos de diversas tradiciones mágicas. Cada vez que alcances un nivel de bardo (incluido este) y aumente la cantidad de conjuros preparados de la tabla “Rasgos de bardo”, podrás elegir cualquiera de los nuevos conjuros preparados de entre las listas de conjuros de bardo, clérigo, druida y mago. Los conjuros elegidos contarán como conjuros de bardo para ti (consulta las listas de conjuros en la sección de la clase correspondiente). Además, cuando sustituyas un conjuro preparado para esta clase, podrás hacerlo con un conjuro de esas listas.",
         },
         {
-          name: "Dado Bárdico (d10)",
+          name: "Dado Bárdico +++",
           description: "Tu dado de inspiración aumenta a d10.",
         },
       ],
@@ -759,7 +784,8 @@ const bardData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles 8, 12 y 16 de bardo. ",
         },
       ],
       classSpecific: {
@@ -801,7 +827,7 @@ const bardData = {
       proficiencyBonus: 5,
       features: [
         {
-          name: "Rasgo de Colegio",
+          name: "Rasgo de Subclase",
           description: "Obtienes un rasgo de tu subclase.",
         },
       ],
@@ -825,7 +851,7 @@ const bardData = {
       proficiencyBonus: 5,
       features: [
         {
-          name: "Dado Bárdico (d12)",
+          name: "Dado Bárdico ++++",
           description: "Tu dado de inspiración aumenta a d12.",
         },
       ],
@@ -850,7 +876,8 @@ const bardData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles 8, 12 y 16 de bardo. ",
         },
       ],
       classSpecific: {
@@ -894,7 +921,7 @@ const bardData = {
         {
           name: "Inspiración Superior",
           description:
-            "Si al tirar iniciativa tienes menos de 2 usos de Inspiración, recuperas hasta tener 2.",
+            "Cuando tires iniciativa, recuperarás usos gastados de Inspiración bárdica hasta que tengas dos, si tuvieras menos de esta cifra. ",
         },
       ],
       classSpecific: {
@@ -915,7 +942,13 @@ const bardData = {
     {
       level: 19,
       proficiencyBonus: 6,
-      features: [{ name: "Don Épico", description: "Eliges una Dote Épica." }],
+      features: [
+        {
+          name: "Don Épico",
+          description:
+            "Obtienes una dote de don épico u otra dote de tu elección para la que cumplas las condiciones. Se recomienda Don del recuerdo de conjuros.",
+        },
+      ],
       classSpecific: {
         bardicDie: "d12",
         cantrips: "4",
@@ -938,7 +971,7 @@ const bardData = {
         {
           name: "Palabras de Creación",
           description:
-            "Siempre tienes preparados Palabra de Poder: Sanar y Matar. Puedes afectar a un segundo objetivo.",
+            "Ahora dominas dos de las palabras de creación: las palabras de la vida y de la muerte. Por tanto, siempre tienes preparados los conjuros palabra de poder: sanar y palabra de poder: matar. Cuando lances uno de estos conjuros, podrás hacer objetivo a una segunda criatura si esta se encuentra a 3 m o menos del primer objetivo. ",
         },
       ],
       classSpecific: {
@@ -962,123 +995,123 @@ const bardData = {
     {
       name: "Colegio de la Danza",
       description:
-        "Practican una forma de armonía con el cosmos que enfatiza la agilidad y la velocidad.",
+        "Los bardos del colegio de la danza saben que las palabras de creación no pueden encerrarse en un discurso o una canción: las palabras se pronuncian a través del desplazamiento de los cuerpos celestes y fluyen por los movimientos de las criaturas menores. Estos bardos practican una forma de permanecer en armonía con la vorágine del cosmos que enfatiza la agilidad, la velocidad y la elegancia.",
       features: [
         {
           level: 3,
           name: "Juego de Pies Deslumbrante",
           description:
-            "Defensa sin armadura (10+DES+CAR) y ataques sin armas usando Inspiración Bárdica.",
+            "Mientras no lleves armadura ni portes un escudo, obtienes los siguientes beneficios. \n<strong>Virtuoso de la danza:</strong> Tienes ventaja en cualquier prueba de Carisma (Interpretación) que hagas que implique bailar. \n<strong>Defensa sin armadura:</strong> Tu clase de armadura base es igual a 10 más tus modificadores por Destreza y Carisma. \n<strong>Ataques ágiles:</strong> Cuando gastes un uso de tu Inspiración bárdica como parte de una acción, una acción adicional o una reacción, puedes realizar un ataque sin armas como parte de esa acción, acción adicional o reacción. \n<strong>Daño Bardico:</strong> Puedes usar tu Destreza en lugar de tu Fuerza para las tiradas de ataque de tus ataques sin armas. Cuando causas daño con un ataque sin armas, puedes infligir una cantidad de daño contundente igual al resultado de una tirada con tu dado de Inspiración bárdica más tu modificador por Destreza, en lugar del daño normal del ataque. No gastas el dado con esta tirada. ",
         },
         {
           level: 6,
           name: "Juego de Pies Conjunto",
           description:
-            "Gasta inspiración al tirar iniciativa para bonificar a aliados.",
+            "Cuando tires iniciativa, puedes gastar un uso de tu Inspiración bárdica si no tienes el estado de incapacitado. Cuando lo hagas, tira tu dado de Inspiración bárdica; tú y todos los aliados que estén a 9 m o menos de ti que puedan verte u oírte ganaréis un bonificador a la iniciativa igual al resultado.",
         },
         {
           level: 6,
           name: "Movimiento Inspirador",
           description:
-            "Reacción para moverte tú y un aliado cuando un enemigo termina turno cerca.",
+            "Cuando un enemigo que puedas ver termine su turno a 1,5 m o menos de ti, puedes llevar a cabo una reacción y gastar un uso de tu Inspiración bárdica para moverte hasta la mitad de tu velocidad. Después, un aliado que elijas que esté a 9 m o menos de ti también podrá moverse hasta la mitad de su velocidad usando su reacción. \nLos movimientos realizados con este rasgo no provocan ataques de oportunidad",
         },
         {
           level: 14,
           name: "Evasión Dirigida",
           description:
-            "Compartes Evasión (mitad de daño en salvaciones DES) con aliados cercanos.",
+            "Cuando sufras un efecto que te permita hacer una tirada de salvación de Destreza para sufrir solo la mitad de daño, no recibes daño alguno si la superas y solo sufres la mitad si la fallas. Si cualquier criatura que esté a 1,5 m de ti hace la misma tirada de salvación de Destreza, puedes compartir este beneficio con ella para la tirada. \nNo puedes usar este rasgo si tienes el estado de incapacitado.",
         },
       ],
     },
     {
       name: "Colegio del Conocimiento",
       description:
-        "Recaban conjuros y secretos de diversas fuentes, como tratados intelectuales y ritos místicos.",
+        "Explora las profundidades del conocimiento mágico. Los bardos del colegio del conocimiento recaban conjuros y secretos de diversas fuentes, como tratados intelectuales, ritos místicos y cuentos de campesinos. Los miembros del colegio se reúnen en bibliotecas y universidades para intercambiar sus conocimientos. También se encuentran en festivales o reuniones de Estado, donde pueden sacar a la luz casos de corrupción, desvelar mentiras o reírse de los vanidosos representantes de la autoridad.",
       features: [
         {
           level: 3,
           name: "Palabras Cortantes",
           description:
-            "Usa tu reacción y un dado de inspiración para restar a la tirada de un enemigo.",
+            "Aprendes a usar tu astucia para distraer, confundir y minar la confianza y las aptitudes de los demás de manera sobrenatural. Cuando una criatura que puedas ver a 18 m o menos de ti haga una tirada de daño o tenga éxito en una prueba de característica o una tirada de ataque, puedes llevar a cabo una reacción para gastar un uso de tu Inspiración bárdica; tira tu dado de Inspiración bárdica y resta el número obtenido al resultado de la tirada de la criatura, lo que reducirá el dañoo quizá convierta el éxito en un fallo.",
         },
         {
           level: 3,
           name: "Competencias Adicionales",
-          description: "Ganas 3 habilidades a elección.",
+          description: "Ganas competencia en tres habilidades de tu elección.",
         },
         {
           level: 6,
           name: "Descubrimientos Mágicos",
           description:
-            "Aprendes 2 conjuros de cualquier clase (Clérigo, Druida o Mago).",
+            "Aprendes dos conjuros de tu elección. Estos conjuros pueden proceder de las listas de conjuros de clérigo, druida o mago, o de cualquier combinación de estas (consulta la lista de conjuros en la sección de la clase). Los conjuros que elijas deben ser trucos o conjuros para los que tengas espacios de conjuro, como se muestra en la tabla “Rasgos de bardo”. \nSiempre tienes preparados los conjuros elegidos y, cada vez que subas un nivel de bardo, podrás reemplazar uno de los conjuros por otro conjuro que cumpla estos requisitos.",
         },
         {
           level: 14,
           name: "Habilidad Sin Parangón",
           description:
-            "Usa inspiración para mejorar tus propias pruebas de habilidad.",
+            "Cuando hagas una prueba de característica o una tirada de ataque y falles, podrás gastar un uso de Inspiración bárdica; tira el dado de Inspiración bárdica y suma el resultado al d20, lo que podría convertir un fallo en un éxito. Si fallas la tirada, la Inspiración bárdica no se gasta. ",
         },
       ],
     },
     {
       name: "Colegio del Glamour",
       description:
-        "Tejen hilos de belleza y terror en sus canciones con magia de los Parajes Feéricos.",
+        "El colegio del glamour se originó con la magia cautivadora de los Parajes Feéricos. Los bardos que estudian esta magia tejen hilos de belleza y terror en sus canciones e historias y los más poderosos de ellos pueden envolverse en una majestuosidad sobrenatural. Sus actuaciones suscitan el anhelo nostálgico de una inocencia olvidada, evocan los recuerdos inconscientes de temores arraigados y apelan a las emociones incluso de los oyentes más insensibles. ",
       features: [
         {
           level: 3,
           name: "Manto de Inspiración",
           description:
-            "Otorga PG temporales y movimiento libre a aliados gastando inspiración.",
+            "Puedes urdir la magia feérica en una canción o danza que insufle energía a los demás. Como acción adicional, puedes gastar un uso de tu Inspiración Bárdica y tirar un dado de Inspiración bárdica. Cuando lo hagas, elige una cantidad de otras criaturas a 18 m o menos de ti, hasta un máximo igual a tu modificador por Carisma (mínimo una criatura). \nCada una de esas criaturas obtendrá una cantidad de puntos de golpe temporales igual al doble del resultado del dado de Inspiración bárdica y luego podrá usar su reacción para moverse hasta su velocidad sin provocar ataques de oportunidad. ",
         },
         {
           level: 3,
           name: "Magia Cautivadora",
           description:
-            "Siempre tienes preparados Hechizar Persona e Imagen Múltiple.",
+            "Siempre tienes los conjuros hechizar persona e imagen múltiple preparados. \nAsimismo, inmediatamente después de que lances un conjuro de encantamiento o ilusionismo mediante un espacio de conjuro, podrás hacer que una criatura que puedas ver a 18 m o menos de ti realice una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros. Si la fálla, el objetivo tendrá el estado de asustado o hechizado (a tu elección) durante 1 minuto. El objetivo repetirá la tirada de salvación al final de cada uno de sus turnos y, si tiene éxito, se librará del efecto. \nCuando uses este beneficio, no podrás volver a hacerlo hasta que finalices un descanso largo. También puedes restablecer su uso gastando un uso de tu Inspiración bárdica (no requiere acción).",
         },
         {
           level: 6,
           name: "Manto de Majestad",
           description:
-            "Lanzas Orden Imperiosa como acción adicional gratis durante 1 minuto.",
+            "Siempre tienes el conjuro orden imperiosa preparado. \nComo acción adicional, puedes lanzar orden imperiosa sin gastar un espacio de conjuro y adoptar una apariencia sobrenatural durante 1 minuto o hasta que pierdas la concentración. Durante este tiempo, puedes lanzar orden imperiosa como acción adicional sin gastar un espacio de conjuro. \nCualquier criatura a la que hayas hechizado fallará automáticamente su tirada de salvación contra la orden imperiosa que lances con este rasgo. \nCuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo. También puedes restablecer su uso gastando un espacio de conjuro de nivel 3 o superior (no requiere acción). ",
         },
         {
           level: 14,
           name: "Majestad Inquebrantable",
           description:
-            "Los enemigos no pueden atacarte sin superar una salvación de Carisma.",
+            "Como acción adicional, puedes adoptar un aspecto majestuoso mágico durante 1 minuto o hasta que tengas el estado de incapacitado. Durante ese tiempo, cuando una criatura te acierte con una tirada de ataque por primera vez en un turno, el atacante deberá superar una tirada de salvación de Carisma contra tu CD de salvación de conjuros o el ataque fallará, puesto que la criatura se amedrentará por tu majestuosidad. \nCuando adoptes este especto majestuoso, no podrás volver a hacerlo hasta que finalices un descanso corto o largo. ",
         },
       ],
     },
     {
       name: "Colegio del Valor",
       description:
-        "Narradores osados que conservan el recuerdo de los grandes héroes y combaten en primera línea.",
+        "Los bardos del colegio del valor son narradores osados cuyos relatos conservan el recuerdo de los grandes héroes del pasado. Estos bardos cantan las hazañas de sus ídolos en salones abovedados o ante un público reunido en torno a refulgentes hogueras. Viajan para presenciar los grandes acontecimientos de primera mano y asegurarse de que su recuerdo no cae en el olvido. Con sus canciones, inspiran alas nuevas generaciones a lograr hitos similares a los de los héroes de antaño.",
       features: [
         {
           level: 3,
           name: "Entrenamiento Marcial",
           description:
-            "Competencia con armas marciales, armaduras medias y escudos.",
+            "Ganas competencia con armas marciales y entrenamiento con armaduras medias y escudos. \nAdemás, puedes utilizar un arma sencilla o marcial como canalizador mágico para lanzar tus conjuros de bardo. ",
         },
         {
           level: 3,
           name: "Inspiración en Combate",
           description:
-            "El dado de inspiración puede sumar al daño o a la CA de un aliado.",
+            "Puedes emplear tu ingenio para cambiar las tornas de la batalla. Una criatura que tenga uno de tus dados de Inspiración bárdica podrá usarlo para lograr uno de los siguientes efectos. \n<strong>Defensa:</strong> Cuando una tirada de ataque acierte a la criatura, esta podrá usar su reacción para tirar el dado de Inspiración bárdica y sumar el resultado a su CA contra ese ataque, lo que podría hacer que falle. \n<strong>Ofensiva:</strong> Inmediatamente después de que la criatura acierte a un objetivo con una tirada de ataque, podrá tirar el dado de Inspiración bárdica y sumar el resultado al daño del ataque contra el objetivo.",
         },
         {
           level: 6,
           name: "Ataque Adicional",
           description:
-            "Atacas dos veces. Puedes cambiar un ataque por un truco.",
+            "Cuando lleves a cabo la acción de atacar en tu turno, podrás hacer dos ataques en lugar de uno. \nAdemás, podrás lanzar uno de tus trucos que tenga un tiempo de lanzamiento de una acción en vez de realizar uno de esos ataques.",
         },
         {
           level: 14,
           name: "Magia de Batalla",
           description:
-            "Tras lanzar un conjuro de acción, puedes atacar como acción adicional.",
+            "Tras lanzar un conjuro que tenga un tiempo de lanzamiento de una acción, podrás hacer un ataque con un arma como acción adicional.",
         },
       ],
     },
@@ -1112,8 +1145,11 @@ const warlockData = {
   startingEquipment: [
     "Armadura de cuero",
     "Hoz y 2 dagas",
-    "Canalizador arcano",
-    "Paquete de explorador de mazmorras y 15 po",
+    "Canalizador arcano (Orbe)",
+    "Libro (de conocimiento oculto)",
+    "Paquete de erudito",
+    "15 po",
+    "O 100 po",
   ],
 
   // Tabla visual para el frontend
@@ -1135,12 +1171,12 @@ const warlockData = {
         {
           name: "Magia del Pacto",
           description:
-            "Tus espacios de conjuro son siempre del máximo nivel posible y se recuperan en descanso corto",
+            "Has sellado un pacto con una entidad misteriosa mediante una ceremonia ocultista para obtener poderes mágicos. Ese ente es una voz en las sombras y no tienes clara su identidad, pero el don que te ofrece sí que lo conoces: te ha dado la capacidad de lanzar conjuros. \n<strong>Espacios de conjuro:</strong> La tabla “Rasgos de brujo” muestra cuántos espacios de conjuro tienes para lanzar tus conjuros de brujo de los niveles 1 a 5. La tabla también te indica de qué nivel son dichos espacios, todos los cuales son del mismo nivel. Recuperas todos los espacios utilizados de Magia del pacto tras finalizar un descanso corto o largo. \nEl número de conjuros de tu lista aumenta conforme subes de nivel de brujo, como se muestra en la columna “Conjuros preparados” de la tabla “Rasgos de brujo”. Cuando ese número aumente, elige conjuros de brujo adicionales hasta que el número de conjuros de tu lista coincida con el número de la tabla. Los conjuros que elijas deben ser de un nivel igual o inferior al que aparece en la columna “Nivel de los espacios” para tu nivel. \nSi otro rasgo de brujo te proporciona conjuros que siempre tienes preparados, esos conjuros no cuentan para el total que puedes preparar con este rasgo, pero sí que cuentan como conjuros de brujo para ti. \n<strong>Cambiar los conjuros preparados:</strong> Cada vez que subas un nivel de brujo, puedes sustituir un conjuro de tu lista por otro conjuro de brujo de un nivel adecuado. \n<strong>Aptitud mágica:</strong> El Carisma es tu aptitud mágica en lo que respecta a tus conjuros de brujo. \n<strong>Canalizador mágico:</strong> Puedes utilizar un canalizador arcano como canalizador mágico para tus conjuros de brujo.",
         },
         {
           name: "Invocaciones Sobrenaturales",
           description:
-            "Obtienes 1 invocación a nivel 1. Fragmentos de conocimiento prohibido que otorgan capacidades mágicas",
+            "Has desenterrado invocaciones sobrenaturales, fragmentos de conocimiento prohibido que te imbuyen de una capacidad mágica perpetua o de otros saberes. Obtienes una invocación de tu elección, como Pacto del grimorio. Las invocaciones se detallan más adelante en la descripción de esta clase, en el apartado “Opciones de invocación sobrenatural”. \n<strong>Requisitos:</strong> Si una invocación tiene un requisito, debes cumplirlo para poder aprenderla. Por ejemplo, si una invocación te pide un nivel 5 o superior de brujo, podrás seleccionar esa invocación cuando alcances ese nivel de brujo. \n<strong>Sustituir y conseguir invocaciones:</strong> Cada vez que subas un nivel de brujo, puedes sustituir una de tus invocaciones por otra para la que cumplas las condiciones. No puedes sustituir una invocación si es un requisito de otra invocación que tengas. \nObtienes más invocaciones de tu elección cuando alcanzas ciertos niveles de brujo, como se muestra en la columna “Invocaciones” de la tabla “Rasgos de brujo”. \nNo puedes elegir la misma invocación más de una vez salvo que la descripción indique algo diferente. ",
         },
       ],
       classSpecific: {
@@ -1158,7 +1194,11 @@ const warlockData = {
         {
           name: "Astucia Mágica",
           description:
-            "Acción de 1 minuto para recuperar la mitad de tus espacios de conjuro (1 vez por descanso largo)",
+            "Puedes llevar a cabo un rito esotérico durante 1 minuto. Al terminarlo, recuperas una cantidad de espacios de conjuro utilizados de Magia del pacto igual o inferior a la mitad de tu máximo (redondeando hacia arriba). Cuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo. ",
+        },
+        {
+          name: "Invocaciones de Nivel ++",
+          description: "Accedes a invocaciones más poderosas.",
         },
       ],
       classSpecific: {
@@ -1174,9 +1214,9 @@ const warlockData = {
       proficiencyBonus: 2,
       features: [
         {
-          name: "Patrón Sobrenatural",
+          name: "Subclase de Brujo",
           description:
-            "Eliges tu Subclase (Celestial, Feérico, Infernal o Primigenio)",
+            "Consigues una subclase de brujo de tu elección. Las subclases del patrón celestial, el patrón feérico, el patrón infernal y el patrón primigenio se detallan tras la descripción de esta clase. Una subclase es una especialización que te proporciona rasgos cuando alcanzas ciertos niveles de brujo. De aquí en adelante, obtienes todos los rasgos de tu subclase que sean de tu nivel de brujo e inferiores.",
         },
       ],
       classSpecific: {
@@ -1193,7 +1233,8 @@ const warlockData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles 8, 12 y 16 de brujo. ",
         },
       ],
       classSpecific: {
@@ -1209,7 +1250,7 @@ const warlockData = {
       proficiencyBonus: 3,
       features: [
         {
-          name: "Invocaciones de Nivel 5",
+          name: "Invocaciones de Nivel +++",
           description: "Accedes a invocaciones más poderosas.",
         },
       ],
@@ -1226,7 +1267,7 @@ const warlockData = {
       proficiencyBonus: 3,
       features: [
         {
-          name: "Rasgo de Patrón",
+          name: "Rasgo de Subclase",
           description: "Obtienes un rasgo de tu subclase.",
         },
       ],
@@ -1243,7 +1284,7 @@ const warlockData = {
       proficiencyBonus: 3,
       features: [
         {
-          name: "Invocaciones de Nivel 7",
+          name: "Invocaciones de Nivel ++++",
           description: "Accedes a invocaciones de mayor nivel.",
         },
       ],
@@ -1261,7 +1302,8 @@ const warlockData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles 8, 12 y 16 de brujo. ",
         },
       ],
       classSpecific: {
@@ -1279,7 +1321,11 @@ const warlockData = {
         {
           name: "Contactar Patrón",
           description:
-            "Puedes lanzar Contactar con otro plano sin gastar espacio y superas automáticamente la salvación (1/día)",
+            "Antes solías ponerte en contacto con tu patrón a través de intermediarios. Ahora puedes comunicarte directamente, ya que siempre tienes el conjuro contactar con otro plano preparado. Con este rasgo, puedes lanzar el conjuro sin gastar un espacio de conjuro para contactar con tu patrón y superas automáticamente la tirada de salvación del conjuro. \nCuando lances el conjuro con este rasgo, no podrás volver a hacerlo de esta forma hasta que finalices un descanso largo.",
+        },
+        {
+          name: "Invocaciones de Nivel +++++",
+          description: "Accedes a invocaciones de mayor nivel.",
         },
       ],
       classSpecific: {
@@ -1295,7 +1341,7 @@ const warlockData = {
       proficiencyBonus: 4,
       features: [
         {
-          name: "Rasgo de Patrón",
+          name: "Rasgo de Subclase",
           description: "Obtienes un rasgo de tu subclase.",
         },
       ],
@@ -1312,9 +1358,14 @@ const warlockData = {
       proficiencyBonus: 4,
       features: [
         {
+          name: "Arcanum Místico",
+          description:
+            "Tu patrón te recompensa con un secreto mágico denominado arcanum. Escoge uno de los conjuros de brujo de nivel 6 como este arcanum. Puedes lanzar tu conjuro de arcanum una vez sin gastar un espacio de conjuro y debes finalizar un descanso largo antes de poder volver a lanzarlo de este modo. Obtendrás más conjuros de brujo de tu elección que podrás lanzar de esta forma cuando alcances los niveles 13 (conjuro de nivel 7), 15 (conjuro de nivel 8) y 17 (conjuro de nivel 9) de brujo, como se muestra en la tabla “Rasgos de brujo”. Recuperas todos los usos de tu Arcanum místico tras finalizar un descanso largo. Siempre que subas un nivel de brujo, puedes sustituir uno de tus conjuros de arcanum por otro conjuro de brujo del mismo nivel. ",
+        },
+        {
           name: "Arcanum Místico (Nv 6)",
           description:
-            "Eliges un conjuro de nivel 6. Puedes lanzarlo una vez por día sin gastar espacio de conjuro",
+            "Eliges un conjuro de nivel 6, que puedes lanzar 1 vez cada descanso largo sin gastar un espacio de conjuro.",
         },
       ],
       classSpecific: {
@@ -1331,7 +1382,12 @@ const warlockData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles 8, 12 y 16 de brujo. ",
+        },
+        {
+          name: "Invocaciones de Nivel ++++++",
+          description: "Accedes a invocaciones de mayor nivel.",
         },
       ],
       classSpecific: {
@@ -1348,7 +1404,8 @@ const warlockData = {
       features: [
         {
           name: "Arcanum Místico (Nv 7)",
-          description: "Eliges un conjuro de nivel 7 (1/día).",
+          description:
+            "Eliges un conjuro de nivel 7, que puedes lanzar 1 vez cada descanso largo sin gastar un espacio de conjuro.",
         },
       ],
       classSpecific: {
@@ -1364,7 +1421,7 @@ const warlockData = {
       proficiencyBonus: 5,
       features: [
         {
-          name: "Rasgo de Patrón",
+          name: "Rasgo de Subclase",
           description: "Obtienes un rasgo de tu subclase.",
         },
       ],
@@ -1382,7 +1439,12 @@ const warlockData = {
       features: [
         {
           name: "Arcanum Místico (Nv 8)",
-          description: "Eliges un conjuro de nivel 8 (1/día).",
+          description:
+            "Eliges un conjuro de nivel 8, que puedes lanzar 1 vez cada descanso largo sin gastar un espacio de conjuro.",
+        },
+        {
+          name: "Invocaciones de Nivel +++++++",
+          description: "Accedes a invocaciones de mayor nivel.",
         },
       ],
       classSpecific: {
@@ -1399,7 +1461,8 @@ const warlockData = {
       features: [
         {
           name: "Mejora de Característica",
-          description: "Aumenta una característica o elige una Dote.",
+          description:
+            "Obtienes la dote Mejora de característica u otra dote de tu elección para la que cumplas las condiciones. Vuelves a obtener este rasgo en los niveles 8, 12 y 16 de brujo. ",
         },
       ],
       classSpecific: {
@@ -1432,8 +1495,8 @@ const warlockData = {
       proficiencyBonus: 6,
       features: [
         {
-          name: "Invocación Final",
-          description: "Obtienes tu décima invocación.",
+          name: "Invocaciones de Nivel ++++++++",
+          description: "Accedes a invocaciones de mayor nivel.",
         },
       ],
       classSpecific: {
@@ -1450,7 +1513,8 @@ const warlockData = {
       features: [
         {
           name: "Don Épico",
-          description: "Eliges una Dote Épica (Recomendado: Don del Destino).",
+          description:
+            "Obtienes una dote de don épico u otra dote de tu elección para la que cumplas las condiciones. Se recomienda Don del destino.",
         },
       ],
       classSpecific: {
@@ -1468,7 +1532,7 @@ const warlockData = {
         {
           name: "Maestro Sobrenatural",
           description:
-            "Cuando usas Astucia Mágica, recuperas TODOS tus espacios de Magia del Pacto.",
+            "Cuando empleas tu rasgo Astucia mágica, recuperas todos los espacios de conjuro utilizados de Magia del pacto.",
         },
       ],
       classSpecific: {
@@ -1481,12 +1545,221 @@ const warlockData = {
     },
   ],
 
+  // --- REEMPLAZÁ EL BLOQUE optionalFeatures CON ESTO ---
+  optionalFeatures: [
+    {
+      title: "Invocaciones Sobrenaturales",
+      description:
+        "Fragmentos de conocimiento prohibido que te imbuyen de una capacidad mágica perpetua.",
+      items: [
+        // --- SIN REQUISITO DE NIVEL (Nivel 1+) ---
+        {
+          name: "Armadura de Sombras",
+          requirements: "-",
+          description:
+            "Puedes lanzar armadura de mago sobre ti sin gastar un espacio de conjuro. ",
+        },
+        {
+          name: "Mente Sobrenatural",
+          requirements: "-",
+          description:
+            "Tienes ventaja en las tiradas de salvación de Constitución que realices para mantener la concentración. ",
+        },
+        {
+          name: "Pacto de la Cadena",
+          requirements: "-",
+          description:
+            "Aprendes el conjuro encontrar familiar y puedes lanzarlo como acción de magia sin gastar un espacio de conjuro. \nCuando lo lances, escoge entre una de las formas habituales para tu familiar o una de las siguientes formas especiales: <strong>diablillo, duende, esfinge de las maravillas, esqueleto, pseudodragón, quasit, renacuajo slaad o serpiente venenosa</strong>. \nAsimismo, cuando realizas la acción de atacar, puedes renunciar a uno de tus propios ataques para que el familiar realice un ataque propio con su reacción. ",
+        },
+        {
+          name: "Pacto del Filo",
+          requirements: "-",
+          description:
+            "Como acción adicional, puedes conjurar en tu mano un arma de pacto, un arma cuerpo a cuerpo sencilla o marcial de tu elección con la que estableces un vínculo. Como alternativa, puedes vincularte con un arma mágica que toques, pero no podrás hacerlo si otra criatura está sintonizada con ella o si otro brujo está vinculado con ella. \nHasta que termine el vínculo, tendrás competencia con esa arma y podrás usarla como canalizador mágico. \nSiempre que ataques con el arma vinculada, puedes usar tu modificador por Carisma para las tiradas de ataque y de daño en lugar del modificador por Fuerza o Destreza. Además, puedes hacer que cause daño necrótico, psíquico o radiante en lugar de su tipo de daño normal. \nTu vínculo con el arma se rompe si vuelves a usar la acción adicional de este rasgo, si el arma está a más de 1,5 m de ti durante 1 minuto o más o si mueres. Un arma conjurada desaparece cuando termina el vínculo. ",
+        },
+        {
+          name: "Pacto del Grimorio",
+          requirements: "-",
+          description:
+            "Uniendo hebras de sombras, conjuras un libro en tu mano al terminar un descanso corto o largo. Este Libro de las sombras (tú eliges su aspecto) contiene magia sobrenatural a la que solo tú puedes acceder y que te proporciona los beneficios presentados a continuación. El libro desaparece si conjuras otro con este rasgo o si mueres. \n<strong>Trucos y rituales:</strong> Cuando aparezca el libro, elige tres trucos y dos conjuros de nivel 1 que estén marcados como “ritual”. Los conjuros pueden ser de la lista de cualquier clase y deben ser conjuros que no tengas ya preparados. Mientras lleves el libro contigo, tendrás preparados los conjuros elegidos y funcionarán como conjuros de brujo para ti. \n<strong>Canalizador mágico:</strong> Puedes usar el libro como canalizador mágico. ",
+        },
+
+        // --- NIVEL 2 ---
+        {
+          name: "Descarga Agónica",
+          requirements: "Nivel 2, Truco de daño",
+          description:
+            "Elige uno de tus trucos de brujo que conozcas y cause daño. Puedes sumar tu modificador por Carisma a las tiradas de daño del conjuro. \n<strong>Repetible:</strong> Puedes obtener esta invocación más de una vez. Cada vez que lo hagas, elige un truco distinto que cumpla las condiciones. ",
+        },
+        {
+          name: "Descarga Ahuyentadora",
+          requirements: "Nivel 2, Truco de ataque",
+          description:
+            "Elige uno de tus trucos de brujo que conozcas y requiera una tirada de ataque. Cuando aciertes a una criatura Grande o más pequeña con ese truco, puedes empujarla hasta 3 m respecto a ti en línea recta. \n<strong>Repetible:</strong> Puedes obtener esta invocación más de una vez. Cada vez que lo hagas, elige un truco distinto que cumpla las condiciones.",
+        },
+        {
+          name: "Lanza Sobrenatural",
+          requirements: "Nivel 2, Truco de daño",
+          description:
+            "Elige uno de tus trucos de brujo que conozcas, cause daño y tenga un alcance de 3 m o más. Cuando lances ese conjuro, su alcance aumenta una cantidad de metros igual a 10 veces tu nivel de brujo. \n<strong>Repetible:</strong> Puedes obtener esta invocación más de una vez. Cada vez que lo hagas, elige un truco distinto que cumpla las condiciones.",
+        },
+        {
+          name: "Lecciones de los Primeros",
+          requirements: "Nivel 2",
+          description:
+            "Has obtenido conocimientos de un ente anciano del multiverso, lo que te permite obtener una dote de origen de tu elección. \n<strong>Repetible:</strong> Puedes obtener esta invocación más de una vez. Cada vez que lo hagas, elige una dote de origen distinta. ",
+        },
+        {
+          name: "Máscara de los Mil Rostros",
+          requirements: "Nivel 2",
+          description:
+            "Puedes lanzar disfrazarse sin gastar un espacio de conjuro. ",
+        },
+        {
+          name: "Salto Sobrenatural",
+          requirements: "Nivel 2",
+          description:
+            "Puedes lanzar salto sobre ti sin gastar un espacio de conjuro.",
+        },
+        {
+          name: "Vigor Infernal",
+          requirements: "Nivel 2",
+          description:
+            "Puedes lanzar falsa vida sobre ti sin gastar un espacio de conjuro. Si lanzas el conjuro con este rasgo, no tiras el dado para los puntos de golpe temporales; en su lugar, obtienes automáticamente el número más alto en el dado.",
+        },
+        {
+          name: "Visiones Brumosas",
+          requirements: "Nivel 2",
+          description:
+            "Puedes lanzar imagen silenciosa sin gastar un espacio de conjuro. ",
+        },
+        {
+          name: "Vista del Diablo",
+          requirements: "Nivel 2",
+          description:
+            "Puedes ver con normalidad en luz tenue y en la oscuridad, tanto si son mágicas como si no, a una distancia de 36 m o menos de ti. ",
+        },
+
+        // --- NIVEL 5 ---
+        {
+          name: "Castigo Arcano",
+          requirements: "Nivel 5, Pacto del Filo",
+          description:
+            "Una vez por turno, cuando aciertes a una criatura con tu arma de pacto, puedes gastar un espacio de conjuro de Magia del pacto para causar 1d8 de daño de fuerza adicional al objetivo más 1d8 por cada nivel del espacio de conjuro. Además, puedes imponerle el estado de derribado al objetivo si es Enorme o más pequeño.",
+        },
+        {
+          name: "Don de las Profundidades",
+          requirements: "Nivel 5",
+          description:
+            "Puedes respirar bajo el agua y obtienes una velocidad nadando igual a tu velocidad. \nTambién puedes lanzar respirar bajo el agua una vez sin gastar un espacio de conjuro. Recuperas la capacidad de lanzarlo de este modo tras finalizar un descanso largo. ",
+        },
+        {
+          name: "Filo Sediento",
+          requirements: "Nivel 5, Pacto del Filo",
+          description:
+            "Obtienes el rasgo Ataque adicional, pero solo para tu arma de pacto. Este rasgo te permite hacer dos ataques con esa arma en lugar de uno cuando lleves a cabo la acción de atacar en tu turno. ",
+        },
+        {
+          name: "Inversión del Amo de las Cadenas",
+          requirements: "Nivel 5, Pacto de la Cadena",
+          description:
+            "Cuando lanzas encontrar familiar, imbuyes al familiar invocado de una cierta cantidad de tu poder sobrenatural, lo que le otorga a la criatura los siguientes beneficios. \n<strong>Acuático</strong> o <strong>aéreo:</strong> El familiar obtiene una velocidad nadando o una velocidad volando (a tu elección) de 12 m. \n<strong>Ataque rápido:</strong> Como acción adicional, puedes ordenar al familiar que realice la acción de atacar. \n<strong>Daño necrótico</strong> o <strong>radiante:</strong> Siempre que el familiar haga daño contundente, cortante o perforante, puedes hacer que cause daño necrótico o radiante en su lugar. \n<strong>Tu CD de salvación:</strong> Si el familiar obliga a una criatura a realizar una tirada de salvación, esta utiliza tu CD de salvación de conjuros. \n<strong>Resistencia:</strong> Cuando el familiar recibe daño, puedes usar una reacción para otorgarle resistencia contra ese daño. ",
+        },
+        {
+          name: "Maestro de las Formas Innumerables",
+          requirements: "Nivel 5",
+          description:
+            "Puedes lanzar alterar el propio aspecto sin gastar un espacio de conjuro. ",
+        },
+        {
+          name: "Mirada de las Dos Mentes",
+          requirements: "Nivel 5",
+          description:
+            "Puedes usar una acción adicional para tocar a una criatura voluntaria y percibir el mundo a través de sus sentidos hasta el final de tu siguiente turno. Mientras la criatura permanezca en el mismo plano de existencia que tú, podrás utilizar una acción adicional en cada uno de los turnos posteriores para mantener esta conexión y alargar la duración de este efecto hasta el final de tu siguiente turno. \nLa conexión termina si no la mantienes de esta forma. \nMientras percibes el mundo a través de los ojos de la otra criatura, te beneficias de cualquier sentido especial que tenga y puedesllanzar conjuros como si estuvieras en tu espacio o en el espacio de la otra criatura si estáis a 18 m o menos de distancia. ",
+        },
+        {
+          name: "Paso Ascendente",
+          requirements: "Nivel 5",
+          description:
+            "Puedes lanzar levitar sobre ti sin gastar un espacio de conjuro.",
+        },
+        {
+          name: "Uno con las Sombras",
+          requirements: "Nivel 5",
+          description:
+            "Mientras estés en una zona de luz tenue u oscuridad, puedes lanzar invisibilidad sobre ti sin gastar un espacio de conjuro. ",
+        },
+
+        // --- NIVEL 7 ---
+        {
+          name: "Susurros del Sepulcro",
+          requirements: "Nivel 7",
+          description:
+            "Puedes lanzar hablar con los muertos sin gastar un espacio de conjuro. ",
+        },
+
+        // --- NIVEL 9 ---
+        {
+          name: "Devorador de Vida",
+          requirements: "Nivel 9, Pacto del Filo",
+          description:
+            "Una vez por turno, cuando aciertes a una criatura con tu arma de pacto, puedes causarle 1d6 de daño necrótico, psíquico o radiante adicional (a tu elección) a esa criatura y gastar uno de tus dados de puntos de golpe para tirarlo y recuperar una cantidad de puntos de golpe igual al resultado más tu modificador por Constitución (mínimo 1 punto de golpe). ",
+        },
+        {
+          name: "Don de los Protectores",
+          requirements: "Nivel 9, Pacto del Grimorio",
+          description:
+            "Aparece una nueva página en el Libro de las sombras cuando lo conjuras. Con tu permiso, una criatura puede usar una acción para escribir su nombre en esa página, que puede contener una cantidad de nombres igual a tu modificador por Carisma (mínimo un nombre). \nCuando los puntos de golpe de cualquier criatura cuyo nombre esté en la página se reduzcan a O, pero no muera, en vez de eso pasará a tener 1 punto de golpe mágicamente. Cuando esta magia se active, ninguna criatura podrá beneficiarse de ella hasta que finalices un descanso largo. \nComo acción de magia, puedes borrar un nombre de la página tocándolo.",
+        },
+        {
+          name: "Visiones de Reinos Remotos",
+          requirements: "Nivel 9",
+          description:
+            "Puedes lanzar ojo arcano sin gastar un espacio de conjuro.",
+        },
+
+        // --- NIVEL 12 ---
+        {
+          name: "Hoja Devoradora",
+          requirements: "Nivel 12, Filo Sediento",
+          description:
+            "El rasgo Ataque adicional de tu invocación Filo sediento otorga dos ataques adicionales en vez de uno.",
+        },
+
+        // --- NIVEL 15 ---
+        {
+          name: "Visión Bruja",
+          requirements: "Nivel 15",
+          description: "Tienes visión verdadera hasta 9 m.",
+        },
+      ],
+    },
+  ],
+
   subclasses: [
     {
       name: "Patrón Celestial",
       description:
         "Pacto con un ser de los Planos Superiores (Empíreo, Couatl, Unicornio).",
+      expandedSpells: [
+         // Nota: Auxilio es nivel 2 en 2014, pero en la imagen del 2024 aparece en la lista de nivel de brujo 3. Revisando reglas: Auxilio es nv 2. La imagen agrupa por nivel de brujo. Ajustaré por nivel de conjuro real.
+        // CORRECCIÓN BASADA EN REGLAS 5e (La imagen agrupa por Nivel de Brujo, no de Conjuro):
+        // Nivel Brujo 3 = Conjuros de Nivel 1 y 2.
+        // Nivel Brujo 5 = Conjuros de Nivel 3.
+        // Nivel Brujo 7 = Conjuros de Nivel 4.
+        // Nivel Brujo 9 = Conjuros de Nivel 5.
+        { spellLevel: 3, list: ["Auxilio","Curar heridas", "Saeta guía","Llama sagrada","Luz","Restablecimiento menor"] },
+        { spellLevel: 5, list: ["Luz del día", "Revivir"] },
+        { spellLevel: 7, list: ["Guardián de la fe", "Muro de fuego"] },
+        { spellLevel: 5, list: ["Invocar celestial", "Restablecimiento mayor"],},
+      ],
       features: [
+        {
+          level: 3,
+          name: "Conjuros del Celestial",
+          description:
+            "La magia de tu patrón garantiza que siempre tengas ciertos conjuros preparados. Cuando alcances un nivel de brujo especificado en la tabla “Conjuros del celestial”, a partir de entonces siempre tendrás preparados los conjuros que se indican. ",
+        },
         {
           level: 3,
           name: "Luz Sanadora",
@@ -1517,6 +1790,12 @@ const warlockData = {
       name: "Patrón Feérico",
       description:
         "Pacto con un señor de los Parajes Feéricos (Titania, Oberon, Reina del Aire y la Oscuridad).",
+      expandedSpells: [
+        { spellLevel: 3, list: ["Dormir", "Fuego feérico","Calmar emociones", "Fuerza fantasmal", "Paso brumoso"] },
+        { spellLevel: 5, list: ["Crecimiento vegetal", "Desplazamiento"] },
+        { spellLevel: 7, list: ["Dominar bestia", "Invisibilidad mejorada"] },
+        { spellLevel: 9, list: ["Apariencia", "Dominar persona"] },
+      ],
       features: [
         {
           level: 3,
@@ -1548,6 +1827,12 @@ const warlockData = {
       name: "Patrón Infernal",
       description:
         "Pacto con un demonio, diablo o yugoloth de los Planos Inferiores.",
+      expandedSpells: [
+        { spellLevel: 3, list: ["Manos ardientes", "Orden imperiosa","Rayo abrasador", "Sugestión"] },
+        { spellLevel: 5, list: ["Bola de fuego", "Nube apestosa"] },
+        { spellLevel: 7, list: ["Escudo de fuego", "Muro de fuego"] },
+        { spellLevel: 9, list: ["Geas", "Plaga de insectos"] },
+      ],
       features: [
         {
           level: 3,
@@ -1579,6 +1864,12 @@ const warlockData = {
       name: "Patrón Primigenio",
       description:
         "Pacto con una entidad antigua e incomprensible del Reino Lejano (Cthulhu, Hadar).",
+      expandedSpells: [
+        { spellLevel: 3, list: ["Risa horrible de Tasha", "Susurros discordantes","Detectar pensamientos", "Fuerza fantasmal"] },
+        { spellLevel: 5, list: ["Clarividencia", "Hambre de Hadar"] },
+        { spellLevel: 7, list: ["Confusión", "Invocar aberración"] },
+        { spellLevel: 9, list: ["Alterar los recuerdos", "Telequinesis"] },
+      ],
       features: [
         {
           level: 3,

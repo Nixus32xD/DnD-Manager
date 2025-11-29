@@ -1,5 +1,6 @@
 import Class from "../models/Class.js";
 import Species from "../models/Species.js";
+import Spell from "../models/Spell.js"; // <--- Importamos el modelo de Conjuros
 
 // Función para normalizar strings (quita acentos, pasa a minúsculas)
 const normalize = (str = "") =>
@@ -32,7 +33,7 @@ export const searchGlossaryTerm = async (req, res) => {
             return res.json({
               name: feat.name,
               type: "Rasgo de Clase",
-              source: cls.name,
+              source: `${cls.name} (Nivel ${level.level})`,
               description: feat.description,
             });
           }
@@ -50,6 +51,22 @@ export const searchGlossaryTerm = async (req, res) => {
               description: feature.description,
             });
           }
+        }
+        
+        // Buscar en opciones de clase (ej: Invocaciones del Brujo)
+        if (cls.optionalFeatures) {
+            for (const opt of cls.optionalFeatures) {
+                for (const item of opt.items) {
+                    if (normalize(item.name) === normalizedTerm) {
+                        return res.json({
+                            name: item.name,
+                            type: opt.title, // Ej: "Invocación Sobrenatural"
+                            source: cls.name,
+                            description: item.description
+                        });
+                    }
+                }
+            }
         }
       }
     }
@@ -70,6 +87,25 @@ export const searchGlossaryTerm = async (req, res) => {
           });
         }
       }
+    }
+
+    // -----------------------------------------------
+    // 🔍 3. BUSCAR EN CONJUROS (Spells)
+    // -----------------------------------------------
+    // Traemos todos para poder usar la función normalize en JS
+    // (Si la base crece a miles, esto se debería optimizar con índices de texto en Mongo)
+    const spells = await Spell.find({}); 
+
+    for (const spell of spells) {
+        if (normalize(spell.name) === normalizedTerm) {
+            return res.json({
+                name: spell.name,
+                // Mostramos si es Truco o el Nivel
+                type: spell.level === 0 ? "Truco" : `Conjuro Nivel ${spell.level}`,
+                source: spell.school, // Ej: "Evocación"
+                description: spell.description
+            });
+        }
     }
 
     // -----------------------------------------------
