@@ -10,6 +10,9 @@ import BackgroundsPage from './pages/BackgroundsPage';
 import SpeciesPage from './pages/SpeciesPage';
 import ClassPage from './pages/ClassPage';
 
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
+
 // Placeholder para páginas que aún no creaste
 const Placeholder = ({ title }) => (
   <div className="text-center py-20 text-slate-500 font-serif text-xl">
@@ -29,24 +32,26 @@ function App() {
         {/* Rutas de Personajes */}
         <Route path="characters" element={<CharactersPage />} />
         <Route path="characters/create" element={<Placeholder title="Crear Personaje" />} />
-        
+
         {/* Rutas de Reglas */}
-        <Route path="rules" element={< RulesPage/>} />
+        <Route path="rules" element={< RulesPage />} />
 
         {/* Rutas de Conjuros */}
-        <Route path="rules/spells" element={< SpellsPage/>} />
+        <Route path="rules/spells" element={< SpellsPage />} />
         {/* Rutas de Dotes */}
-        <Route path="rules/feats" element={< FeatsPage/>} />
+        <Route path="rules/feats" element={< FeatsPage />} />
         {/* Rutas de Obejtos y Equipo */}
-        <Route path="rules/items" element={< ItemsPage/>} />
+        <Route path="rules/items" element={< ItemsPage />} />
         {/* Rutas de Transfondo */}
-        <Route path="rules/backgrounds" element={< BackgroundsPage/>} />
+        <Route path="rules/backgrounds" element={< BackgroundsPage />} />
         {/* Rutas de Especies */}
-        <Route path="rules/species" element={< SpeciesPage/>} />
+        <Route path="rules/species" element={< SpeciesPage />} />
         {/* Rutas de Clases */}
-        <Route path="rules/classes/:classId" element={< ClassPage/>} />
-        <Route path="rules/classes" element={< ClassPage/>} />
+        <Route path="rules/classes/:classId" element={< ClassPage />} />
+        <Route path="rules/classes" element={< ClassPage />} />
 
+        <Route path="/login" element={< LoginPage />} />
+        <Route path="/register" element={< RegisterPage />} />
 
         {/* Ruta 404 */}
         <Route path="*" element={<Placeholder title="404 - Página no encontrada" />} />

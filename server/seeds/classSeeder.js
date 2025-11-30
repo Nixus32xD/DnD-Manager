@@ -1740,7 +1740,7 @@ const warlockData = {
     {
       name: "Patrón Celestial",
       description:
-        "Pacto con un ser de los Planos Superiores (Empíreo, Couatl, Unicornio).",
+        "Tu pacto recurre a los Planos Superiores, los reinos de la dicha eterna. Podrías llegar a un acuerdo con un empíreo, un couatl, una esfinge, un unicornio u otro ser de los cielos, o quizá prefieras recurrir a varios seres de este tipo para lograr objetivos comunes con los suyos. Tu pacto te permite experimentar una pizca de la luz sagrada que ilumina el multiverso.",
       expandedSpells: [
          // Nota: Auxilio es nivel 2 en 2014, pero en la imagen del 2024 aparece en la lista de nivel de brujo 3. Revisando reglas: Auxilio es nv 2. La imagen agrupa por nivel de brujo. Ajustaré por nivel de conjuro real.
         // CORRECCIÓN BASADA EN REGLAS 5e (La imagen agrupa por Nivel de Brujo, no de Conjuro):
@@ -1758,38 +1758,38 @@ const warlockData = {
           level: 3,
           name: "Conjuros del Celestial",
           description:
-            "La magia de tu patrón garantiza que siempre tengas ciertos conjuros preparados. Cuando alcances un nivel de brujo especificado en la tabla “Conjuros del celestial”, a partir de entonces siempre tendrás preparados los conjuros que se indican. ",
+            "La magia de tu patrón garantiza que siempre tengas ciertos conjuros preparados. Cuando alcances un nivel de brujo especificado en la tabla “Conjuros de Patron”, a partir de entonces siempre tendrás preparados los conjuros que se indican. ",
         },
         {
           level: 3,
           name: "Luz Sanadora",
           description:
-            "Reserva de dados d6 (1+Nivel) para curar a 18m como acción adicional.",
+            "Obtienes la facultad de canalizar energía celestial para curar heridas. Tienes una reserva de d6 para alimentar esta sanación. La cantidad de dados de tu reserva es de 1 más tu nivel de brujo. \nComo acción adicional, puedes gastar dados de tu reserva para curarte a ti mismo o a una criatura que puedas ver a 18 m o menos de ti. La cantidad máxima de dados que puedes usar a la vez es igual a tu modificador por Carisma (un dado como mínimo). Tira los dados que gastes y restablece una cantidad de puntos de golpe igual al resultado total de la tirada. Tu reserva recupera todos los dados gastados tras finalizar un descanso largo.",
         },
         {
           level: 6,
           name: "Alma Radiante",
           description:
-            "Resistencia radiante. Sumas Carisma al daño radiante/fuego de conjuros.",
+            "Tu vínculo con tu patrón te permite servir de canalizador de energía radiante. Tienes resistencia al daño radiante. \nUna vez por turno, si causas daño radiante o de fuego con un conjuro, puedes sumar tu modificador por Carisma al daño del conjuro contra uno de sus objetivos.",
         },
         {
           level: 10,
           name: "Resiliencia Celestial",
           description:
-            "Ganas PG temporales (Nivel + CAR) al descansar o usar Astucia Mágica. Aliados ganan la mitad.",
+            "Obtienes puntos de golpe temporales siempre que uses el rasgo Astucia mágica o finalices un descanso corto o largo. La cantidad obtenida es igual a tu nivel de brujo más tu modificador por Carisma. Además, eliges hasta cinco criaturas que puedas ver cuando obtengas los puntos. \nCada una de ellas obtiene una cantidad de puntos de golpe temporales igual a la mitad de tu nivel de brujo más tu modificador por Carisma.",
         },
         {
           level: 14,
           name: "Venganza Ardiente",
           description:
-            "Al hacer salvación de muerte, te levantas con mitad de vida, ciegas y dañas a enemigos cercanos.",
+            "Cuando tú o un aliado a 18 m o menos de ti vayáis a hacer una tirada de salvación contra muerte, puedes emitir energía radiante para salvar a esa criatura. La criatura recupera una cantidad de puntos de golpe igual a la mitad de sus puntos de golpe máximos y puede poner fin a su estado de derribada. Todas las criaturas de tu elección que se encuentren a 9 m o menos de la criatura sufren una cantidad de daño radiante igual a 2d8 más tu modificador por Carisma y tienen el estado de cegadas hasta el final del turno actual. \nCuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo.",
         },
       ],
     },
     {
       name: "Patrón Feérico",
       description:
-        "Pacto con un señor de los Parajes Feéricos (Titania, Oberon, Reina del Aire y la Oscuridad).",
+        "Tu pacto recurre a la energía de los Parajes Feéricos. Si eliges esta subclase, puedes hacer un trato con un señor feérico, como el Príncipe de la Escarcha; la Reina del Aire y la Oscuridad, gobernante de la Corte Crepuscular; Titania de la Corte del Verano, o sagas muy ancianas. Si no, puedes recurrir a una variedad de feéricos y tejer una red de favores y deudas. Sea quien sea, tu patrón suele resultar caprichoso e inescrutable.",
       expandedSpells: [
         { spellLevel: 3, list: ["Dormir", "Fuego feérico","Calmar emociones", "Fuerza fantasmal", "Paso brumoso"] },
         { spellLevel: 5, list: ["Crecimiento vegetal", "Desplazamiento"] },
@@ -1799,34 +1799,40 @@ const warlockData = {
       features: [
         {
           level: 3,
+          name: "Conjuros del Señor Feérico",
+          description:
+            "La magia de tu patrón garantiza que siempre tengas ciertos conjuros preparados. Cuando alcances un nivel de brujo especificado en la tabla “Conjuros de Patron”, a partir de entonces siempre tendrás preparados los conjuros que se indican. ",
+        },
+        {
+          level: 3,
           name: "Pasos Feéricos",
           description:
-            "Lanzas Paso Brumoso gratis (Usos = CAR). Añades efectos: Burlón (desventaja ataques) o Refrescante (cura).",
+            "Tu patrón te otorga la capacidad de desplazarte entre los límites de los planos. Puedes lanzar paso brumoso sin gastar un espacio de conjuro una cantidad de veces igual a tu modificador por Carisma (mínimo una vez) y recuperas todos los usos tras finalizar un descanso largo. \nAdemás, siempre que lances el conjuro, puedes elegir uno de los siguientes efectos adicionales. \n<strong>Paso burlón:</strong> Las criaturas a 1,5 m o menos del espacio que hayas abandonado deberán superar una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros o tendrán desventaja en las tiradas de ataque contra criaturas que no seas tú hasta el principio de tu siguiente turno. \n<strong>Paso refrescante:</strong> Inmediatamente después de teletransportarte, tú o una criatura que puedas ver a 3 m o menos de ti obtenéis 1d10 puntos de golpe temporales.",
         },
         {
           level: 6,
           name: "Escape Brumoso",
           description:
-            "Paso Brumoso como reacción al recibir daño. Nuevos efectos: Aterrador (daño psíquico) o Desvanecedor (invisible).",
+            "Puedes lanzar paso brumoso como reacción en respuesta a recibir daño. \nAdemás, ahora cuentas con los siguientes efectos entre tus opciones de Pasos feéricos. \n<strong>Paso aterrador</strong> Las criaturas a 1,5 m o menos del espacio que hayas abandonado o del espacio en el que aparezcas (a tu elección) deberán superar una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros o sufrirán 2d10 de daño psíquico. \n<strong>Paso desvanecedor:</strong> Tienes el estado de invisible hasta el principio de tu siguiente turno o hasta justo después de que hagas una tirada de ataque, causes daño o lances un conjuro.",
         },
         {
           level: 10,
           name: "Defensas Seductoras",
           description:
-            "Inmune a Hechizado. Reacción para reducir daño a la mitad y devolverlo como psíquico.",
+            "Tu patrón te enseña a proteger tu mente y cuerpo. Eres inmune al estado de hechizado. \nAdemás, inmediatamente después de que una criatura que puedas ver te acierte con una tirada de ataque, puedes usar una reacción para reducir a la mitad el daño que recibes (redondeando hacia abajo) y obligar al atacante a hacer una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros. Si la falla, sufrirá una cantidad de daño psíquico igual al daño que tú recibas. Cuando uses esta reacción, no podrás volver a hacerlo hasta que finalices un descanso largo, a menos que gastes un espacio de conjuro de Magia del pacto (no requiere acción) para restablecer su uso. ",
         },
         {
           level: 14,
           name: "Magia Embrujadora",
           description:
-            "Al lanzar Encantamiento/Ilusión, lanzas Paso Brumoso gratis.",
+            "Tu patrón te otorga la capacidad de entrelazar tu magia con la teletransportación. Inmediatamente después de lanzar un conjuro de encantamiento o ilusionismo usando una acción y un espacio de conjuro, puedes lanzar paso brumoso como parte de la misma acción y sin gastar otro espacio de conjuro.",
         },
       ],
     },
     {
       name: "Patrón Infernal",
       description:
-        "Pacto con un demonio, diablo o yugoloth de los Planos Inferiores.",
+        "Tu pacto recurre a los Planos Inferiores, los reinos de la perdición. Puedes negociar con un señor demoníaco, como Demogorgon u Orcus, con un archidiablo como Asmodeo, o con un diablo de la sima, balor, yugoloth o una saga de la noche especialmente notable. Estos patrones desean la corrupción y la destrucción de todas las cosas (incluyéndote a ti en última instancia) y tu camino se verá definido por la medida en que luchas contra esos deseos.",
       expandedSpells: [
         { spellLevel: 3, list: ["Manos ardientes", "Orden imperiosa","Rayo abrasador", "Sugestión"] },
         { spellLevel: 5, list: ["Bola de fuego", "Nube apestosa"] },
@@ -1836,34 +1842,40 @@ const warlockData = {
       features: [
         {
           level: 3,
+          name: "Conjuros del Infernal",
+          description:
+            "La magia de tu patrón garantiza que siempre tengas ciertos conjuros preparados. Cuando alcances un nivel de brujo especificado en la tabla “Conjuros de Patron”, a partir de entonces siempre tendrás preparados los conjuros que se indican.",
+        },
+        {
+          level: 3,
           name: "Bendición del Oscuro",
           description:
-            "Cuando reduces a 0 a un enemigo, ganas PG temporales (CAR + Nivel).",
+            "Cuando reduzcas a O los puntos de golpe de un enemigo, obtienes una cantidad de puntos de golpe temporales igual a tu modificador por Carisma más tu nivel de brujo (mínimo de 1 punto de golpe temporal). También obtienes este beneficio si otra criatura reduce a O los puntos de golpe de un enemigo a 3 m o menos de ti.",
         },
         {
           level: 6,
           name: "La Suerte del Oscuro",
           description:
-            "Sumas 1d10 a una prueba de característica o salvación (Usos = CAR).",
+            "Puedes invocar a tu patrón infernal para alterar el destino a tu favor. Cuando hagas una prueba de característica o una tirada de salvación, puedes utilizar este rasgo para sumar 1d10 a tu tirada. Puedes hacerlo después de ver el resultado de la tirada, pero antes de que ocurran sus efectos. \nPuedes usar este rasgo una cantidad de veces igual a tu modificador por Carisma (mínimo una vez), pero no más de una vez por tirada. Recuperas todos los usos tras finalizar un descanso largo.",
         },
         {
           level: 10,
           name: "Resistencia Infernal",
           description:
-            "Eliges resistencia a un tipo de daño tras cada descanso.",
+            "Tras finalizar un descanso corto o largo, elige un tipo de daño que no sea el de fuerza. Tienes resistencia a ese tipo de daño hasta que elijas uno distinto con este rasgo. ",
         },
         {
           level: 14,
           name: "Arrastrar por el Infierno",
           description:
-            "Al acertar ataque, destierras al objetivo. Al volver sufre 8d10 psíquico.",
+          "Una vez por turno, cuando aciertas a una criatura con una tirada de ataque, puedes intentar teletransportar instantáneamente al objetivo a los Planos Inferiores. El objetivo deberá superar una tirada de salvación de Carisma contra tu CD de salvación de conjuros o desaparecerá y se precipitará a través de un paisaje de pesadilla. Si el objetivo no es un infernal, sufrirá 8d10 de daño psíquico y tendrá el estado de incapacitado hasta el final de tu siguiente turno, momento en el que volverá al espacio que ocupaba anteriormente o al espacio sin ocupar más cercano. \nCuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo, a menos que gastes un espacio de conjuro de Magia del pacto (no requiere acción) para restablecer su uso. ",
         },
       ],
     },
     {
       name: "Patrón Primigenio",
       description:
-        "Pacto con una entidad antigua e incomprensible del Reino Lejano (Cthulhu, Hadar).",
+        "Cuando eliges esta subclase, quizá te ates a un ser indescriptible del Reino Lejano o a un dios antiguo: entidades como Tharizdun, el Dios Encadenado; Zargon, el Ente que Regresa; Hadar, el Hambre Tenebrosa o el Gran Cthulhu, o quizá invoques a varias entidades sin subyugarte a una sola. Sus motivos son incomprensibles y seguramente el Primigenio no sea siquiera consciente de tu existencia, pero los secretos que has descubierto te permiten extraer poder mágico de él.",
       expandedSpells: [
         { spellLevel: 3, list: ["Risa horrible de Tasha", "Susurros discordantes","Detectar pensamientos", "Fuerza fantasmal"] },
         { spellLevel: 5, list: ["Clarividencia", "Hambre de Hadar"] },
@@ -1873,33 +1885,45 @@ const warlockData = {
       features: [
         {
           level: 3,
+          name: "Conjuros del Primigenio",
+          description:
+            "La magia de tu patrón garantiza que siempre tengas ciertos conjuros preparados. Cuando alcances un nivel de brujo especificado en la tabla “Conjuros del Patron”, a partir de entonces siempre tendrás preparados los conjuros que se indican.",
+        },
+        {
+          level: 3,
+          name: "Conjuros Psíquicos",
+          description:
+            "Cuando lances un conjuro de brujo que cause daño, puedes cambiar su tipo de daño a psíquico. Además, cuando lances un conjuro de brujo de encantamiento o ilusionismo, puedes hacerlo sin componentes verbales ni somáticos.",
+        },
+        {
+          level: 3,
           name: "Mente Iluminada",
           description:
-            "Telepatía 1.5km. Puedes cambiar daño de conjuros a psíquico. Encantamiento/Ilusión sin componentes V/S.",
+            "Puedes establecer una conexión telepática con la mente de otra criatura. Como acción adicional, elige una criatura que puedas ver a 9 m o menos de ti. La criatura elegida y tú podréis comunicaros telepáticamente mientras estéis a una distancia máxima igual a 1,5 km x tu modificador por Carisma (mínimo de 1,5 km). Para entenderos, debéis emplear mentalmente un idioma que ambos conozcáis. \nLa conexión telepática dura un número de minutos igual a tu nivel de brujo. Termina antes de tiempo si usas este rasgo para conectarte con otra criatura. ",
         },
         {
           level: 6,
           name: "Combatiente Clarividente",
           description:
-            "Al conectar mente, fuerzas salvación: si falla, tienes ventaja contra él y él desventaja contra ti.",
+            "Cuando formas un enlace telepático con una criatura usando Mente iluminada, puedes obligar a esa criatura a hacer una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros. Si la falla, la criatura tendrá desventaja en las tiradas de ataque contra ti y tú tendrás ventaja en las tiradas de ataque contra ella hasta que acabe el enlace. \nCuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso corto o largo, a menos que gastes un espacio de conjuro de Magia del pacto (no requiere acción) para restablecer su uso. ",
         },
         {
           level: 10,
           name: "Escudo Mental",
           description:
-            "Pensamientos ilegibles. Resistencia psíquica y reflejas daño psíquico.",
+            "Tus pensamientos no se pueden leer mediante telepatía o cualquier otro medio sin que tú lo permitas. Además, tienes resistencia al daño psíquico y, siempre que una criatura te cause daño psíquico, ella recibirá la misma cantidad de daño que tú. ",
         },
         {
           level: 10,
           name: "Maleficio Sobrenatural",
           description:
-            "Siempre tienes Maleficio. Impone desventaja en salvaciones de la característica elegida.",
+            "Tu patrón extraterrenal te concede una poderosa maldición. Siempre tienes el conjuro maleficio preparado. Cuando lanzas maleficio y eliges una característica, el objetivo también tendrá desventaja en las tiradas de salvación de la característica elegida hasta que termine el conjuro. ",
         },
         {
           level: 14,
           name: "Crear Siervo",
           description:
-            "Invocar Aberración sin concentración (1 min). Gana PG temporales y hace daño extra a objetivos con Maleficio.",
+            "Cuando lanzas invocar aberración, puedes modificarlo para que no requiera concentración. Si lo haces, la duración del conjuro pasa a ser de 1 minuto para ese lanzamiento y, cuando la invoques, la aberración tendrá una cantidad de puntos de golpe temporales igual a tu nivel de brujo más tu modificador por Carisma. \nAdemás, la primera vez en cada turno que la aberración acierte a una criatura bajo el efecto de tu maleficio, le infligirá una cantidad de daño psíquico extra igual al daño adicional del conjuro. ",
         },
       ],
     },

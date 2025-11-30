@@ -13,6 +13,7 @@ import backgroundRoutes from "./routes/backgroundRoutes.js";
 import speciesRoutes from "./routes/speciesRoutes.js";
 import classRoutes from "./routes/classRoutes.js";
 import glossaryRoutes from "./routes/glossaryRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -51,6 +52,7 @@ app.use("/api/backgrounds", backgroundRoutes);
 app.use("/api/species", speciesRoutes)
 app.use("/api/classes", classRoutes);
 app.use("/api/glossary", glossaryRoutes);
+app.use("/api/auth", authRoutes); // Rutas de autenticación
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);

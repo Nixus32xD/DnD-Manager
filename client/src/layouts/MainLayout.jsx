@@ -34,9 +34,9 @@ const MainLayout = () => {
                             <Link to="/ua" className="text-slate-400 hover:text-amber-400 transition font-medium uppercase text-sm tracking-widest">
                                 UNEARTHED ARCANA
                             </Link>
-                            <button className="bg-red-700 hover:bg-red-600 text-white px-4 py-2 rounded border border-red-500 transition shadow-lg shadow-red-900/20">
+                            <Link to="/login" className="bg-red-700 hover:bg-red-600 text-white px-4 py-2 rounded border border-red-500 transition shadow-lg shadow-red-900/20">
                                 Login
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
