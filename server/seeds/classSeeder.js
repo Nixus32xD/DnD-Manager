@@ -9,8 +9,8 @@ const barbarianData = {
   description:
     "Un guerrero feroz de origen primitivo que puede entrar en una furia de batalla impulsada por las fuerzas de la naturaleza.",
   hitDie: 12,
-  primaryAbility: ["Fuerza"],
-  savingThrows: ["Fuerza", "Constitución"],
+  primaryAbility: ["strength"],
+  savingThrows: ["strength", "constitution"],
   proficiencies: {
     armor: ["Ligeras", "Medias", "Escudos"],
     weapons: ["Sencillas", "Marciales"],
@@ -454,8 +454,8 @@ const bardData = {
   description:
     "Un artista inspirador cuya magia resuena con la música de la creación.",
   hitDie: 8,
-  primaryAbility: ["Carisma"],
-  savingThrows: ["Destreza", "Carisma"],
+  primaryAbility: ["charisma"],
+  savingThrows: ["dexterity", "charisma"],
   proficiencies: {
     armor: ["Ligeras"],
     weapons: ["Sencillas"],
@@ -463,7 +463,26 @@ const bardData = {
   },
   skillChoices: {
     count: 3,
-    list: ["Cualquiera"], // Los bardos pueden elegir 3 habilidades cualesquiera
+    list: [
+      "Acrobacias",
+      "Atletismo",
+      "Conocimiento Arcano",
+      "Engaño",
+      "Historia",
+      "Interpretación",
+      "Intimidación",
+      "Investigación",
+      "Juego de Manos",
+      "Medicina",
+      "Naturaleza",
+      "Percepción",
+      "Perspicacia",
+      "Persuasión",
+      "Religión",
+      "Sigilo",
+      "Supervivencia",
+      "Trato con Animales",
+    ], // Los bardos pueden elegir 3 habilidades cualesquiera
   },
   startingEquipment: [
     "Armadura de cuero, 2 dagas",
@@ -1123,8 +1142,8 @@ const warlockData = {
   description:
     "Un lanzador de conjuros que obtiene poder mediante un pacto con una entidad extraplanar.",
   hitDie: 8,
-  primaryAbility: ["Carisma"],
-  savingThrows: ["Sabiduría", "Carisma"],
+  primaryAbility: ["charisma"],
+  savingThrows: ["wisdom", "charisma"],
   proficiencies: {
     armor: ["Ligeras"],
     weapons: ["Sencillas"],
@@ -1133,7 +1152,7 @@ const warlockData = {
   skillChoices: {
     count: 2,
     list: [
-      "Conocimiento arcano",
+      "Conocimiento Arcano",
       "Engaño",
       "Historia",
       "Intimidación",
@@ -1742,16 +1761,29 @@ const warlockData = {
       description:
         "Tu pacto recurre a los Planos Superiores, los reinos de la dicha eterna. Podrías llegar a un acuerdo con un empíreo, un couatl, una esfinge, un unicornio u otro ser de los cielos, o quizá prefieras recurrir a varios seres de este tipo para lograr objetivos comunes con los suyos. Tu pacto te permite experimentar una pizca de la luz sagrada que ilumina el multiverso.",
       expandedSpells: [
-         // Nota: Auxilio es nivel 2 en 2014, pero en la imagen del 2024 aparece en la lista de nivel de brujo 3. Revisando reglas: Auxilio es nv 2. La imagen agrupa por nivel de brujo. Ajustaré por nivel de conjuro real.
+        // Nota: Auxilio es nivel 2 en 2014, pero en la imagen del 2024 aparece en la lista de nivel de brujo 3. Revisando reglas: Auxilio es nv 2. La imagen agrupa por nivel de brujo. Ajustaré por nivel de conjuro real.
         // CORRECCIÓN BASADA EN REGLAS 5e (La imagen agrupa por Nivel de Brujo, no de Conjuro):
         // Nivel Brujo 3 = Conjuros de Nivel 1 y 2.
         // Nivel Brujo 5 = Conjuros de Nivel 3.
         // Nivel Brujo 7 = Conjuros de Nivel 4.
         // Nivel Brujo 9 = Conjuros de Nivel 5.
-        { spellLevel: 3, list: ["Auxilio","Curar heridas", "Saeta guía","Llama sagrada","Luz","Restablecimiento menor"] },
+        {
+          spellLevel: 3,
+          list: [
+            "Auxilio",
+            "Curar heridas",
+            "Saeta guía",
+            "Llama sagrada",
+            "Luz",
+            "Restablecimiento menor",
+          ],
+        },
         { spellLevel: 5, list: ["Luz del día", "Revivir"] },
         { spellLevel: 7, list: ["Guardián de la fe", "Muro de fuego"] },
-        { spellLevel: 5, list: ["Invocar celestial", "Restablecimiento mayor"],},
+        {
+          spellLevel: 5,
+          list: ["Invocar celestial", "Restablecimiento mayor"],
+        },
       ],
       features: [
         {
@@ -1791,7 +1823,16 @@ const warlockData = {
       description:
         "Tu pacto recurre a la energía de los Parajes Feéricos. Si eliges esta subclase, puedes hacer un trato con un señor feérico, como el Príncipe de la Escarcha; la Reina del Aire y la Oscuridad, gobernante de la Corte Crepuscular; Titania de la Corte del Verano, o sagas muy ancianas. Si no, puedes recurrir a una variedad de feéricos y tejer una red de favores y deudas. Sea quien sea, tu patrón suele resultar caprichoso e inescrutable.",
       expandedSpells: [
-        { spellLevel: 3, list: ["Dormir", "Fuego feérico","Calmar emociones", "Fuerza fantasmal", "Paso brumoso"] },
+        {
+          spellLevel: 3,
+          list: [
+            "Dormir",
+            "Fuego feérico",
+            "Calmar emociones",
+            "Fuerza fantasmal",
+            "Paso brumoso",
+          ],
+        },
         { spellLevel: 5, list: ["Crecimiento vegetal", "Desplazamiento"] },
         { spellLevel: 7, list: ["Dominar bestia", "Invisibilidad mejorada"] },
         { spellLevel: 9, list: ["Apariencia", "Dominar persona"] },
@@ -1834,7 +1875,15 @@ const warlockData = {
       description:
         "Tu pacto recurre a los Planos Inferiores, los reinos de la perdición. Puedes negociar con un señor demoníaco, como Demogorgon u Orcus, con un archidiablo como Asmodeo, o con un diablo de la sima, balor, yugoloth o una saga de la noche especialmente notable. Estos patrones desean la corrupción y la destrucción de todas las cosas (incluyéndote a ti en última instancia) y tu camino se verá definido por la medida en que luchas contra esos deseos.",
       expandedSpells: [
-        { spellLevel: 3, list: ["Manos ardientes", "Orden imperiosa","Rayo abrasador", "Sugestión"] },
+        {
+          spellLevel: 3,
+          list: [
+            "Manos ardientes",
+            "Orden imperiosa",
+            "Rayo abrasador",
+            "Sugestión",
+          ],
+        },
         { spellLevel: 5, list: ["Bola de fuego", "Nube apestosa"] },
         { spellLevel: 7, list: ["Escudo de fuego", "Muro de fuego"] },
         { spellLevel: 9, list: ["Geas", "Plaga de insectos"] },
@@ -1868,7 +1917,7 @@ const warlockData = {
           level: 14,
           name: "Arrastrar por el Infierno",
           description:
-          "Una vez por turno, cuando aciertas a una criatura con una tirada de ataque, puedes intentar teletransportar instantáneamente al objetivo a los Planos Inferiores. El objetivo deberá superar una tirada de salvación de Carisma contra tu CD de salvación de conjuros o desaparecerá y se precipitará a través de un paisaje de pesadilla. Si el objetivo no es un infernal, sufrirá 8d10 de daño psíquico y tendrá el estado de incapacitado hasta el final de tu siguiente turno, momento en el que volverá al espacio que ocupaba anteriormente o al espacio sin ocupar más cercano. \nCuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo, a menos que gastes un espacio de conjuro de Magia del pacto (no requiere acción) para restablecer su uso. ",
+            "Una vez por turno, cuando aciertas a una criatura con una tirada de ataque, puedes intentar teletransportar instantáneamente al objetivo a los Planos Inferiores. El objetivo deberá superar una tirada de salvación de Carisma contra tu CD de salvación de conjuros o desaparecerá y se precipitará a través de un paisaje de pesadilla. Si el objetivo no es un infernal, sufrirá 8d10 de daño psíquico y tendrá el estado de incapacitado hasta el final de tu siguiente turno, momento en el que volverá al espacio que ocupaba anteriormente o al espacio sin ocupar más cercano. \nCuando uses este rasgo, no podrás volver a hacerlo hasta que finalices un descanso largo, a menos que gastes un espacio de conjuro de Magia del pacto (no requiere acción) para restablecer su uso. ",
         },
       ],
     },
@@ -1877,7 +1926,15 @@ const warlockData = {
       description:
         "Cuando eliges esta subclase, quizá te ates a un ser indescriptible del Reino Lejano o a un dios antiguo: entidades como Tharizdun, el Dios Encadenado; Zargon, el Ente que Regresa; Hadar, el Hambre Tenebrosa o el Gran Cthulhu, o quizá invoques a varias entidades sin subyugarte a una sola. Sus motivos son incomprensibles y seguramente el Primigenio no sea siquiera consciente de tu existencia, pero los secretos que has descubierto te permiten extraer poder mágico de él.",
       expandedSpells: [
-        { spellLevel: 3, list: ["Risa horrible de Tasha", "Susurros discordantes","Detectar pensamientos", "Fuerza fantasmal"] },
+        {
+          spellLevel: 3,
+          list: [
+            "Risa horrible de Tasha",
+            "Susurros discordantes",
+            "Detectar pensamientos",
+            "Fuerza fantasmal",
+          ],
+        },
         { spellLevel: 5, list: ["Clarividencia", "Hambre de Hadar"] },
         { spellLevel: 7, list: ["Confusión", "Invocar aberración"] },
         { spellLevel: 9, list: ["Alterar los recuerdos", "Telequinesis"] },
@@ -1935,8 +1992,8 @@ const clericData = {
   description:
     "Un sacerdote milagroso que canaliza el poder divino para obrar maravillas y castigar enemigos.",
   hitDie: 8,
-  primaryAbility: ["Sabiduría"],
-  savingThrows: ["Sabiduría", "Carisma"],
+  primaryAbility: ["wisdom"],
+  savingThrows: ["wisdom", "charisma"],
   proficiencies: {
     armor: ["Ligeras", "Medias", "Escudos"],
     weapons: ["Sencillas"],
@@ -2566,8 +2623,8 @@ const druidData = {
   description:
     "Un sacerdote de la Antigua Fe, que canaliza los poderes de la naturaleza (luz de luna, crecimiento vegetal, fuego, rayo) y adopta formas animales.",
   hitDie: 8,
-  primaryAbility: ["Sabiduría"],
-  savingThrows: ["Inteligencia", "Sabiduría"],
+  primaryAbility: ["wisdom"],
+  savingThrows: ["intelligence", "wisdom"],
   proficiencies: {
     armor: ["Ligeras", "Medias", "Escudos"],
     weapons: ["Sencillas"],
@@ -2576,7 +2633,7 @@ const druidData = {
   skillChoices: {
     count: 2,
     list: [
-      "Conocimiento arcano",
+      "Conocimiento Arcano",
       "Medicina",
       "Naturaleza",
       "Percepción",
@@ -3242,8 +3299,8 @@ const rangerData = {
   description:
     "Un luchador errante que combina la maestría marcial con la magia primigenia de la naturaleza para cazar monstruos y proteger las tierras salvajes.",
   hitDie: 10,
-  primaryAbility: ["Destreza", "Sabiduría"],
-  savingThrows: ["Fuerza", "Destreza"],
+  primaryAbility: ["dexterity", "wisdom"],
+  savingThrows: ["strength", "dexterity"],
   proficiencies: {
     armor: ["Ligeras", "Medias", "Escudos"],
     weapons: ["Sencillas", "Marciales"],
@@ -3837,8 +3894,8 @@ const fighterData = {
   description:
     "Un maestro del combate marcial, experto en el uso de todas las armas y armaduras.",
   hitDie: 10,
-  primaryAbility: ["Fuerza", "Destreza"],
-  savingThrows: ["Fuerza", "Constitución"],
+  primaryAbility: ["strength", "dexterity"],
+  savingThrows: ["strength", "constitution"],
   proficiencies: {
     armor: ["Ligeras", "Medias", "Pesadas", "Escudos"],
     weapons: ["Sencillas", "Marciales"],
@@ -4305,8 +4362,8 @@ const sorcererData = {
   description:
     "Un lanzador de conjuros que emplea una magia innata derivada de un don o un linaje.",
   hitDie: 6,
-  primaryAbility: ["Carisma"],
-  savingThrows: ["Constitución", "Carisma"],
+  primaryAbility: ["charisma"],
+  savingThrows: ["constitution", "charisma"],
   proficiencies: {
     armor: [],
     weapons: ["Sencillas"],
@@ -4315,7 +4372,7 @@ const sorcererData = {
   skillChoices: {
     count: 2,
     list: [
-      "Conocimiento arcano",
+      "Conocimiento Arcano",
       "Engaño",
       "Intimidación",
       "Perspicacia",
@@ -4954,8 +5011,8 @@ const wizardData = {
   description:
     "Un estudioso usuario de magia capaz de manipular la estructura de la realidad.",
   hitDie: 6,
-  primaryAbility: ["Inteligencia"],
-  savingThrows: ["Inteligencia", "Sabiduría"],
+  primaryAbility: ["intelligence"],
+  savingThrows: ["intelligence", "wisdom"],
   proficiencies: {
     armor: [],
     weapons: ["Sencillas"],
@@ -4964,7 +5021,7 @@ const wizardData = {
   skillChoices: {
     count: 2,
     list: [
-      "Conocimiento arcano",
+      "Conocimiento Arcano",
       "Historia",
       "Investigación",
       "Medicina",
@@ -5609,8 +5666,8 @@ const monkData = {
   description:
     "Un maestro de las artes marciales que utiliza el poder de su cuerpo y su mente para realizar hazañas físicas sobrenaturales.",
   hitDie: 8,
-  primaryAbility: ["Destreza", "Sabiduría"],
-  savingThrows: ["Fuerza", "Destreza"],
+  primaryAbility: ["dexterity", "wisdom"],
+  savingThrows: ["strength", "dexterity"],
   proficiencies: {
     armor: [],
     weapons: ["Sencillas", "Armas Marciales con la propiedad Ligera"],
@@ -6126,8 +6183,8 @@ const paladinData = {
   description:
     "Un guerrero sagrado unido a un juramento solemne que le otorga poder divino para proteger a los débiles y castigar a los malvados.",
   hitDie: 10,
-  primaryAbility: ["Fuerza", "Carisma"],
-  savingThrows: ["Sabiduría", "Carisma"],
+  primaryAbility: ["strength", "charisma"],
+  savingThrows: ["wisdom", "charisma"],
   proficiencies: {
     armor: ["Ligeras", "Medias", "Pesadas", "Escudos"],
     weapons: ["Sencillas", "Marciales"],
@@ -6724,8 +6781,8 @@ const rogueData = {
   description:
     "Un bribón que utiliza el sigilo, la astucia y la precisión para superar obstáculos y enemigos.",
   hitDie: 8,
-  primaryAbility: ["Destreza"],
-  savingThrows: ["Destreza", "Inteligencia"],
+  primaryAbility: ["dexterity"],
+  savingThrows: ["dexterity", "intelligence"],
   proficiencies: {
     armor: ["Ligeras"],
     weapons: ["Sencillas", "Marciales con la propiedad Sutil o Ligera"],

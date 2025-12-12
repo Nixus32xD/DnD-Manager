@@ -9,6 +9,7 @@ const CharacterSchema = new mongoose.Schema({
   
   // Referencias Core (Elecciones de creación)
   species: { type: mongoose.Schema.Types.ObjectId, ref: 'Species' },
+  subspecies: { type: String },
   class: { type: mongoose.Schema.Types.ObjectId, ref: 'Class' },
   subclass: { type: String }, // Nombre de la subclase elegida (ej: "Evocador")
   background: { type: mongoose.Schema.Types.ObjectId, ref: 'Background' },

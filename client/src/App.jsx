@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/Homepage';
-import CharactersPage from './pages/CharactersPage';
+
 import SpellsPage from './pages/SpellsPage';
 import RulesPage from './pages/RulesPage';
 import FeatsPage from './pages/FeatsPage';
@@ -12,6 +12,11 @@ import ClassPage from './pages/ClassPage';
 
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+
+
+import CharactersPage from './pages/CharactersPage';
+import CreateCharacterPage from './pages/CreateCharactersPage';
+import CharacterDetailsPage from './pages/CharacterDetailsPage';
 
 // Placeholder para páginas que aún no creaste
 const Placeholder = ({ title }) => (
@@ -31,7 +36,8 @@ function App() {
 
         {/* Rutas de Personajes */}
         <Route path="characters" element={<CharactersPage />} />
-        <Route path="characters/create" element={<Placeholder title="Crear Personaje" />} />
+        <Route path="characters/create" element={<CreateCharacterPage />} />
+        <Route path="characters/:id" element={<CharacterDetailsPage />} />
 
         {/* Rutas de Reglas */}
         <Route path="rules" element={< RulesPage />} />

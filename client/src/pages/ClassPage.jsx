@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Sword, Shield, Zap, X, ChevronRight, Scroll, BookOpen, Star, List } from 'lucide-react';
+import { Sword, Shield, Zap, X, ChevronRight, BookOpen, Star, List, Scroll } from 'lucide-react';
 import Keyword from '../components/Keyword';
 
 // Importamos íconos específicos de rol
@@ -8,19 +8,30 @@ import { GiSharpAxe, GiFragmentedSword, GiWarlockEye, GiHolyGrail, GiChargedArro
 import { LiaGuitarSolid } from "react-icons/lia";
 import { FaWolfPackBattalion } from "react-icons/fa";
 
+// 1. DICCIONARIO DE TRADUCCIÓN DE STATS
+const STAT_TRANSLATIONS = {
+    strength: "Fuerza",
+    dexterity: "Destreza",
+    constitution: "Constitución",
+    intelligence: "Inteligencia",
+    wisdom: "Sabiduría",
+    charisma: "Carisma"
+};
+
+// 2. MAPA DE ÍCONOS (Soporta Inglés y Español por las dudas)
 const CLASS_ICONS = {
-    "Bárbaro": GiSharpAxe,
-    "Paladín": GiFragmentedSword,
-    "Bardo": LiaGuitarSolid,
-    "Brujo": GiWarlockEye,
-    "Clérigo": GiHolyGrail,
-    "Druida": FaWolfPackBattalion,
-    "Explorador": GiChargedArrow,
-    "Hechicero": GiCrystalWand,
-    "Guerrero": GiSwordsEmblem,
-    "Mago": GiSpellBook,
-    "Monje": GiPunchBlast,
-    "Pícaro": GiCloakDagger,
+    "Bárbaro": GiSharpAxe, "Barbarian": GiSharpAxe,
+    "Paladín": GiFragmentedSword, "Paladin": GiFragmentedSword,
+    "Bardo": LiaGuitarSolid, "Bard": LiaGuitarSolid,
+    "Brujo": GiWarlockEye, "Warlock": GiWarlockEye,
+    "Clérigo": GiHolyGrail, "Cleric": GiHolyGrail,
+    "Druida": FaWolfPackBattalion, "Druid": FaWolfPackBattalion,
+    "Explorador": GiChargedArrow, "Ranger": GiChargedArrow,
+    "Hechicero": GiCrystalWand, "Sorcerer": GiCrystalWand,
+    "Guerrero": GiSwordsEmblem, "Fighter": GiSwordsEmblem,
+    "Mago": GiSpellBook, "Wizard": GiSpellBook,
+    "Monje": GiPunchBlast, "Monk": GiPunchBlast,
+    "Pícaro": GiCloakDagger, "Rogue": GiCloakDagger,
 };
 
 const ClassesPage = () => {
@@ -50,6 +61,12 @@ const ClassesPage = () => {
         setActiveTab('general'); // Reseteamos a la primera pestaña siempre que se abre
     };
 
+    // Helper para formatear array de stats (ej: ["strength"] -> "Fuerza")
+    const formatStats = (arr) => {
+        if (!arr) return "";
+        return arr.map(stat => STAT_TRANSLATIONS[stat.toLowerCase()] || stat).join(" / ");
+    };
+
     return (
         <div className="container mx-auto animate-fadeIn p-4 pb-20">
             <div className="mb-12 text-center">
@@ -77,11 +94,14 @@ const ClassesPage = () => {
                                 ) : null;
                             })()}
                             <h2 className="text-2xl font-bold text-slate-100 font-serif mb-2 group-hover:text-amber-500 transition-colors">{cls.name}</h2>
+                            
                             <div className="flex gap-2 mb-4 text-xs font-bold uppercase tracking-widest text-slate-500">
                                 <span>d{cls.hitDie} PG</span>
                                 <span>•</span>
-                                <span>{cls.primaryAbility.join(" / ")}</span>
+                                {/* AQUÍ APLICAMOS LA TRADUCCIÓN */}
+                                <span>{formatStats(cls.primaryAbility)}</span>
                             </div>
+
                             <p className="text-slate-400 text-sm line-clamp-3">{cls.description}</p>
                             <div className="mt-4 flex items-center text-amber-600 text-sm font-bold">
                                 Ver Detalles <ChevronRight className="w-4 h-4 ml-1" />
@@ -103,7 +123,8 @@ const ClassesPage = () => {
                                     <h2 className="text-4xl font-bold text-amber-500 font-serif mb-2">{selectedClass.name}</h2>
                                     <div className="flex gap-4 text-sm text-slate-400">
                                         <span className="flex items-center gap-1"><Shield className="w-4 h-4" /> d{selectedClass.hitDie}</span>
-                                        <span className="flex items-center gap-1"><Zap className="w-4 h-4" /> {selectedClass.primaryAbility.join("/")}</span>
+                                        {/* AQUÍ TAMBIÉN APLICAMOS LA TRADUCCIÓN */}
+                                        <span className="flex items-center gap-1"><Zap className="w-4 h-4" /> {formatStats(selectedClass.primaryAbility)}</span>
                                     </div>
                                 </div>
                                 <button onClick={() => setSelectedClass(null)} className="p-2 hover:bg-red-900/30 rounded-full text-slate-400 hover:text-white transition-colors">
@@ -196,7 +217,8 @@ const ClassesPage = () => {
                                             <ul className="space-y-2 text-sm text-slate-300">
                                                 <li><strong className="text-slate-500 uppercase text-xs">Armadura:</strong> <br /> {selectedClass.proficiencies.armor.join(", ")}</li>
                                                 <li><strong className="text-slate-500 uppercase text-xs">Armas:</strong> <br /> {selectedClass.proficiencies.weapons.join(", ")}</li>
-                                                <li><strong className="text-slate-500 uppercase text-xs">Salvaciones:</strong> <br /> {selectedClass.savingThrows.join(", ")}</li>
+                                                {/* TRADUCIMOS LAS SALVACIONES AQUÍ TAMBIÉN */}
+                                                <li><strong className="text-slate-500 uppercase text-xs">Salvaciones:</strong> <br /> {formatStats(selectedClass.savingThrows)}</li>
                                             </ul>
                                         </div>
                                         <div className="bg-slate-800/30 p-5 rounded-lg border border-slate-800">
