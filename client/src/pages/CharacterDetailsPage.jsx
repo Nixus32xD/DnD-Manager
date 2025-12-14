@@ -115,6 +115,18 @@ const CharacterDetailsPage = () => {
     const initiative = getInitiative(stats);
     const proficiencyList = character.proficiencies?.skills || character.selectedSkills || [];
 
+    // Asumimos que character.spellcastingAbility guarda el stat clave (ej: "intelligence")
+    const spellAbilityKey = character.class?.spellcastingAbility || "intelligence";
+    const spellMod = getRawMod(stats[spellAbilityKey] || 10);
+    const spellSaveDC = 8 + pb + spellMod;
+    const spellAttackBonus = pb + spellMod;
+
+    // Helper para formatear monedas
+    const formatMoney = (money) => {
+        if (!money) return "0 po";
+        return `${money.gp || 0}po ${money.sp || 0}pp ${money.cp || 0}pc`;
+    };
+
     return (
         <div className="min-h-screen bg-slate-950 text-slate-200 pb-20">
 
@@ -152,7 +164,7 @@ const CharacterDetailsPage = () => {
             </div>
 
             <div className="container mx-auto max-w-6xl px-4 -mt-8">
-                
+
                 {/* --- HUD DE COMBATE --- */}
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
                     <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 shadow-lg text-center relative overflow-hidden">
@@ -196,11 +208,11 @@ const CharacterDetailsPage = () => {
 
                                 return (
                                     <div key={key} className={`relative h-24 rounded-xl flex items-center justify-center border-2 transition-all 
-                                        ${isSaveProficient 
-                                            ? 'bg-amber-900/10 border-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.15)]' 
-                                            : 'bg-slate-900 border-slate-800' 
+                                        ${isSaveProficient
+                                            ? 'bg-amber-900/10 border-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.15)]'
+                                            : 'bg-slate-900 border-slate-800'
                                         }`}>
-                                        
+
                                         {/* Nombre y Valor (Fijo a la izquierda) */}
                                         <div className="absolute left-4 flex flex-col items-center gap-1">
                                             <div className={`text-[10px] uppercase font-bold tracking-wider ${isSaveProficient ? 'text-amber-500' : 'text-slate-500'}`}>
@@ -218,10 +230,10 @@ const CharacterDetailsPage = () => {
 
                                         {/* Escudo de Salvación (Abajo) */}
                                         <div className={`absolute -bottom-3 left-1/2 transform -translate-x-1/2 px-3 py-0.5 rounded-full border flex items-center gap-1.5 shadow-md z-10
-                                            ${isSaveProficient 
-                                                ? 'bg-amber-600 border-amber-400 text-white' 
+                                            ${isSaveProficient
+                                                ? 'bg-amber-600 border-amber-400 text-white'
                                                 : 'bg-slate-950 border-slate-700 text-slate-500'
-                                            }`} 
+                                            }`}
                                             title="Tirada de Salvación">
                                             <Shield className="w-4 h-4 fill-current" />
                                             <span className="text-sm font-bold font-mono">
@@ -251,7 +263,7 @@ const CharacterDetailsPage = () => {
                                                 <div className={`w-2.5 h-2.5 rounded-full ${isProficient ? 'bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.8)]' : 'bg-slate-700'}`}></div>
                                                 <div>
                                                     <span className={`${isProficient ? 'text-white font-bold' : 'text-slate-400'}`}>{skillName}</span>
-                                                    <span className="text-[10px] text-slate-600 ml-2 uppercase">({STAT_LABELS[abilityKey]?.slice(0,3)})</span>
+                                                    <span className="text-[10px] text-slate-600 ml-2 uppercase">({STAT_LABELS[abilityKey]?.slice(0, 3)})</span>
                                                 </div>
                                             </div>
                                             <span className={`text-sm font-mono ${isProficient ? 'text-amber-500 font-bold' : 'text-slate-600'}`}>
@@ -299,10 +311,186 @@ const CharacterDetailsPage = () => {
                             </div>
                         </div>
                     </div>
+                    {/* --- SECCIÓN INFERIOR: COMBATE, EQUIPO Y MAGIA --- */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+
+                        {/* COLUMNA IZQUIERDA: COMBATE Y EQUIPO */}
+                        <div className="space-y-6">
+
+                            {/* 1. ATAQUES Y ARMAS */}
+                            <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-lg">
+                                <h2 className="text-lg font-bold text-amber-500 mb-4 flex items-center gap-2">
+                                    <Swords className="w-5 h-5" /> Acciones y Ataques
+                                </h2>
+
+                                {/* Tabla de Armas */}
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-left text-sm">
+                                        <thead>
+                                            <tr className="text-slate-500 border-b border-slate-800">
+                                                <th className="pb-2 font-bold uppercase text-xs">Nombre</th>
+                                                <th className="pb-2 font-bold uppercase text-xs text-center">Bono</th>
+                                                <th className="pb-2 font-bold uppercase text-xs">Daño</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-slate-800">
+                                            {/* Ejemplo estático o mapeo de character.weapons */}
+                                            {(character.weapons || []).length > 0 ? (
+                                                character.weapons.map((w, i) => (
+                                                    <tr key={i} className="group hover:bg-slate-800/50 transition">
+                                                        <td className="py-3 font-bold text-slate-200">{w.name}</td>
+                                                        <td className="py-3 text-center text-amber-500 font-mono font-bold">
+                                                            {formatBonus((w.isProficient ? pb : 0) + getRawMod(stats[w.stat || 'strength']))}
+                                                        </td>
+                                                        <td className="py-3 text-slate-400">
+                                                            {w.damage} <span className="text-slate-600 text-xs">({w.damageType})</span>
+                                                        </td>
+                                                    </tr>
+                                                ))
+                                            ) : (
+                                                <tr>
+                                                    <td colSpan="3" className="py-4 text-center text-slate-600 italic">Sin armas equipadas</td>
+                                                </tr>
+                                            )}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            {/* 2. INVENTARIO Y DINERO */}
+                            <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-lg">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h2 className="text-lg font-bold text-amber-500 flex items-center gap-2">
+                                        <Shield className="w-5 h-5" /> Equipo
+                                    </h2>
+                                    <div className="bg-amber-900/20 text-amber-500 px-3 py-1 rounded-lg text-xs font-mono font-bold border border-amber-900/50">
+                                        {formatMoney(character.money)}
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-4">
+                                    {/* Lista simple de items */}
+                                    <ul className="col-span-2 space-y-2 text-sm text-slate-300 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
+                                        {(character.inventory || []).map((item, idx) => (
+                                            <li key={idx} className="flex justify-between items-center border-b border-slate-800/50 pb-1 last:border-0">
+                                                <span>{item.name}</span>
+                                                <span className="text-slate-500 text-xs">x{item.quantity || 1}</span>
+                                            </li>
+                                        ))}
+                                        {(character.inventory || []).length === 0 && <li className="text-slate-600 italic">Mochila vacía...</li>}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* COLUMNA DERECHA: MAGIA Y RECURSOS DE CLASE */}
+                        <div className="space-y-6">
+
+                            {/* 3. ADICIONALES (Recursos de Clase, Ki, Maestrias, Invocaciones) */}
+                            <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-lg">
+                                <h2 className="text-lg font-bold text-amber-500 mb-4 flex items-center gap-2">
+                                    <Zap className="w-5 h-5" /> Recursos de Clase
+                                </h2>
+
+                                {/* Grid de recursos contables (Ej: Ki, Rage, Espacios de Conjuro si querés ponerlos acá) */}
+                                <div className="grid grid-cols-3 gap-3 mb-4">
+                                    {(character.resources || []).map((res, i) => (
+                                        <div key={i} className="bg-slate-950 p-2 rounded border border-slate-800 text-center">
+                                            <span className="block text-[10px] text-slate-500 uppercase font-bold truncate">{res.name}</span>
+                                            <div className="text-xl font-bold text-white">
+                                                {res.current} <span className="text-sm text-slate-600">/ {res.max}</span>
+                                            </div>
+                                        </div>
+                                    ))}
+                                    {/* Placeholder si no hay recursos */}
+                                    {(character.resources || []).length === 0 && (
+                                        <div className="col-span-3 text-center text-slate-600 text-sm italic py-2">
+                                            Sin recursos especiales activos.
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Lista de habilidades pasivas adicionales (Ej: Invocaciones, Estilos de combate) */}
+                                <div className="space-y-3">
+                                    <h3 className="text-xs font-bold text-slate-500 uppercase border-b border-slate-800 pb-1">Maestrías / Invocaciones</h3>
+                                    <div className="flex flex-wrap gap-2">
+                                        {(character.additionals || []).map((add, i) => (
+                                            <span key={i} className="bg-slate-800 text-slate-300 px-2 py-1 rounded text-xs border border-slate-700" title={add.description}>
+                                                {add.name}
+                                            </span>
+                                        ))}
+                                        {(character.additionals || []).length === 0 && <span className="text-slate-600 text-xs italic">N/A</span>}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 4. CONJUROS (Solo si tiene spellcasting) */}
+                            {(character.class?.canCastSpells || true) && ( // Cambiar true por la lógica real
+                                <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-lg">
+                                    <div className="flex justify-between items-start mb-4">
+                                        <h2 className="text-lg font-bold text-purple-400 flex items-center gap-2">
+                                            <Brain className="w-5 h-5" /> Libro de Conjuros
+                                        </h2>
+                                        <div className="text-right">
+                                            <div className="text-xs text-slate-500 uppercase font-bold">CD Salvación</div>
+                                            <div className="text-xl font-bold text-white">{spellSaveDC}</div>
+                                        </div>
+                                        <div className="text-right">
+                                            <div className="text-xs text-slate-500 uppercase font-bold">Ataque Mág.</div>
+                                            <div className="text-xl font-bold text-white">+{spellAttackBonus}</div>
+                                        </div>
+                                    </div>
+
+                                    {/* Renderizado de conjuros por nivel (Simplificado) */}
+                                    <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                                        {[0, 1, 2, 3, 4, 5].map(level => {
+                                            // Filtrar conjuros por nivel (asumiendo estructura)
+                                            const spells = (character.spells || []).filter(s => s.level === level);
+                                            if (spells.length === 0) return null;
+
+                                            return (
+                                                <div key={level}>
+                                                    <div className="flex items-center gap-2 mb-2">
+                                                        <h3 className="text-sm font-bold text-slate-400 uppercase">
+                                                            {level === 0 ? "Trucos" : `Nivel ${level}`}
+                                                        </h3>
+                                                        {level > 0 && (
+                                                            <div className="flex gap-1 ml-auto">
+                                                                {/* Slots visuales (solo visual por ahora) */}
+                                                                {[...Array(character.spellSlots?.[`level${level}`]?.max || 0)].map((_, i) => (
+                                                                    <div key={i} className={`w-3 h-3 rounded-full border border-purple-500 ${i < (character.spellSlots?.[`level${level}`]?.current || 0) ? 'bg-purple-600' : 'bg-transparent'}`}></div>
+                                                                ))}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                    <div className="grid grid-cols-1 gap-1">
+                                                        {spells.map((spell, idx) => (
+                                                            <div key={idx} className="flex justify-between text-sm bg-slate-950/50 px-3 py-2 rounded hover:bg-slate-800 transition cursor-help group relative">
+                                                                <span className="text-purple-200">{spell.name}</span>
+                                                                <span className="text-xs text-slate-600 uppercase group-hover:text-slate-400">{spell.school || "Univ."}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                        {(character.spells || []).length === 0 && (
+                                            <p className="text-slate-600 text-center italic py-4">Este personaje no conoce magia aún.</p>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
     );
 };
+
+
 
 export default CharacterDetailsPage;
